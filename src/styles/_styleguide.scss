@@ -1,0 +1,25 @@
+.sg {
+    background: $gradient-orange-purple-blue;
+	padding: $padding*5 $padding $padding;
+}
+
+.sg-section {
+	padding: $padding 0;
+}
+
+.sg-section__title {
+	font-size: $font-size-lg;
+	font-weight: $font-weight-thin;
+	margin-bottom: $padding;
+	text-transform: uppercase;
+}
+
+.sg-section__subtitle {
+	font-size: $font-size-md;
+	text-transform: uppercase;
+	margin: $padding*2 0 $padding;
+}
+
+.sg-section__main {
+	padding: 0 $padding;
+}

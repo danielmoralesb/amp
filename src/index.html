@@ -1,0 +1,718 @@
+<!doctype html>
+<html ⚡ lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>AMP Template</title>
+    <link rel="canonical" href="https://codepen.io/danielbriceno/pen/jRXBjp">
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,500,700,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
+
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+    <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js" async></script>
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js" async></script>
+    <script async custom-element="amp-lightbox" src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"></script>
+    <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
+    <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
+
+    <meta name="description"
+        content="Showcasing a complete Custom AMP Template">
+
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "NewsArticle",
+            "headline": "Open-source framework for publishing content",
+            "datePublished": "2015-10-07T12:02:41Z",
+            "image": [
+            "logo.svg"
+            ]
+        }
+    </script>
+
+    <style amp-custom></style>
+    <style amp-boilerplate>
+        body {
+            -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            animation: -amp-start 8s steps(1, end) 0s 1 normal both
+        }
+
+        @-webkit-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-moz-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-ms-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-o-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+    </style><noscript>
+        <style amp-boilerplate>
+            body {
+                -webkit-animation: none;
+                -moz-animation: none;
+                -ms-animation: none;
+                animation: none
+            }
+        </style>
+    </noscript>
+</head>
+
+<body [class]="navVisible ? 'nav-open' : 'nav-closed'"
+    class="nav-closed">
+    <div class="off-canvas-container">
+        @@include('./partials/header.html')
+        <main class="body-wrapper">
+            <section class="home-main">
+                <section class="hero-carousel">
+                    <amp-carousel width="400" height="400" layout="responsive" type="slides" autoplay>
+                        <div class="hero-carousel__item" >
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 225.333 287.375"><path fill="#0FF" d="M33.891 272.548L.25 272.5V271l33.641.048zM225.141 272.548L191.5 272.5V271l33.641.048z"/><path fill="#9D3290" d="M86.018 223.014a89.768 89.768 0 0 0 19.282 4.762h23.936a89.754 89.754 0 0 0 19.282-4.762h-62.5z"/><path fill="#FC4A4C" d="M204.05 112.986c-10.918-37.624-45.636-65.129-86.781-65.129s-75.863 27.504-86.781 65.129H204.05z"/><path fill="#9D3290" d="M56.621 205.187a90.93 90.93 0 0 0 7.739 6.27h105.817a90.737 90.737 0 0 0 7.739-6.27H56.621z"/><path fill="#BB397A" d="M26.914 138.212c0 2.462.102 4.9.296 7.313h180.118c.193-2.413.295-4.851.295-7.313 0-1.216-.031-2.425-.079-3.63H26.993a91.043 91.043 0 0 0-.079 3.63z"/><path fill="#9D3290" d="M41.542 187.51a90.685 90.685 0 0 0 5.562 7.626h140.328a90.685 90.685 0 0 0 5.562-7.626H41.542z"/><path fill="#DC4264" d="M29.521 116.604a90.053 90.053 0 0 0-2.157 12.551h179.809a90.079 90.079 0 0 0-2.157-12.551H29.521z"/><path fill="#9D3290" d="M32.684 170.035a89.972 89.972 0 0 0 3.777 8.632h161.615a89.972 89.972 0 0 0 3.777-8.632H32.684zM28.019 152.359a89.735 89.735 0 0 0 2.065 9.636h174.37a89.735 89.735 0 0 0 2.065-9.636h-178.5z"/><g><g fill="#FFF"><path d="M65.839 220.629H53.835c-1.333 0-2.375-.31-3.121-.929s-1.262-1.437-1.548-2.453l-2.144-12.481H23.444l-5.145 12.481c-.445.857-1.151 1.636-2.119 2.334-.969.699-2.073 1.048-3.311 1.048H.675l33.154-69.405H49.74l16.099 69.405zm-20.627-26.438l-3.382-19.816a164.751 164.751 0 0 1-.833-4.406 173.34 173.34 0 0 1-.881-5.502 119.652 119.652 0 0 1-2.263 5.55 401.444 401.444 0 0 0-1.929 4.454l-8.146 19.72h17.434zM202.264 151.224c4.129 0 7.661.5 10.6 1.5 2.937 1.001 5.351 2.383 7.24 4.145s3.278 3.842 4.169 6.24c.888 2.398 1.334 4.977 1.334 7.74 0 3.78-.58 7.281-1.739 10.504-1.159 3.223-2.929 6.01-5.311 8.359-2.382 2.35-5.399 4.192-9.05 5.525-3.653 1.335-7.971 2.002-12.957 2.002h-7.384l-2.906 23.389h-15.434l8.479-69.405h22.959zm-4.191 34.345c2.223 0 4.088-.326 5.598-.977 1.508-.65 2.73-1.571 3.669-2.763.936-1.19 1.611-2.611 2.023-4.263.412-1.651.619-3.46.619-5.431 0-1.365-.182-2.619-.547-3.763-.366-1.144-.929-2.127-1.691-2.953-.762-.826-1.724-1.469-2.882-1.929-1.16-.46-2.534-.691-4.121-.691h-7.336l-2.811 22.77h7.479z"/></g></g><path fill="#01E3F7" d="M145.377 31.333L55.345 162.025h62.926l-22.154 88.371 89.96-137.807-59.966-.968z"/><linearGradient id="a" gradientUnits="userSpaceOnUse" x1="53.582" y1="141.816" x2="179.433" y2="141.816"><stop offset="0" stop-color="#12043d"/><stop offset="1" stop-color="#240878"/></linearGradient><path fill="url(#a)" d="M143.614 33.39L53.582 164.082h62.925l-20.329 86.16 83.255-133.596-58.085-.968z"/><g fill="#FFF"><path d="M74.743 6.827l-.615 3.507h-2.003L73.854.381l3.486.007c1.075 0 1.921.299 2.536.896s.884 1.376.807 2.338c-.073.976-.479 1.755-1.22 2.338-.741.583-1.686.875-2.834.875l-1.886-.008zm.28-1.661l1.668.014c.538 0 .984-.139 1.34-.417s.567-.654.636-1.128-.008-.853-.229-1.135c-.222-.282-.549-.433-.981-.451l-1.887-.007-.547 3.124zM85.215 6.69h-1.627l-.636 3.644H80.95L82.679.381l3.295.007c1.103 0 1.951.26 2.547.779.594.52.857 1.242.789 2.167-.096 1.367-.825 2.317-2.188 2.851l1.401 4.04v.109H86.39L85.215 6.69zm-1.34-1.661l1.49.014c.528-.009.965-.151 1.31-.428.344-.275.55-.65.618-1.124.063-.442-.007-.788-.212-1.039s-.531-.385-.978-.403l-1.709-.007-.519 2.987zM96.255 6.02h-3.814l-.465 2.666h4.484l-.287 1.647h-6.487L91.415.38h6.474l-.294 1.661h-4.464l-.417 2.372h3.828l-.287 1.607zM102.866 7.674c.096-.542-.171-.957-.8-1.244l-1.319-.526c-1.531-.684-2.258-1.625-2.181-2.823.032-.556.214-1.048.547-1.477s.8-.765 1.401-1.009a4.998 4.998 0 0 1 1.948-.352c.962.019 1.738.305 2.331.857.593.555.884 1.296.875 2.226h-1.996c.022-.451-.076-.802-.297-1.053-.222-.251-.564-.381-1.029-.39-.456-.009-.853.095-1.189.311a1.281 1.281 0 0 0-.602.893c-.087.497.246.891.998 1.183l.902.342.52.239c1.345.665 1.974 1.6 1.887 2.803-.041.588-.229 1.095-.564 1.521-.334.426-.79.753-1.367.98a4.858 4.858 0 0 1-1.903.321c-.706-.014-1.335-.162-1.887-.444s-.971-.682-1.258-1.196c-.269-.479-.395-1.025-.376-1.641l2.003.007c-.063 1.08.467 1.629 1.593 1.647.487 0 .889-.107 1.203-.321s.5-.498.56-.854zM112.375 6.02h-3.814l-.465 2.666h4.484l-.287 1.647h-6.487L107.535.38h6.474l-.294 1.661h-4.464l-.417 2.372h3.828l-.287 1.607zM121.377 10.333h-1.941l-2.769-6.638-1.155 6.638h-2.003L115.238.38h1.935l2.775 6.651L121.103.38h1.996l-1.722 9.953zM131.686 2.042h-2.953l-1.436 8.292h-2.003l1.436-8.292h-2.919l.294-1.661h7.875l-.294 1.661zM133.573 10.333h-2.003L133.293.38h2.003l-1.723 9.953zM143.334 10.333h-1.941l-2.769-6.638-1.155 6.638h-2.003L137.195.38h1.935l2.775 6.651L143.06.38h1.996l-1.722 9.953zM153.103 9.076c-.355.451-.876.799-1.563 1.043-.686.243-1.459.358-2.32.345-.679-.005-1.276-.153-1.791-.448-.515-.293-.921-.716-1.217-1.268s-.465-1.181-.506-1.887c-.046-.656.023-1.428.209-2.314.184-.886.501-1.663.949-2.33.449-.668.988-1.167 1.617-1.498a4.272 4.272 0 0 1 2.092-.475c1.039.019 1.853.311 2.44.879.588.566.923 1.379 1.005 2.437l-1.928-.007c-.05-.556-.198-.966-.444-1.23s-.613-.405-1.101-.424c-.843-.027-1.508.343-1.992 1.111-.486.768-.763 1.881-.831 3.339-.046.779.074 1.383.358 1.812.285.429.72.647 1.303.656.679.019 1.258-.144 1.736-.485l.335-1.716h-1.818l.267-1.511h3.801l-.601 3.971z"/></g><g><linearGradient id="b" gradientUnits="userSpaceOnUse" x1="54.84" y1="286.66" x2="54.84" y2="256.207"><stop offset="0" stop-color="#12043d"/><stop offset="1" stop-color="#240878"/></linearGradient><path fill="url(#b)" stroke="#0FF" stroke-miterlimit="10" d="M43.604 286.66l7.755-30.453h14.719l-1.726 6.091h-6.983l-1.482 6.07h6.902l-1.502 6.131h-6.983l-1.625 6.091h7.086l-1.482 6.07H43.604z"/><linearGradient id="c" gradientUnits="userSpaceOnUse" x1="79.218" y1="286.68" x2="79.218" y2="256.308"><stop offset="0" stop-color="#12043d"/><stop offset="1" stop-color="#240878"/></linearGradient><path fill="url(#c)" stroke="#0FF" stroke-miterlimit="10" d="M72.4 286.679l6.051-24.321h-2.559l-5.969 24.321h-7.309l7.41-30.371h21.459c1.787.027 3.052.46 3.797 1.299.663.826.717 2.409.162 4.751l-5.745 24.321h-7.35l6.029-24.321h-2.74l-5.948 24.321H72.4z"/><linearGradient id="d" gradientUnits="userSpaceOnUse" x1="106.42" y1="286.619" x2="106.42" y2="256.186"><stop offset="0" stop-color="#12043d"/><stop offset="1" stop-color="#240878"/></linearGradient><path fill="url(#d)" stroke="#0FF" stroke-miterlimit="10" d="M94.68 286.619l7.532-30.433h11.856c1.299.014 2.348.399 3.146 1.157.866.718 1.137 1.732.812 3.045l-2.354 10.07c-.42 1.665-1.076 2.754-1.97 3.269-.839.515-1.908.751-3.207.71h-5.481l-2.924 12.182h-7.41zm13.338-24.383l-1.38 6.132h2.01l1.38-6.132h-2.01z"/><linearGradient id="e" gradientUnits="userSpaceOnUse" x1="124.359" y1="286.619" x2="124.359" y2="256.166"><stop offset="0" stop-color="#12043d"/><stop offset="1" stop-color="#240878"/></linearGradient><path fill="url(#e)" stroke="#0FF" stroke-miterlimit="10" d="M116.329 286.619l7.634-30.453h7.837l-6.253 24.383h6.841l-1.522 6.07h-14.537z"/><linearGradient id="f" gradientUnits="userSpaceOnUse" x1="147.18" y1="286.68" x2="147.18" y2="256.227"><stop offset="0" stop-color="#12043d"/><stop offset="1" stop-color="#240878"/></linearGradient><path fill="url(#f)" stroke="#0FF" stroke-miterlimit="10" d="M135.219 286.619l6.76-26.271c.406-1.313.894-2.335 1.462-3.065.568-.704 1.719-1.056 3.451-1.056h8.101c1.042 0 1.848.074 2.416.223.637.163 1.097.44 1.381.833.271.474.386 1.137.345 1.989-.081.758-.305 1.773-.67 3.045l-6.07 24.362h-7.674l3.188-12.141h-2.091l-3.005 12.141-7.594-.06zm12.363-18.232h1.848l1.502-6.07h-2.029l-1.321 6.07z"/><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="170.673" y1="286.619" x2="170.673" y2="256.267"><stop offset="0" stop-color="#12043d"/><stop offset="1" stop-color="#240878"/></linearGradient><path fill="url(#g)" stroke="#0FF" stroke-miterlimit="10" d="M168.704 286.619h-7.329l5.948-24.362h-3.572l1.441-5.989h14.779l-1.502 5.989h-3.756l-6.009 24.362z"/><linearGradient id="h" gradientUnits="userSpaceOnUse" x1="188.375" y1="286.66" x2="188.375" y2="256.207"><stop offset="0" stop-color="#12043d"/><stop offset="1" stop-color="#240878"/></linearGradient><path fill="url(#h)" stroke="#0FF" stroke-miterlimit="10" d="M177.138 286.66l7.755-30.453h14.719l-1.726 6.091h-6.983l-1.482 6.07h6.902l-1.502 6.131h-6.983l-1.625 6.091h7.086l-1.482 6.07h-14.679z"/><linearGradient id="i" gradientUnits="userSpaceOnUse" x1="37.139" y1="286.619" x2="37.139" y2="256.267"><stop offset="0" stop-color="#12043d"/><stop offset="1" stop-color="#240878"/></linearGradient><path fill="url(#i)" stroke="#0FF" stroke-miterlimit="10" d="M35.17 286.619h-7.329l5.948-24.362h-3.572l1.441-5.989h14.779l-1.502 5.989H41.18l-6.01 24.362z"/></g><g fill="#FFF"><path d="M97.231 177.186a94.71 94.71 0 0 0 .142-3.144l9.898 29.188 5.404-22.903-8.918-26.721a10.28 10.28 0 0 0-.977-1.238 3.157 3.157 0 0 0-.976-.715 4.361 4.361 0 0 0-1.215-.333 12.745 12.745 0 0 0-1.691-.096H87.084l-8.575 69.405h13.719l4.763-40.633c.096-.858.175-1.793.24-2.81zM142.35 179.574c-.035.22-.074.451-.105.66l-4.859 40.395h13.623l8.278-67.002-16.937 25.947zM122.086 210.615a7.76 7.76 0 0 0 .439-.609l.341-.586-.78 1.195z"/></g></svg>
+                        </div><!-- .featured-carousel__item -->
+                        <div class="hero-carousel__item" >
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 225.333 287.375"><circle fill="#FC4A4C" cx="115.13" cy="129.16" r="45.34"/><linearGradient id="b" gradientUnits="userSpaceOnUse" x1="115.13" y1="102.633" x2="115.13" y2="101.357"><stop offset=".008" stop-color="#070dfa"/><stop offset=".568" stop-color="#7528ac"/><stop offset="1" stop-color="#fc4a4c"/></linearGradient><path fill="url(#b)" d="M79.314 101.357c-.326.42-.645.845-.956 1.276h73.543c-.311-.431-.63-.857-.956-1.276H79.314z"/><linearGradient id="c" gradientUnits="userSpaceOnUse" x1="115.13" y1="105.956" x2="115.13" y2="104.986"><stop offset=".008" stop-color="#070dfa"/><stop offset=".568" stop-color="#7528ac"/><stop offset="1" stop-color="#fc4a4c"/></linearGradient><path fill="url(#c)" d="M76.767 104.986c-.202.32-.401.644-.595.969h77.915a43.288 43.288 0 0 0-.595-.969H76.767z"/><linearGradient id="d" gradientUnits="userSpaceOnUse" x1="115.13" y1="116.014" x2="115.13" y2="115.904"><stop offset=".008" stop-color="#070dfa"/><stop offset=".568" stop-color="#7528ac"/><stop offset="1" stop-color="#fc4a4c"/></linearGradient><path fill="url(#d)" d="M158.532 116.014a15.3 15.3 0 0 0-.033-.11H71.76a15.3 15.3 0 0 1-.033.11h86.805z"/><linearGradient id="e" gradientUnits="userSpaceOnUse" x1="115.13" y1="109.247" x2="115.13" y2="108.615"><stop offset=".008" stop-color="#070dfa"/><stop offset=".568" stop-color="#7528ac"/><stop offset="1" stop-color="#fc4a4c"/></linearGradient><path fill="url(#e)" d="M74.701 108.615c-.107.209-.211.421-.314.632h81.484a41.222 41.222 0 0 0-.314-.632H74.701z"/><linearGradient id="f" gradientUnits="userSpaceOnUse" x1="115.13" y1="112.569" x2="115.13" y2="112.275"><stop offset=".008" stop-color="#070dfa"/><stop offset=".568" stop-color="#7528ac"/><stop offset="1" stop-color="#fc4a4c"/></linearGradient><path fill="url(#f)" d="M73.04 112.275l-.119.294h84.417l-.119-.294H73.04z"/><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="115.13" y1="99.311" x2="115.13" y2="97.759"><stop offset=".008" stop-color="#070dfa"/><stop offset=".568" stop-color="#7528ac"/><stop offset="1" stop-color="#fc4a4c"/></linearGradient><path fill="url(#g)" d="M82.425 97.759a46.45 46.45 0 0 0-1.423 1.552h68.255a45.399 45.399 0 0 0-1.423-1.552H82.425z"/><linearGradient id="h" gradientUnits="userSpaceOnUse" x1="115.13" y1="85.88" x2="115.13" y2="83.819"><stop offset=".008" stop-color="#070dfa"/><stop offset=".568" stop-color="#7528ac"/><stop offset="1" stop-color="#fc4a4c"/></linearGradient><path fill="url(#h)" d="M101.579 85.88h27.1c-4.279-1.338-8.83-2.06-13.55-2.06s-9.271.721-13.55 2.06z"/><linearGradient id="i" gradientUnits="userSpaceOnUse" x1="115.13" y1="174.5" x2="115.13" y2="119.655"><stop offset=".008" stop-color="#070dfa"/><stop offset=".568" stop-color="#7528ac"/><stop offset="1" stop-color="#fc4a4c"/></linearGradient><path fill="url(#i)" d="M70.79 119.655a45.502 45.502 0 0 0-1.001 9.504c0 25.041 20.3 45.34 45.34 45.34s45.34-20.3 45.34-45.34c0-3.26-.347-6.439-1.001-9.504H70.79z"/><linearGradient id="j" gradientUnits="userSpaceOnUse" x1="115.13" y1="92.565" x2="115.13" y2="90.603"><stop offset=".008" stop-color="#070dfa"/><stop offset=".568" stop-color="#7528ac"/><stop offset="1" stop-color="#fc4a4c"/></linearGradient><path fill="url(#j)" d="M91.267 90.603a45.471 45.471 0 0 0-2.906 1.962h53.537a45.893 45.893 0 0 0-2.906-1.962H91.267z"/><linearGradient id="k" gradientUnits="userSpaceOnUse" x1="115.13" y1="95.959" x2="115.13" y2="94.201"><stop offset=".008" stop-color="#070dfa"/><stop offset=".568" stop-color="#7528ac"/><stop offset="1" stop-color="#fc4a4c"/></linearGradient><path fill="url(#k)" d="M86.255 94.201a46.315 46.315 0 0 0-1.999 1.757h61.746a45.723 45.723 0 0 0-1.999-1.757H86.255z"/><linearGradient id="l" gradientUnits="userSpaceOnUse" x1="115.13" y1="89.212" x2="115.13" y2="86.984"><stop offset=".008" stop-color="#070dfa"/><stop offset=".568" stop-color="#7528ac"/><stop offset="1" stop-color="#fc4a4c"/></linearGradient><path fill="url(#l)" d="M98.455 86.984a45.087 45.087 0 0 0-4.787 2.228h42.922a45.1 45.1 0 0 0-4.787-2.228H98.455z"/><path fill="#0FF" d="M32.891 272.048L.25 272v-1.5l32.641.048zM225.141 272.048L196.5 272v-1.5l28.641.048z"/><g><linearGradient id="m" gradientUnits="userSpaceOnUse" x1="114.593" y1="219.167" x2="114.593" y2="118.833"><stop offset="0" stop-color="#12043d"/><stop offset="1" stop-color="#240878"/></linearGradient><path fill="url(#m)" d="M42.472 118.833L18.55 219.167h192.086l-23.922-100.334z"/><path fill="#0FF" d="M100.926 163.833h13.417v9.917h-13.417zM115.926 163.833h13.417v9.917h-13.417z"/><path fill="#02D1C6" d="M89.593 142.833h12.667v8.667H89.593zM128.093 143.083h12.667v8.667h-12.667zM103.593 136.583h23.5v6.167h-23.5z"/><path fill="#00EDE6" d="M100.26 162.833H87.593v-10h14.667z"/><path fill="#0FF" d="M99.76 173.583H86.093l1-10h14.667zM98.907 186.5H84.593l2-12.167h13.417z"/><path fill="#00EDE6" d="M129.843 163.083h12.667v-10h-14.667z"/><path fill="#0FF" d="M130.343 173.833h13.667l-1-10h-14.667zM131.195 186.75h14.315l-2-12.167h-13.417z"/><linearGradient id="n" gradientUnits="userSpaceOnUse" x1="115.13" y1="220" x2="115.13" y2="117.5"><stop offset="0" stop-color="#0ff"/><stop offset="1" stop-color="#1666ab"/></linearGradient><path fill="url(#n)" d="M187.95 117.5H42.874L18.381 220h193.496L187.95 117.5zm17.682 83H192.41l-2.541-12.5h12.812l2.951 12.5zM103.442 144h10.725v7.5h-11.413l.688-7.5zm-2.332 7.5H89.662l1.033-7.5h11.104l-.689 7.5zm14.983-7.5h10.725l.688 7.5h-11.413V144zm12.367 0h11.104l1.033 7.5h-11.448l-.689-7.5zm-.137-1.5l-.505-5.5h10.783l.757 5.5h-11.035zm-1.643 0h-10.587V137h10.082l.505 5.5zm-12.514 0h-10.587l.505-5.5h10.082v5.5zm-12.229 0H90.901l.757-5.5h10.783l-.504 5.5zm-12.679 0H78.162l1.01-5.5h10.844l-.758 5.5zm-.206 1.5l-1.033 7.5h-11.51l1.377-7.5h11.166zm-1.239 9l-1.308 9.5H74.49l1.744-9.5h11.579zm1.642 0h11.517l-.872 9.5H88.147l1.308-9.5zm13.16 0h11.551v9.5h-12.423l.872-9.5zm13.478 0h11.551l.872 9.5h-12.423V153zm13.194 0h11.517l1.308 9.5h-11.953l-.872-9.5zm13.16 0h11.578l1.744 9.5h-12.015l-1.307-9.5zm-.207-1.5l-1.033-7.5h11.165l1.377 7.5H142.24zm-1.239-9l-.757-5.5h10.844l1.01 5.5h-11.097zm-.964-7l-.757-5.5h10.523l1.01 5.5h-10.776zm-1.643 0H127.68l-.505-5.5h10.462l.757 5.5zm-12.357 0h-9.944V130h9.439l.505 5.5zm-11.871 0h-9.944l.505-5.5h9.439v5.5zm-11.587 0H91.865l.757-5.5h10.462l-.505 5.5zm-12.357 0H79.447l1.01-5.5H90.98l-.758 5.5zm-12.418 0H65.959l1.046-5.5h11.809l-1.01 5.5zm-.275 1.5l-1.01 5.5H64.628l1.046-5.5h11.855zm-1.285 7l-1.377 7.5h-11.95l1.426-7.5h11.901zm-1.653 9l-1.744 9.5H60.825l1.807-9.5h11.959zm-2.019 11l-1.744 9.5H58.733l1.807-9.5h12.032zm1.642 0h12.083l-1.308 9.5H72.47l1.744-9.5zm13.727 0h12.022l-.872 9.5H86.632l1.309-9.5zm13.665 0h12.561v9.5h-13.433l.872-9.5zm14.487 0h12.561l.872 9.5h-13.433V164zm14.203 0h12.022l1.308 9.5h-12.458l-.872-9.5zm13.665 0h12.083l1.744 9.5H145.27l-1.309-9.5zm13.727 0h12.032l1.807 9.5h-12.094l-1.745-9.5zm-.276-1.5l-1.744-9.5h11.96l1.807 9.5h-12.023zm-2.019-11l-1.377-7.5h11.901l1.426 7.5h-11.95zm-1.653-9l-1.01-5.5h11.855l1.046 5.5H153.74zm-1.285-7l-1.01-5.5h11.809l1.046 5.5h-11.845zm-1.285-7l-.826-4.5h11.77l.856 4.5h-11.8zm-1.643 0h-10.454l-.62-4.5H148.7l.827 4.5zm-12.097 0h-10.393l-.413-4.5h10.186l.62 4.5zm-12.035 0h-9.302V124h8.889l.413 4.5zm-11.229 0h-9.302l.413-4.5h8.889v4.5zm-10.944 0H92.829l.62-4.5h10.186l-.413 4.5zm-12.036 0H80.732l.826-4.5h10.247l-.619 4.5zm-12.096 0h-11.8l.856-4.5h11.77l-.826 4.5zm-13.442 0H54.129l.915-4.5h11.46l-.856 4.5zm-.286 1.5l-1.046 5.5h-11.61l1.118-5.5h11.538zm-1.331 7l-1.046 5.5H51.283l1.118-5.5h11.63zm-1.331 7l-1.426 7.5H49.453l1.525-7.5H62.7zm-1.711 9l-1.807 9.5H47.217l1.931-9.5h11.841zm-2.092 11l-1.807 9.5H44.981l1.931-9.5h11.985zm-2.092 11l-2.187 11.5h-12.28l2.338-11.5h12.129zm1.643 0h12.104l-2.112 11.5H56.26l2.188-11.5zm13.747 0h12.588l-1.584 11.5H70.083l2.112-11.5zm14.231 0h12.527l-1.056 11.5H84.842l1.584-11.5zm14.17 0h13.571v11.5H99.54l1.056-11.5zm15.497 0h13.571l1.056 11.5h-14.626V175zm15.213 0h12.527l1.584 11.5h-13.055l-1.056-11.5zm14.17 0h12.588l2.112 11.5H147.06l-1.584-11.5zm14.231 0h12.104l2.187 11.5h-12.18l-2.111-11.5zm13.747 0h12.129l2.338 11.5h-12.28l-2.187-11.5zm-.285-1.5l-1.807-9.5h11.985l1.931 9.5h-12.109zm-2.092-11l-1.807-9.5h11.84l1.931 9.5h-11.964zm-2.092-11l-1.426-7.5h11.722l1.525 7.5h-11.821zm-1.711-9l-1.046-5.5h11.63l1.118 5.5h-11.702zm-1.331-7l-1.046-5.5h11.539l1.118 5.5h-11.611zm-1.331-7l-.856-4.5h11.46l.915 4.5h-11.519zm-1.141-6l-.666-3.5H174.2l.711 3.5h-11.44zm-1.643 0h-11.76l-.643-3.5h11.737l.666 3.5zm-13.403 0h-10.178l-.482-3.5h10.018l.642 3.5zm-11.821 0h-10.117l-.321-3.5h9.957l.481 3.5zm-11.76 0h-8.751V119h8.43l.321 3.5zm-10.678 0h-8.751l.321-3.5h8.43v3.5zm-10.393 0H93.655l.482-3.5h9.957l-.321 3.5zm-11.76 0H81.834l.643-3.5h10.018l-.482 3.5zm-11.822 0h-11.76l.666-3.5h11.737l-.643 3.5zm-13.402 0h-11.44l.711-3.5h11.394l-.665 3.5zm-13.084 0H43.041l.826-3.5h10.55l-.712 3.5zm-.304 1.5l-.915 4.5H41.624l1.062-4.5h10.715zm-1.22 6l-1.118 5.5H39.972l1.298-5.5h10.911zm-1.423 7l-1.118 5.5H38.32l1.298-5.5h11.14zm-1.423 7l-1.525 7.5H36.195l1.771-7.5h11.369zm-1.83 9l-1.931 9.5H33.598l2.243-9.5h11.664zm-2.236 11l-1.931 9.5H31.001l2.243-9.5h12.025zm-2.236 11l-2.338 11.5H27.932l2.715-11.5h12.386zm-2.642 13l-2.541 12.5H24.627l2.951-12.5h12.813zm1.643 0h12.299l-2.377 12.5H39.492l2.542-12.5zm13.942 0h12.189l-2.295 12.5H53.599l2.377-12.5zm13.832 0h13.185l-1.721 12.5H67.513l2.295-12.5zm14.828 0H97.76l-1.148 12.5H82.914l1.722-12.5zm14.766 0h14.764v12.5H98.255l1.147-12.5zm16.691 0h14.764l1.148 12.5h-15.912V188zm16.407 0h13.124l1.721 12.5h-13.698L132.5 188zm14.766 0h13.185l2.295 12.5h-13.759l-1.721-12.5zm14.828 0h12.189l2.377 12.5h-12.271l-2.295-12.5zm13.832 0h12.299l2.541 12.5h-12.463l-2.377-12.5zm26.401-1.5h-12.763l-2.338-11.5h12.386l2.715 11.5zm-3.069-13h-12.337l-1.931-9.5h12.025l2.243 9.5zm-2.597-11h-11.976l-1.931-9.5h11.665l2.242 9.5zm-2.596-11h-11.616l-1.525-7.5h11.37l1.771 7.5zm-2.125-9h-11.32l-1.118-5.5h11.14l1.298 5.5zm-1.653-7h-11.091l-1.118-5.5h10.911l1.298 5.5zm-1.652-7h-10.862l-.915-4.5h10.714l1.063 4.5zm-1.416-6h-10.665l-.711-3.5h10.55l.826 3.5zm-166.841 96l3.895-16.5h13.271l-3.354 16.5H20.378zm15.455 0l3.354-16.5H51.67l-3.138 16.5H35.833zm14.343 0l3.138-16.5h12.281l-3.03 16.5H50.176zm14.032 0l3.03-16.5h13.828l-2.272 16.5H64.208zm16.228 0l2.272-16.5h13.766l-1.515 16.5H80.436zm16.166 0l1.515-16.5h16.049v16.5H96.602zm19.491 0V202h16.049l1.515 16.5h-17.564zm19.207 0l-1.515-16.5h13.766l2.272 16.5H135.3zm16.166 0l-2.272-16.5h13.828l3.03 16.5h-14.586zm16.228 0l-3.03-16.5h12.281l3.138 16.5h-12.389zm14.032 0l-3.138-16.5h12.483l3.354 16.5h-12.699zm14.343 0l-3.354-16.5h13.271l3.895 16.5h-13.812z"/></g><g><path fill="#01E3F7" d="M126.792 49.5l-41.099 59.66h28.725l-10.113 40.34 41.066-62.908-27.374-.442z"/><linearGradient id="o" gradientUnits="userSpaceOnUse" x1="84.888" y1="99.934" x2="142.338" y2="99.934"><stop offset="0" stop-color="#12043d"/><stop offset="1" stop-color="#240878"/></linearGradient><path fill="url(#o)" d="M125.987 50.439l-41.099 59.659h28.725l-9.28 39.332 38.005-60.986-26.515-.442z"/></g><g fill="none" stroke="#0FF" stroke-miterlimit="10"><path d="M36.573 286.119h-7.329l5.948-24.362H31.62l1.441-5.989H47.84l-1.502 5.989h-3.756l-6.009 24.362zM45.007 286.16l7.755-30.453h14.719l-1.726 6.091h-6.983l-1.482 6.07h6.902l-1.502 6.131h-6.983l-1.625 6.091h7.086l-1.482 6.07H45.007zM73.803 286.179l6.051-24.321h-2.559l-5.969 24.321h-7.309l7.41-30.371h21.459c1.787.027 3.052.46 3.797 1.299.663.826.717 2.409.162 4.751L91.1 286.179h-7.35l6.029-24.321h-2.74l-5.948 24.321h-7.288zM96.083 286.119l7.532-30.433h11.856c1.299.014 2.348.399 3.146 1.157.866.718 1.137 1.732.812 3.045l-2.354 10.07c-.42 1.665-1.076 2.754-1.97 3.269-.839.515-1.908.751-3.207.71h-5.481l-2.924 12.182h-7.41zm13.338-24.383l-1.38 6.132h2.01l1.38-6.132h-2.01zM117.733 286.119l7.634-30.453h7.837l-6.253 24.383h6.841l-1.522 6.07h-14.537zM136.622 286.119l6.76-26.271c.406-1.313.894-2.335 1.462-3.065.568-.704 1.719-1.056 3.451-1.056h8.101c1.042 0 1.848.074 2.416.223.637.163 1.097.44 1.381.833.271.474.386 1.137.345 1.989-.081.758-.305 1.773-.67 3.045l-6.07 24.362h-7.674l3.188-12.141h-2.091l-3.005 12.141-7.594-.06zm12.364-18.232h1.848l1.502-6.07h-2.029l-1.321 6.07zM170.108 286.119h-7.329l5.948-24.362h-3.572l1.441-5.989h14.779l-1.502 5.989h-3.756l-6.009 24.362zM178.541 286.16l7.755-30.453h14.719l-1.726 6.091h-6.983l-1.482 6.07h6.902l-1.502 6.131h-6.983l-1.625 6.091h7.086l-1.482 6.07h-14.679z"/></g><g fill="#FFF"><path d="M67.083 6.599h-3.814l-.711 4.067h-2.003L62.284.713h6.303l-.294 1.661H64l-.451 2.57h3.828l-.294 1.655zM72.6 8.616h-3.473l-1.025 2.051h-2.208L71.212.714h1.853l1.894 9.953h-2.044L72.6 8.616zm-2.652-1.661h2.399l-.561-3.705-1.838 3.705zM81.432 8.007c.096-.542-.171-.957-.8-1.244l-1.319-.526c-1.531-.684-2.258-1.625-2.181-2.823.032-.556.214-1.048.547-1.477s.8-.765 1.401-1.009a4.998 4.998 0 0 1 1.948-.352c.962.019 1.738.305 2.331.857.593.555.884 1.296.875 2.226h-1.996c.022-.451-.076-.802-.297-1.053-.222-.251-.564-.381-1.029-.39-.456-.009-.853.095-1.189.311a1.281 1.281 0 0 0-.602.893c-.087.497.246.891.998 1.183l.902.342.52.239c1.345.665 1.974 1.6 1.887 2.803-.041.588-.229 1.095-.564 1.521-.334.426-.79.753-1.367.98a4.858 4.858 0 0 1-1.903.321c-.706-.014-1.335-.162-1.887-.444s-.971-.682-1.258-1.196c-.269-.479-.395-1.025-.376-1.641l2.003.007c-.063 1.08.467 1.629 1.593 1.647.487 0 .889-.107 1.203-.321s.5-.498.56-.854zM93.087 2.375h-2.953l-1.436 8.292h-2.003l1.436-8.292h-2.919l.294-1.661h7.875l-.294 1.661zM99.41 6.353h-3.814l-.465 2.666h4.484l-.287 1.647h-6.487L94.57.713h6.474l-.294 1.661h-4.464l-.417 2.372h3.828l-.287 1.607zM104.811 7.023h-1.627l-.636 3.644h-2.003l1.729-9.953 3.295.007c1.103 0 1.951.26 2.547.779.594.52.857 1.242.789 2.167-.096 1.367-.825 2.317-2.188 2.851l1.401 4.04v.109h-2.133l-1.174-3.644zm-1.34-1.661l1.49.014c.528-.009.965-.151 1.31-.428.344-.275.55-.65.618-1.124.063-.442-.007-.788-.212-1.039s-.531-.385-.978-.403l-1.709-.007-.519 2.987zM115.024 9.019h4.225l-.287 1.647h-6.228l1.729-9.953h2.003l-1.442 8.306zM123.719 10.803c-.661-.014-1.243-.17-1.746-.469-.504-.298-.902-.729-1.197-1.291-.293-.563-.463-1.209-.509-1.938-.05-.747.029-1.545.239-2.393s.547-1.593 1.012-2.235 1.011-1.123 1.637-1.442a4.237 4.237 0 0 1 2.034-.458c.67.014 1.256.172 1.757.475a3.14 3.14 0 0 1 1.183 1.307c.287.566.451 1.211.492 1.931.046.802-.041 1.627-.26 2.475s-.559 1.581-1.019 2.201-.999 1.085-1.617 1.395a4.253 4.253 0 0 1-2.006.442zm2.837-5.386l.055-.649c.046-.812-.063-1.427-.325-1.846-.262-.419-.659-.638-1.192-.656-.834-.027-1.496.342-1.985 1.107-.49.766-.768 1.837-.831 3.213-.046.807.062 1.428.321 1.862.26.436.663.662 1.21.681.716.032 1.308-.247 1.777-.837.47-.591.777-1.426.923-2.506l.047-.369zM134.875 8.616h-3.473l-1.025 2.051h-2.208l5.318-9.953h1.853l1.894 9.953h-2.044l-.315-2.051zm-2.652-1.661h2.399l-.561-3.705-1.838 3.705zM138.232 10.667l1.729-9.953 2.857.007a3.93 3.93 0 0 1 1.809.454c.535.29.969.706 1.302 1.248s.533 1.153.602 1.832c.036.396.032.802-.014 1.217l-.048.362c-.2 1.458-.773 2.628-1.719 3.511-.946.881-2.094 1.322-3.442 1.322h-3.076zm3.445-8.292l-1.155 6.645.834.007c.921 0 1.66-.337 2.219-1.012.558-.675.878-1.693.96-3.056l.014-.219c.014-.752-.13-1.328-.431-1.729s-.75-.61-1.347-.629l-1.094-.007zM149.258 10.667h-2.003l1.723-9.953h2.003l-1.723 9.953zM159.02 10.667h-1.941l-2.769-6.638-1.155 6.638h-2.003l1.729-9.953h1.935l2.775 6.651 1.155-6.651h1.996l-1.722 9.953zM168.788 9.409c-.355.451-.876.799-1.563 1.043-.686.243-1.459.358-2.32.345-.679-.005-1.276-.153-1.791-.448-.515-.293-.921-.716-1.217-1.268s-.465-1.181-.506-1.887c-.046-.656.023-1.428.209-2.314.184-.886.501-1.663.949-2.33.449-.668.988-1.167 1.617-1.498a4.272 4.272 0 0 1 2.092-.475c1.039.019 1.853.311 2.44.879.588.566.923 1.379 1.005 2.437l-1.928-.007c-.05-.556-.198-.966-.444-1.23s-.613-.405-1.101-.424c-.843-.027-1.508.343-1.992 1.111-.486.768-.763 1.881-.831 3.339-.046.779.074 1.383.358 1.812.285.429.72.647 1.303.656.679.019 1.258-.144 1.736-.485l.335-1.716h-1.818l.267-1.511h3.801l-.601 3.971z"/></g><g fill="#0FF"><path d="M106.233 28.208v.498l.229-.545 2.314-4.834h.598l.626 4.845.035.598.24-.604 2.098-4.84h.744l-2.895 6.34h-.598l-.697-5.027-.006-.352-.135.357-2.426 5.021h-.598l-.674-6.34.656-.006.489 4.889zM114.114 29.667h-.703l1.107-6.34h.697l-1.101 6.34zm.597-8.174c.02-.254.188-.414.504-.48.152.027.261.075.325.144s.106.181.126.337c-.039.148-.096.257-.17.325s-.186.118-.334.149c-.316-.048-.466-.206-.451-.475zM118.455 21.704l-.281 1.623h1.271l-.1.574h-1.271l-.703 4.23-.012.363c0 .426.195.645.586.656.121.004.311-.01.568-.041l-.029.574c-.23.066-.465.096-.703.088-.41-.008-.709-.151-.896-.431s-.256-.685-.205-1.216l.697-4.225h-1.137l.105-.574h1.125l.287-1.623h.698zM121.362 24.399c.609-.809 1.328-1.205 2.156-1.189.609.016 1.053.229 1.33.639s.375.975.293 1.693l-.691 4.125h-.691l.691-4.133c.023-.223.027-.437.012-.644-.066-.694-.445-1.052-1.137-1.071a1.88 1.88 0 0 0-1.148.366c-.355.251-.668.631-.938 1.138l-.75 4.344h-.691l1.564-9h.691l-.691 3.732z"/></g></svg>
+                        </div><!-- -->
+                    </amp-carousel>
+                </section><!-- .hero-carousel -->
+                <section class="app-intro">
+
+                    <p class="app-intro__desc"><strong>AMP</strong> is an open-source HTML framework that provides a straightforward way to create web pages that are fast, smooth-loading and prioritize the user-experience above all else</p>
+
+                </section><!-- .app-intro -->
+                <section class="featured-carousel">
+                    <amp-animation id="showAnim" layout="nodisplay">
+                            <script type="application/json">
+                                {
+                                    "duration": "400ms",
+                                    "fill": "both",
+                                    "direction": "alternate",
+                                    "animations": [{
+                                        "selector": "#stickyWrapper",
+                                        "keyframes": [{
+                                            "opacity": "1",
+                                            "visibility": "visible"
+                                        }]
+                                    }]
+                                }
+                            </script>
+                    </amp-animation>
+
+                    <amp-animation id="hideAnim" layout="nodisplay">
+                        <script type="application/json">
+                            {
+                                "duration": "400ms",
+                                "fill": "both",
+                                "direction": "alternate",
+                                "animations": [{
+                                    "selector": "#stickyWrapper",
+                                    "keyframes": [{
+                                        "opacity": "0",
+                                        "visibility": "hidden"
+                                    }]
+                                }]
+                            }
+                        </script>
+                    </amp-animation>
+
+                    <amp-animation id="showAnimAdvertisers" layout="nodisplay">
+                            <script type="application/json">
+                                {
+                                    "duration": "400ms",
+                                    "fill": "both",
+                                    "direction": "alternate",
+                                    "animations": [{
+                                        "selector": "#stickyAdvertisers",
+                                        "keyframes": [{
+                                            "opacity": "1",
+                                            "visibility": "visible"
+                                        }]
+                                    }]
+                                }
+                            </script>
+                    </amp-animation>
+
+                    <amp-animation id="hideAnimAdvertisers" layout="nodisplay">
+                        <script type="application/json">
+                            {
+                                "duration": "400ms",
+                                "fill": "both",
+                                "direction": "alternate",
+                                "animations": [{
+                                    "selector": "#stickyAdvertisers",
+                                    "keyframes": [{
+                                        "opacity": "0",
+                                        "visibility": "hidden"
+                                    }]
+                                }]
+                            }
+                        </script>
+                    </amp-animation>
+
+                    <amp-animation id="showAnimEcommerce" layout="nodisplay">
+                            <script type="application/json">
+                                {
+                                    "duration": "400ms",
+                                    "fill": "both",
+                                    "direction": "alternate",
+                                    "animations": [{
+                                        "selector": "#stickyEcommerce",
+                                        "keyframes": [{
+                                            "opacity": "1",
+                                            "visibility": "visible"
+                                        }]
+                                    }]
+                                }
+                            </script>
+                    </amp-animation>
+
+                    <amp-animation id="hideAnimEcommerce" layout="nodisplay">
+                        <script type="application/json">
+                            {
+                                "duration": "400ms",
+                                "fill": "both",
+                                "direction": "alternate",
+                                "animations": [{
+                                    "selector": "#stickyEcommerce",
+                                    "keyframes": [{
+                                        "opacity": "0",
+                                        "visibility": "hidden"
+                                    }]
+                                }]
+                            }
+                        </script>
+                    </amp-animation>
+
+                    <amp-animation id="showAnimPublishers" layout="nodisplay">
+                            <script type="application/json">
+                                {
+                                    "duration": "400ms",
+                                    "fill": "both",
+                                    "direction": "alternate",
+                                    "animations": [{
+                                        "selector": "#stickyPublishers",
+                                        "keyframes": [{
+                                            "opacity": "1",
+                                            "visibility": "visible"
+                                        }]
+                                    }]
+                                }
+                            </script>
+                    </amp-animation>
+
+                    <amp-animation id="hideAnimPublishers" layout="nodisplay">
+                        <script type="application/json">
+                            {
+                                "duration": "400ms",
+                                "fill": "both",
+                                "direction": "alternate",
+                                "animations": [{
+                                    "selector": "#stickyPublishers",
+                                    "keyframes": [{
+                                        "opacity": "0",
+                                        "visibility": "hidden"
+                                    }]
+                                }]
+                            }
+                        </script>
+                    </amp-animation>
+
+                    <amp-position-observer target="stickyWrapper" on="enter:hideAnim.start; exit:showAnim.start" intersection-ratios="0.9" layout="nodisplay"></amp-position-observer>
+
+                    <amp-position-observer target="stickyAdvertisers" on="enter:hideAnimAdvertisers.start; exit:showAnimAdvertisers.start" intersection-ratios="0.9" layout="nodisplay"></amp-position-observer>
+
+                    <amp-position-observer target="stickyEcommerce" on="enter:hideAnimEcommerce.start; exit:showAnimEcommerce.start" intersection-ratios="0.9" layout="nodisplay"></amp-position-observer>
+
+                    <amp-position-observer target="stickyPublishers" on="enter:hideAnimPublishers.start; exit:showAnimPublishers.start" intersection-ratios="0.9" layout="nodisplay"></amp-position-observer>
+
+                    <div id="stickyWrapper" class="sticky">
+                        <section class="sticky__inner">
+                            <header class="sticky__header">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.92 20.92"><path fill="#FFF" d="M10.46 0C4.683 0 0 4.683 0 10.46c0 5.777 4.683 10.46 10.46 10.46s10.46-4.683 10.46-10.46C20.92 4.683 16.237 0 10.46 0zM8.809 19.269l1.652-7H5.348l7.314-10.618-1.809 6.685 4.719.079-6.763 10.854z"/></svg>
+                                <h2 class="sticky-header__title">Success Stories</h2>
+                            </header>
+                            <nav class="sticky__nav">
+                                <button class="btn"
+                                [class]="stickyState == 'advertisers' ? 'btn -active' : 'btn'"
+                                on="tap:AMP.setState({stickyState : stickyState != 'advertisers' ? 'advertisers' : ''})"><span>Advertisers</span></button>
+                                <button class="btn"
+                                [class]="stickyState == 'e-commerce' ? 'btn -active' : 'btn'"
+                                on="tap:AMP.setState({stickyState : stickyState != 'e-commerce' ? 'e-commerce' : ''})"><span>E-Commerce</span></button>
+                                <button class="btn"
+                                [class]="stickyState == 'publishers' ? 'btn -active' : 'btn'"
+                                on="tap:AMP.setState({stickyState : stickyState != 'publishers' ? 'publishers' : ''})"><span>Publishers</span></button>
+                            </nav>
+                        </section>
+                    </div><!-- .sticky -->
+
+                    <div id="stickyAdvertisers" class="sticky-content"
+                        [class]="stickyState == 'advertisers' ? 'sticky-content -block' : 'sticky-content'">
+                        <div class="sticky-content__inner">
+                            <article class="sticky-content__card">
+                                <div class="sticky-content-card__inner">
+                                    <div class="sticky-content-card__header">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 146 48"><g fill="#FFF"><path d="M10.115 47.85c.53-2.113 1.038-4.146 1.551-6.177 1.602-6.347 3.212-12.693 4.8-19.044.118-.47.309-.605.791-.605 41.752.012 83.503.011 125.255.011h.645c-.221.883-.418 1.703-.64 2.516-.025.092-.185.186-.296.208-.181.035-.374.011-.562.011-40.71 0-81.42 0-122.13.002-1.03 0-.801-.124-1.033.788a5024.565 5024.565 0 0 0-5.445 21.623c-.133.533-.324.726-.875.68-.661-.055-1.329-.013-2.061-.013zM91.113 17.088h-4.652c.341-1.316.673-2.601 1.007-3.885 1.051-4.041 2.109-8.081 3.142-12.127.102-.401.273-.498.66-.511 2.574-.084 5.147-.222 7.721-.283a19.804 19.804 0 0 1 3.058.182c1.012.134 1.434.679 1.355 1.702-.126 1.64-.478 3.239-1.126 4.757-.458 1.071-1.384 1.509-2.461 1.682-1.035.167-2.075.3-3.114.542.674.07 1.347.151 2.022.206.727.06 1.038.338 1.074 1.084.042.886.054 1.774.061 2.661.009 1.311.002 2.623.002 3.976-.079.008-.209.032-.339.033-1.11.003-2.219.004-3.329.001-.574-.002-.904-.234-1.019-.798-.085-.414-.104-.845-.114-1.27-.037-1.552-.051-3.105-.088-4.657-.021-.902-.498-1.265-1.398-1.122-.309.049-.453.177-.534.498-.589 2.33-1.204 4.653-1.812 6.977-.032.114-.074.225-.116.352zm1.813-15.062c.296.038.581.073.865.111.957.128 1.131.385.887 1.325-.346 1.336-.697 2.672-1.043 4.008-.083.322-.153.648-.265 1.122.843-.086 1.589-.117 2.316-.246 1.18-.21 1.973-.907 2.276-2.084.263-1.023.561-2.046.697-3.089.18-1.385-.337-1.787-1.382-1.845-1.208-.067-2.421-.027-3.63-.082-.546-.024-.742.196-.721.78zM25.32.449c-.32 1.251-.625 2.454-.936 3.655-.748 2.887-1.497 5.774-2.251 8.659-.077.296-.204.579-.282.875-.59 2.226-2.127 3.205-4.33 3.498-2.58.343-5.133.324-7.689-.128a4.42 4.42 0 0 1-.2-.04c-1.581-.378-2.071-1.072-1.723-2.666.374-1.714.835-3.409 1.271-5.109.716-2.79 1.442-5.577 2.165-8.365.03-.115.074-.226.118-.357h4.652c-.352 1.369-.696 2.718-1.046 4.066-.826 3.184-1.657 6.366-2.48 9.55-.455 1.761.048 2.397 1.857 2.371 1.352-.019 2.234-.756 2.619-2.218.552-2.093 1.09-4.189 1.635-6.284.613-2.359 1.234-4.715 1.831-7.078.082-.323.197-.441.539-.437 1.397.019 2.795.008 4.25.008zM12.229 22.036c-.736 2.915-1.45 5.738-2.162 8.562-1.401 5.551-2.808 11.1-4.192 16.655-.115.461-.277.622-.771.611-1.687-.037-3.376-.014-5.126-.014.284-1.145.552-2.249.83-3.35 1.833-7.252 3.674-14.502 5.488-21.758.136-.542.33-.739.906-.721 1.466.045 2.935.015 4.403.015h.624zM75.833 17.093h-4.672c.229-.895.447-1.761.671-2.626 1.15-4.436 2.311-8.869 3.441-13.311.125-.491.326-.625.82-.632C79.094.482 82.095.4 85.095.334c.29-.006.581-.001.87.014 1.71.088 2.36.776 2.188 2.469-.178 1.752-.572 3.461-1.313 5.075-.432.94-1.134 1.565-2.173 1.649-2.088.17-4.18.3-6.272.389-.537.023-.769.158-.899.694-.525 2.152-1.099 4.291-1.663 6.469zm2.015-7.747c.97-.089 1.819-.126 2.653-.254.817-.126 1.451-.627 1.69-1.402.455-1.475.89-2.967 1.165-4.482.221-1.219-.31-1.784-1.571-1.86-1.187-.072-2.382-.019-3.572-.047-.49-.011-.594.246-.599.686.415.037.804.055 1.188.109.595.084.801.37.662.96-.21.895-.45 1.783-.679 2.673l-.937 3.617zM36.359 12.121c-.188.735-.328 1.417-.538 2.076-.587 1.838.317 2.323 1.769 2.244.791-.043 1.431-.313 1.838-1.011.893-1.534 1.243-3.238 1.472-4.967.074-.555-.275-.96-.928-1.111a14.436 14.436 0 0 0-2.069-.315c-.9-.074-1.806-.084-2.71-.113-1.029-.033-1.633-.576-1.583-1.598a11.873 11.873 0 0 1 1.615-5.436c.494-.851 1.333-1.242 2.263-1.445 1.735-.379 3.494-.342 5.25-.264 1.431.063 2.86.175 4.29.269.235.015.47.048.699.072.004.073.018.11.006.136-.521 1.148-.519 1.136-1.752.816-1.464-.38-2.941-.591-4.451-.26-1.003.22-1.801.755-2.14 1.718a23.719 23.719 0 0 0-.918 3.439c-.135.706.208 1.112.94 1.206 1.097.14 2.209.154 3.311.258.642.06 1.291.137 1.911.302.798.213 1.165.703 1.076 1.518-.222 2.05-.752 4.024-1.792 5.822-.656 1.134-1.78 1.576-3.004 1.706-2.674.283-5.349.176-8.014-.157a3.267 3.267 0 0 1-.641-.166c-1.002-.342-1.3-.848-1.065-1.872.194-.847.416-1.688.648-2.525.036-.13.191-.324.293-.325 1.379-.024 2.759-.017 4.224-.017zM134.584 12.119c-.23.908-.45 1.747-.654 2.589-.255 1.053.244 1.693 1.331 1.725 1.566.047 2.223-.288 2.756-1.745.466-1.273.777-2.609 1.072-3.936.177-.793-.14-1.274-.96-1.408-1.241-.203-2.502-.279-3.756-.396-.356-.033-.717-.013-1.075-.032-.92-.049-1.482-.591-1.46-1.504.048-1.947.621-3.763 1.561-5.451.6-1.077 1.674-1.51 2.829-1.605a50.804 50.804 0 0 1 4.698-.172c1.465.016 2.929.168 4.393.265.215.014.429.057.704.095-.199.389-.339.742-.554 1.04-.073.101-.353.124-.511.081-1.305-.351-2.612-.682-3.978-.608-1.033.056-2.075.165-2.799 1.023-.334.396-.634.865-.796 1.352a22.028 22.028 0 0 0-.693 2.72c-.167.85.169 1.336 1.03 1.441 1.081.131 2.177.139 3.263.24.642.06 1.29.145 1.911.312.74.199 1.04.627 1.017 1.397a7.14 7.14 0 0 1-.221 1.615 46.322 46.322 0 0 1-.965 3.178c-.586 1.696-1.794 2.67-3.584 2.85-2.694.271-5.384.168-8.067-.165-.117-.015-.233-.052-.347-.085-1.284-.369-1.586-.895-1.258-2.201.191-.76.378-1.523.602-2.273.042-.14.253-.325.389-.328 1.346-.024 2.694-.014 4.122-.014zM130.631.542c-.195.397-.328.751-.539 1.051-.07.099-.353.117-.513.074-1.305-.347-2.611-.684-3.977-.605a7.944 7.944 0 0 0-1.464.215c-.939.236-1.637.832-1.95 1.732a25.626 25.626 0 0 0-.886 3.244c-.16.772.211 1.237 1.041 1.34 1.064.131 2.142.143 3.211.239.625.056 1.258.124 1.864.281.862.223 1.186.685 1.119 1.58a9.954 9.954 0 0 1-.328 1.909c-.278 1-.596 1.992-.959 2.964-.605 1.622-1.849 2.458-3.531 2.624-2.676.264-5.349.165-8.014-.171a2.758 2.758 0 0 1-.496-.12c-1.123-.359-1.432-.908-1.147-2.059.197-.794.399-1.587.627-2.372.04-.137.216-.332.332-.334 1.379-.023 2.758-.015 4.184-.015-.227.894-.446 1.733-.651 2.575-.258 1.06.234 1.704 1.315 1.739 1.579.05 2.209-.252 2.762-1.734.485-1.3.785-2.675 1.088-4.034.153-.688-.16-1.124-.855-1.296a13.596 13.596 0 0 0-2.117-.332c-.9-.076-1.806-.085-2.709-.113-1.034-.032-1.607-.572-1.573-1.597.065-1.908.635-3.688 1.545-5.352.491-.897 1.35-1.32 2.32-1.531 1.735-.378 3.494-.34 5.25-.266 1.431.06 2.86.176 4.289.272.234.016.465.055.762.092zM68.867 6.669c.101-.149.206-.295.302-.448 1.078-1.701 2.176-3.39 3.216-5.114.302-.5.618-.768 1.206-.663.162.029.334.004.578.004-.124.213-.209.372-.305.525-1.538 2.44-3.071 4.883-4.623 7.314-.219.343-.261.67-.212 1.061.302 2.421.587 4.844.874 7.267.016.134.002.271.002.45h-4.882l-.764-6.104-.12-.036c-.169.243-.34.486-.507.731-1.108 1.62-2.235 3.228-3.31 4.87-.301.46-.622.674-1.158.588-.177-.029-.362-.004-.653-.004l.938-1.375c1.061-1.549 2.166-3.07 3.169-4.656.753-1.191 1.722-1.898 3.152-1.926.243-.005.485-.08.717-.214-.456-.039-.912-.086-1.368-.115-.79-.05-1.12-.322-1.219-1.1-.251-1.98-.483-3.963-.721-5.945-.051-.421-.094-.843-.144-1.299h4.938l.779 6.167.115.022zM113.552 8.188l-.306 1.142c-1.212-.037-2.382-.064-3.551-.115-.461-.02-.644.173-.753.617-.466 1.904-.972 3.799-1.462 5.697-.045.176-.078.355-.152.694l5.507-.412c-.212.363-.438.769-.689 1.16-.05.078-.197.132-.299.132-3.124.007-6.248.006-9.437.006l4.317-16.63h9.495v1.119c-1.497-.116-2.955-.255-4.417-.333-.764-.041-1.534.041-2.301.036-.452-.003-.661.175-.614.702.349.04.714.075 1.078.127.595.085.783.278.711.881-.064.538-.213 1.068-.346 1.597-.316 1.254-.646 2.504-1.007 3.9a2400.5 2400.5 0 0 1 4.226-.32zM48.186 17.392c-.464-.089-.942-.136-1.389-.279-.574-.182-.849-.608-.826-1.209.037-.996.447-1.791 1.388-2.205 1.039-.457 2.123-.468 3.196-.129.684.216.955.724.849 1.432-.208 1.39-1.136 2.187-2.694 2.309-.169.013-.341.002-.511.002a1.86 1.86 0 0 0-.013.079zM25.917 17.392c-.447-.089-.909-.135-1.338-.279-.615-.206-.899-.725-.832-1.365.122-1.152.753-1.922 1.874-2.227.87-.237 1.753-.247 2.623.016.779.236 1.087.774.932 1.567-.264 1.346-1.164 2.089-2.684 2.206-.186.014-.375.002-.562.002l-.013.08z"/></g></svg>
+                                    </div>
+                                    <section class="sticky-content-card__section">
+                                        <p class="sticky-content-card__desc">Faster page loads with AMP deliver truckloads of new drivers to U.S. Xpress</p>
+                                    </section>
+                                </div>
+                            </article><!-- .sticky-content__card -->
+                            <article class="sticky-content__card">
+                                <div class="sticky-content-card__inner">
+                                    <div class="sticky-content-card__header">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 158.992 38.618"><path fill="#072E4E" d="M15.799 37.344c-.071-.008-.1-.02-.11-.012-.941.887-2.124.666-3.251.719-3.805.182-7.61.375-11.415.559-.307.016-.616.003-1.023.003.293-.761.555-1.474.84-2.178 1.881-4.661 3.76-9.323 5.652-13.979 1.502-3.695 3.032-7.38 4.531-11.076.874-2.155 1.688-4.336 2.584-6.482a3.932 3.932 0 0 1 .995-1.393c.95-.836 1.96-1.608 2.986-2.35.348-.251.818-.472 1.232-.473C30.9.656 42.98.659 55.059.66c.179 0 .359.029.567.047l-.27 1.633c.646-.402 1.195-.658 1.636-1.039.641-.554 1.334-.763 2.171-.747 3.018.058 6.037.068 9.055.117.263.004.523.169.775.362.997-.736 2.161-.376 3.29-.379 2.748-.009 5.496-.055 8.244-.086.224-.002.447 0 .772 0L80.76 2.44c.3-.125.501-.187.68-.286C85.479-.083 89.737-.565 94.172.647c.847.231 1.614.747 2.435 1.088.226.094.524.07.776.025.194-.034.395-.154.546-.289 1.09-.98 2.396-.945 3.754-.934 5.769.044 11.538-.006 17.307.049 1.615.015 3.234.227 4.839.442.643.086 1.246.442 1.879.637.211.065.488.08.683-.003.477-.201.952-.432 1.375-.726.566-.393 1.183-.463 1.836-.463 4.998-.001 9.996-.031 14.994.001 2.831.018 5.662.112 8.491.218a7.267 7.267 0 0 1 3.498 1.026c1.911 1.148 2.597 2.926 2.362 5.056-.143 1.297-.432 2.582-.724 3.856-.59 2.572-1.185 5.145-1.856 7.697a85.029 85.029 0 0 1-1.722 5.718c-.671 1.975-2.056 3.377-3.956 4.188a190.258 190.258 0 0 1-7.804 3.128c-.783.294-1.664.393-2.509.445-3.324.205-6.651.357-9.977.527-5.053.259-10.106.517-15.158.772-.265.013-.532.002-.872.002l.216-1.292c-.785.302-1.468.58-2.161.829-1.789.642-3.671.73-5.537.83-5.115.274-10.233.484-15.349.729-2.141.102-4.282.227-6.423.338-.226.012-.452.002-.776.002l.444-1.585c-.643.29-1.16.508-1.664.752-2.433 1.179-5.005 1.76-7.703 1.822-1.953.045-3.937.009-5.64-1.008-1.079-.645-1.894-.514-2.823.081-.279.179-.619.27-.875.474-.524.417-1.12.488-1.754.514-3.141.127-6.282.361-9.423.363-1.492.001-2.945.303-4.437.262-1.536-.043-3.077.111-4.616.181-1.518.069-3.037.134-4.555.214-1.518.08-3.034.193-4.552.262-6.78.306-13.561.602-20.342.9-.318.012-.723.141-.6-.431zm21.571-4.849c.291.017.433.037.574.031 2.891-.131 5.781-.273 8.672-.388.427-.017.508-.242.57-.576.439-2.351.884-4.7 1.332-7.049.6-3.147 1.204-6.293 1.806-9.439.599-3.126 1.201-6.251 1.796-9.377.185-.974.35-1.953.536-3.002-.288-.018-.509-.043-.731-.043-3.914-.002-7.83.015-11.745-.018-.633-.005-.924.258-1.194.763-1.182 2.216-2.389 4.419-3.596 6.622-2.007 3.662-4.022 7.32-6.032 10.981-1.7 3.096-3.4 6.191-5.092 9.29-.504.922-.98 1.859-1.501 2.849.226.023.365.055.501.049 3.058-.125 6.117-.242 9.173-.406.252-.014.584-.304.712-.551.792-1.531 1.53-3.09 2.303-4.632.084-.168.268-.4.412-.405 1.006-.035 2.014-.019 3.052-.019l-1.548 5.32zm23.532-1.233c.123.042.181.081.238.079 2.33-.096 4.66-.183 6.987-.316.206-.012.494-.289.575-.506a177.746 177.746 0 0 0 1.69-4.755c1.357-3.972 2.699-7.949 4.051-11.923 1.192-3.502 2.391-7.002 3.583-10.505.064-.188.094-.389.141-.587-.101-.04-.157-.081-.213-.082-2.124-.007-4.249-.023-6.372.007-.184.003-.46.272-.531.474-1.028 2.919-2.021 5.85-3.038 8.774-.322.925-.686 1.836-1.031 2.753a.807.807 0 0 1-.163-.493c-.094-3.622-.195-7.245-.265-10.868-.01-.517-.167-.678-.682-.672-2.041.024-4.082.018-6.123.002-.406-.003-.584.162-.714.531-.565 1.607-1.158 3.205-1.741 4.805-1.323 3.632-2.649 7.263-3.969 10.897-1.234 3.397-2.463 6.796-3.692 10.195-.335.927-.661 1.857-1.029 2.892.376 0 .619.01.862-.002 2.038-.099 4.075-.225 6.114-.286.53-.016.767-.199.933-.677 1.172-3.374 2.363-6.742 3.553-10.11.236-.668.495-1.329.743-1.993l.092.033v6.178l.001 6.155zm42.815-1.975c.363 0 .629.009.894-.002 1.456-.06 2.914-.088 4.367-.195 2.572-.19 5.15-.35 7.707-.669 2.541-.317 4.424-1.648 5.3-4.141a69.968 69.968 0 0 0 1.415-4.52c1.076-3.884 2.12-7.777 3.155-11.673.273-1.029.497-2.094.042-3.125-.621-1.406-1.899-1.959-3.28-2.032-3.718-.196-7.442-.265-11.165-.355-.188-.005-.497.239-.557.428-.807 2.577-1.583 5.164-2.361 7.751a7973.9 7973.9 0 0 0-4.107 13.677c-.474 1.59-.925 3.186-1.41 4.856zm-20.942-8.913c-.143-.05-.182-.076-.221-.075-2.373.064-4.745.12-7.117.213-.181.007-.455.24-.511.422-.504 1.624-1.057 3.241-1.422 4.899-.415 1.887.297 3.338 1.91 4.192a6.741 6.741 0 0 0 1.756.627c3.385.706 6.671.294 9.836-1.047 1.795-.761 3.369-1.85 4.286-3.645a20.611 20.611 0 0 0 2.033-6.385c.293-1.963-.416-3.467-1.95-4.617a59.438 59.438 0 0 0-3.466-2.436c-1.774-1.143-2.112-1.657-1.724-3.225.22-.889.566-1.758 1.363-2.316.462-.323 1.068-.513 1.502-.137.227.197.192.792.139 1.19-.065.488-.28.954-.418 1.433-.124.429-.233.862-.346 1.286h7.314c.349-1.263.715-2.413.978-3.585.32-1.425.312-2.825-1.116-3.713a8.304 8.304 0 0 0-2.093-.933c-2.669-.751-5.362-.671-8.023.038-2.088.556-4.059 1.465-5.221 3.364-.879 1.436-1.541 3.036-2.092 4.635-1.123 3.258-.049 5.006 2.489 6.753 1.164.801 2.29 1.659 3.429 2.497.736.542 1.224 1.227.98 2.186-.229.902-.478 1.808-.828 2.668-.327.802-.936 1.351-1.863 1.475-.79.106-1.228-.269-1.093-1.062.086-.508.258-1.004.418-1.496.343-1.061.705-2.117 1.071-3.206zM6.206 34.028c.337 0 .561.01.784-.001 2.911-.145 5.821-.321 8.734-.419.672-.022.928-.302 1.149-.859 1.583-3.999 3.185-7.99 4.807-11.973.082-.202.399-.425.616-.436 1.705-.08 3.412-.124 5.119-.147.352-.005.517-.127.636-.439.453-1.184.925-2.36 1.388-3.54.23-.586.455-1.175.713-1.842h-5.959c.644-1.624 1.289-3.171 1.867-4.743.241-.655.594-.951 1.31-.939 1.749.03 3.498-.006 5.247.004.357.002.557-.095.689-.451.42-1.13.883-2.243 1.318-3.367.265-.685.51-1.378.774-2.096-.163-.04-.241-.076-.319-.076-5.248-.002-10.496-.005-15.743.016-.185.001-.463.203-.538.379-.778 1.835-1.524 3.685-2.278 5.53l-4.499 11.016c-1.672 4.096-3.345 8.192-5.012 12.29-.271.665-.516 1.34-.803 2.093zm131.408-6.37c.332 0 .554.011.775-.002 1.309-.074 2.618-.143 3.925-.235 2.322-.163 4.65-.279 6.961-.537 1.431-.159 2.608-.891 3.453-2.119.881-1.28 1.278-2.744 1.655-4.209.858-3.34 1.68-6.689 2.486-10.042.296-1.231.56-2.474.742-3.726.312-2.147-.788-3.718-2.89-3.862-3.38-.231-6.772-.288-10.159-.392-.172-.005-.467.216-.512.383-.971 3.61-1.918 7.226-2.864 10.842-.883 3.376-1.761 6.754-2.635 10.133-.313 1.222-.608 2.447-.937 3.766zm4.253-24.994c-.132-.081-.167-.121-.202-.121-3.54.005-7.08.009-10.62.039-.148.001-.37.223-.426.387-.207.609-.357 1.237-.531 1.858-1.052 3.764-2.102 7.528-3.158 11.291-1.05 3.742-2.111 7.481-3.157 11.223-.084.302-.095.625-.143.965.22.016.322.034.423.029 3.681-.182 7.361-.372 11.042-.541.433-.02.628-.196.73-.598.326-1.289.679-2.571 1.01-3.858.06-.234.069-.481.102-.725h-4.866c.499-1.773.972-3.491 1.485-5.197.039-.131.356-.243.549-.252 1.061-.047 2.124-.04 3.184-.102.204-.012.514-.213.571-.392.326-1.03.601-2.077.872-3.124.11-.426.169-.864.268-1.382h-4.079c.391-1.441.741-2.809 1.152-4.158.058-.192.403-.405.627-.419.809-.05 1.623-.018 2.435-.017 1.396 0 1.418.006 1.804-1.34.341-1.192.626-2.399.928-3.566zM92.772 29.798c.319 0 .541.009.763-.001 2.142-.096 4.282-.22 6.425-.277.573-.015.792-.24.941-.747.803-2.729 1.629-5.452 2.455-8.175 1.574-5.187 3.154-10.373 4.728-15.56.238-.784.455-1.575.714-2.474h-.801c-1.79-.001-3.58-.002-5.37-.001-1.309 0-1.323-.003-1.717 1.234-1.367 4.294-2.73 8.589-4.081 12.888-1.121 3.568-2.224 7.141-3.333 10.713-.239.769-.466 1.542-.724 2.4z"/><path fill="#FFF" d="M37.37 32.495l1.548-5.319c-1.038 0-2.046-.017-3.052.019-.144.005-.328.237-.412.405-.772 1.541-1.511 3.1-2.303 4.632-.128.248-.46.538-.712.551-3.056.164-6.115.281-9.173.406-.137.006-.275-.026-.501-.049.52-.99.997-1.927 1.501-2.849 1.692-3.1 3.393-6.195 5.092-9.29 2.01-3.661 4.025-7.318 6.032-10.981a693.45 693.45 0 0 0 3.596-6.622c.27-.505.561-.768 1.194-.763 3.915.033 7.831.015 11.746.017.221 0 .443.026.731.043-.187 1.049-.351 2.027-.536 3.002-.594 3.126-1.197 6.251-1.796 9.377-.603 3.146-1.206 6.292-1.806 9.439-.448 2.349-.893 4.698-1.332 7.049-.062.334-.144.559-.57.576-2.891.115-5.782.257-8.672.388-.142.006-.284-.014-.575-.031zm6.304-22.282l-.161-.066-5.948 11.475c1.094 0 1.985.013 2.875-.015.123-.004.312-.191.348-.326.798-2.99 1.58-5.984 2.362-8.979.181-.694.349-1.392.524-2.089zM60.902 31.262v-6.154-6.178l-.092-.033c-.248.664-.507 1.325-.743 1.993-1.19 3.368-2.381 6.735-3.553 10.11-.166.478-.403.661-.933.677-2.039.061-4.076.187-6.114.286-.243.012-.486.002-.862.002.368-1.034.694-1.965 1.029-2.892 1.229-3.399 2.458-6.798 3.692-10.195 1.32-3.633 2.646-7.264 3.969-10.897.583-1.601 1.176-3.198 1.741-4.805.13-.369.308-.535.714-.531 2.041.016 4.082.022 6.123-.002.515-.006.672.155.682.672.07 3.623.171 7.245.265 10.868a.813.813 0 0 0 .163.493c.345-.917.71-1.827 1.031-2.753C69.03 9 70.024 6.069 71.052 3.149c.071-.202.347-.471.531-.474 2.124-.029 4.248-.014 6.372-.007.056 0 .112.041.213.082-.047.198-.076.398-.141.587-1.192 3.502-2.391 7.002-3.583 10.505-1.352 3.974-2.694 7.951-4.051 11.923a181.323 181.323 0 0 1-1.69 4.755c-.081.217-.369.494-.575.506-2.327.133-4.657.22-6.987.316-.057.001-.116-.038-.239-.08zM103.717 29.287c.485-1.67.936-3.266 1.411-4.855a7973.9 7973.9 0 0 1 4.107-13.677c.778-2.586 1.554-5.173 2.361-7.751.059-.189.369-.433.557-.428 3.723.089 7.447.158 11.165.355 1.381.073 2.659.626 3.28 2.032.456 1.031.231 2.096-.042 3.125a1115.895 1115.895 0 0 1-3.155 11.673 69.968 69.968 0 0 1-1.415 4.52c-.876 2.493-2.76 3.824-5.3 4.141-2.557.319-5.135.479-7.707.669-1.452.107-2.911.136-4.367.195-.266.01-.532.001-.895.001zm8.961-5.06c.769.066 1.363-.06 1.87-.534.705-.659.947-1.547 1.204-2.421a1429.9 1429.9 0 0 0 2.81-9.697c.307-1.076.586-2.163.809-3.258.066-.323.017-.828-.192-1.018-.614-.561-1.476-.273-1.706.507-.899 3.048-1.79 6.099-2.68 9.15-.697 2.388-1.39 4.777-2.115 7.271zM82.775 20.374c-.366 1.09-.728 2.145-1.073 3.206-.16.493-.332.988-.418 1.496-.135.793.304 1.168 1.093 1.062.927-.125 1.536-.673 1.863-1.475.35-.86.599-1.766.828-2.668.243-.959-.244-1.644-.98-2.186-1.139-.838-2.264-1.696-3.429-2.497-2.538-1.747-3.612-3.495-2.489-6.753.551-1.599 1.214-3.199 2.092-4.635 1.162-1.899 3.133-2.808 5.221-3.364 2.661-.709 5.353-.789 8.023-.038a8.234 8.234 0 0 1 2.093.933c1.428.888 1.435 2.288 1.116 3.713-.263 1.173-.629 2.322-.978 3.585h-7.314c.114-.425.222-.858.346-1.286.139-.479.353-.946.418-1.433.053-.397.088-.993-.139-1.19-.434-.376-1.039-.187-1.502.137-.797.558-1.143 1.427-1.363 2.316-.388 1.568-.05 2.082 1.724 3.225a60.271 60.271 0 0 1 3.466 2.436c1.534 1.15 2.244 2.654 1.95 4.617a20.611 20.611 0 0 1-2.033 6.385c-.917 1.794-2.491 2.883-4.286 3.645-3.164 1.341-6.45 1.753-9.836 1.047a6.754 6.754 0 0 1-1.756-.627c-1.613-.854-2.325-2.305-1.91-4.192.364-1.658.918-3.275 1.422-4.899.056-.182.33-.415.511-.422 2.371-.093 4.744-.15 7.117-.213.041-.002.08.025.223.075zM6.206 34.028c.288-.752.532-1.428.803-2.092 1.667-4.098 3.34-8.194 5.012-12.29L16.52 8.63c.754-1.846 1.5-3.695 2.278-5.53.075-.176.353-.378.538-.379 5.248-.021 10.495-.019 15.743-.017.078 0 .156.036.319.076-.264.718-.509 1.411-.774 2.096-.435 1.124-.898 2.237-1.318 3.367-.132.356-.332.453-.689.451-1.749-.01-3.499.027-5.247-.004-.716-.012-1.069.283-1.31.939-.578 1.572-1.223 3.119-1.867 4.743h5.959c-.258.667-.483 1.256-.713 1.842-.463 1.18-.935 2.356-1.388 3.54-.119.312-.284.434-.636.439-1.707.023-3.414.067-5.119.147-.217.01-.534.234-.616.436a1358.22 1358.22 0 0 0-4.807 11.973c-.221.557-.477.837-1.149.859-2.913.097-5.823.274-8.734.419-.224.01-.448.001-.784.001zM137.614 27.658c.328-1.319.624-2.544.939-3.765.873-3.379 1.752-6.756 2.635-10.133.945-3.616 1.892-7.233 2.864-10.842.045-.167.339-.389.512-.383 3.388.103 6.78.161 10.159.392 2.102.144 3.202 1.715 2.89 3.862a41.531 41.531 0 0 1-.742 3.726 665.567 665.567 0 0 1-2.486 10.042c-.376 1.464-.774 2.929-1.655 4.209-.845 1.228-2.022 1.96-3.453 2.119-2.312.258-4.639.374-6.961.537-1.308.092-2.617.16-3.925.235-.222.012-.445.001-.777.001zm7.872-4.805c1.255.05 1.762-.184 2.107-1.185.452-1.313.803-2.662 1.152-4.008a604.167 604.167 0 0 0 1.884-7.499c.203-.825.393-1.657.514-2.496.087-.606-.339-.815-.881-.893-.521-.075-.769.06-.907.622-1.003 4.077-2.047 8.143-3.074 12.214-.267 1.062-.521 2.127-.795 3.245zM141.867 2.664c-.302 1.167-.587 2.374-.929 3.565-.386 1.347-.408 1.341-1.804 1.34-.812 0-1.626-.032-2.435.017-.224.014-.568.227-.627.419-.411 1.349-.761 2.717-1.152 4.158h4.079c-.098.518-.157.957-.268 1.382a60.947 60.947 0 0 1-.872 3.124c-.057.179-.367.38-.571.392-1.06.062-2.123.054-3.184.102-.193.009-.509.121-.549.252-.513 1.706-.986 3.424-1.485 5.197h4.866c-.033.244-.042.491-.102.725-.332 1.287-.684 2.569-1.01 3.858-.102.402-.296.578-.73.598-3.681.169-7.361.359-11.042.541-.1.005-.202-.013-.423-.029.048-.34.059-.663.143-.965 1.046-3.743 2.106-7.482 3.157-11.223 1.056-3.763 2.106-7.527 3.158-11.291.173-.62.324-1.249.531-1.858.056-.164.278-.386.426-.387 3.54-.03 7.08-.033 10.62-.039.036.001.071.041.203.122zM92.772 29.798c.259-.859.485-1.631.724-2.4 1.108-3.572 2.211-7.145 3.333-10.713 1.351-4.299 2.714-8.594 4.081-12.888.394-1.237.408-1.234 1.717-1.234l5.37.001h.801c-.259.899-.476 1.69-.714 2.474-1.574 5.187-3.154 10.372-4.728 15.56-.826 2.723-1.652 5.445-2.455 8.175-.149.507-.367.732-.941.747-2.143.057-4.283.181-6.425.277-.222.01-.445.001-.763.001z"/><path fill="#072E4E" d="M43.674 10.213c-.174.697-.342 1.395-.524 2.09-.782 2.994-1.564 5.989-2.362 8.979-.036.135-.225.322-.348.326-.89.028-1.781.015-2.875.015l5.948-11.475.161.065zM112.678 24.227c.725-2.494 1.418-4.884 2.115-7.272.891-3.051 1.781-6.102 2.68-9.15.23-.78 1.092-1.068 1.706-.507.208.19.257.695.192 1.018a43.52 43.52 0 0 1-.809 3.258c-.923 3.236-1.864 6.468-2.81 9.697-.256.875-.499 1.763-1.204 2.421-.507.475-1.101.601-1.87.535zM145.486 22.853c.274-1.118.528-2.183.796-3.245 1.027-4.071 2.071-8.137 3.074-12.214.138-.562.386-.697.907-.622.542.078.968.287.881.893-.121.839-.311 1.671-.514 2.496a604.167 604.167 0 0 1-1.884 7.499c-.349 1.346-.7 2.695-1.152 4.008-.346 1.001-.853 1.235-2.108 1.185z"/></svg>
+                                    </div>
+                                    <section class="sticky-content-card__section">
+                                        <p class="sticky-content-card__desc">Triplelift and Cloudflare boost Time Inc.’s revenue with AMP Ads</p>
+                                    </section>
+                                </div>
+                            </article><!-- .sticky-content__card -->
+                            <article class="sticky-content__card">
+                                <div class="sticky-content-card__inner">
+                                    <div class="sticky-content-card__header">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 116.608 43.656"><g fill="#FFF"><path d="M99.036 23.94c1.834-1.607 1.333-3.029.286-4.831-1.872-3.22-1.106-7.359 1.438-10.129 2.546-2.771 6.57-3.689 10.103-2.305a9.06 9.06 0 0 1 5.744 8.414 9.128 9.128 0 0 1-12.623 8.546c-.476-.192-1.073-.214-1.591-.146-1.03.136-2.045.39-3.066.595a39.614 39.614 0 0 0-.291-.144zm7.47-12.519c-1.621-.201-1.404.377-1.573 1.317-.017.197-.585-.049-.675.169-.193.289-.243.588-.265.988-.017.304.623-.062.602.241-.033.487-.347 1.855-.45 2.337-.248 1.518.109 2.386 1.944 2.121 1.07-.155 1.3-.25.732-1.245-1.329.216-1.503.185-1.287-1.237.086-.392.132-.718.217-1.108.118-.541.201-.942.771-.867.94.12 1.21-.01 1.301-1.181-.461-.054-.999-.108-1.518-.169.062-.462.141-.902.201-1.366zm3.729 5.413c-.18-1.199-.308-2.226-.458-3.132-.165-.999-.554-.964-1.446-.548.285 1.493.516 3.017.897 4.503.104.405.332.821.79.912.361.072.704-.24.892-.53.852-1.318 1.597-2.657 2.409-4 .155-.257.417-.563.675-1.036-1.025-.306-1.519-.124-1.938.794-.431.943-1.169 1.888-1.821 3.037zm-7.156 1.155c-.551-.431-.822-.803-1.153-.867-.556-.108-1.014.265-.94.83.04.302.494.753.779.767.34.017.699-.363 1.314-.73z"/><path d="M103.079 17.989c-.615.367-.974.747-1.313.731-.285-.014-.74-.465-.779-.767-.074-.566.384-.938.94-.83.33.064.601.435 1.152.866z"/><g><path d="M35.494 35.941c-1.651 1.908-3.552 3.348-5.796 4.297-2.134.903-4.349 1.38-6.677 1.051-3.029-.429-5.463-3.153-5.433-6.212.053-5.552 4.146-13.052 11.251-14.978 1.331-.361 2.812-.375 4.201-.265 1.614.128 2.838 1.051 3.3 2.687.465 1.646-.072 3.059-1.31 4.173-1.556 1.4-3.507 1.906-5.513 2.158-1.585.199-3.188.248-4.862.369-.499 1.697-.846 3.469-.399 5.297.406 1.658 1.432 2.644 3.13 2.61 1.32-.026 2.668-.361 3.935-.772.853-.277 1.615-.886 2.366-1.42 1.323-.941 2.205-2.098 2.734-3.761 1.896-5.962 6.116-9.664 12.095-11.237 3.108-.818 6.037.01 8.55 1.828-.923 2.561-1.9 5.015-2.684 7.53-.566 1.816-.929 3.702-1.276 5.576-.153.828-.272 2.001.62 2.303.575.195 1.586-.354 2.174-.843 2.142-1.783 3.656-4.084 4.827-6.586 2.399-5.126 6.164-8.553 11.817-9.667.932-.184 1.902-.161 2.845-.3.253-.037.653-.296.676-.49.235-2.011.485-4.026.561-6.047.038-1.003-.389-1.946-1.807-2.423.66-.395 1.096-.846 1.587-.918 2.493-.366 4.953.395 5.639 3.314.605 2.572.322 5.134-.36 7.596-1.085 3.913-2.43 7.753-3.647 11.63-.321 1.023-.729 2.053-.823 3.104-.144 1.619.926 2.261 2.29 1.396.844-.535 1.683-1.212 2.254-2.017 1.565-2.206 3.125-4.44 4.412-6.812.68-1.254.881-2.803 1.131-4.248.307-1.776 1.092-3.194 2.589-4.187.656-.435 1.37-.591 2.045.003.631.555.466 1.215.212 1.871-1.15 2.966-.705 4.456 1.808 6.569a42.504 42.504 0 0 1 3.683 3.481c.932.996 1.357 2.26 1.268 3.66-.12 1.893-1.102 3.273-2.694 4.165-2.981 1.671-6.197 2.393-9.613 1.992-1.553-.183-2.324-.797-2.504-1.807-.196-1.098.393-2.051 1.727-2.778.24-.131.495-.236.797-.379.558 1.063 1.524 1.189 2.535 1.02.874-.146 1.766-.334 2.575-.68.989-.424 1.182-1.155.736-2.13-.14-.306-.318-.6-.511-.877-1.402-2.012-2.813-4.018-4.236-6.046-.055.11-.201.386-.332.668-1.635 3.503-3.421 6.924-6.122 9.741-.947.988-2.092 1.809-3.227 2.589-1.145.786-2.494.85-3.836.651-1.826-.27-2.918-1.446-3.094-3.381-.079-.87-.013-1.752-.013-2.848-.324.57-.551.98-.788 1.385-1.028 1.757-2.291 3.29-4.142 4.241-2.912 1.496-5.25.514-6.15-2.639-.293-1.024-.398-2.102-.605-3.243-.146.196-.285.365-.405.547-1.173 1.789-2.471 3.465-4.228 4.732-1.235.891-2.571 1.426-4.135 1.326-1.632-.105-2.732-.877-3.226-2.437-.184-.582-.281-1.201-.341-1.811-.057-.577-.012-1.164-.158-1.832-.143.233-.295.461-.429.698-.886 1.571-1.934 3.007-3.402 4.095-2.998 2.222-6.048 1.235-7.143-2.328-.186-.603-.286-1.234-.449-1.954zm39.909-14.337c-1.627-.195-3.363.487-4.895 1.998-2.618 2.58-4.306 5.682-4.863 9.33-.115.752.002 1.613.265 2.331.363.988 1.362 1.224 2.163.555.748-.625 1.472-1.327 2.034-2.118 2.584-3.638 3.954-7.816 5.296-12.096zm-23.927-.036c-1.656-.183-2.952.383-4.091 1.311-2.459 2.003-4.113 4.583-5.007 7.6-.369 1.244-.478 2.585-.552 3.89-.045.805.43 1.51 1.227 1.798.817.295 1.514-.178 1.924-.779.756-1.109 1.515-2.263 1.992-3.505 1.33-3.468 2.403-7.038 4.507-10.315zM25.51 27.292c2.056-.33 3.846-.807 5.316-2.09.772-.674 1.235-1.526 1.291-2.568.042-.793-.361-1.269-1.102-1.034-.942.299-1.918.706-2.676 1.319-1.336 1.079-2.113 2.605-2.829 4.373z"/><path d="M16.98 10.274c-4.033.656-7.912 1.167-11.462 2.971-.354.18-.688.415-.993.671-.988.83-1.323 1.679-.657 2.765.807 1.317 1.893 2.466 2.904 3.65.217.254.625.345.944.512l-.33.382c-.168-.021-.353-.005-.501-.07-2.018-.889-3.921-1.968-5.396-3.645a7.108 7.108 0 0 1-1.173-1.861c-.546-1.273-.42-2.58.649-3.483 1.234-1.042 2.562-2.045 4-2.761 4.454-2.218 9.269-3.342 14.14-4.148 1.535-.254 2.55-.839 3.167-2.22A51.99 51.99 0 0 1 23.357.794c.436-.863 1.109-1.03 1.894-.464.77.555 1.231 1.293 1.196 2.272-.016.46-.079.919-.123 1.397.079.032.165.101.241.092 4.28-.521 8.573-.964 12.833-1.622 1.522-.235 2.972-.966 4.437-1.519.798-.301 1.175-.074 1.12.787-.01.152-.052.303-.088.453-.834 3.497-4.827 6.649-8.392 6.751-3.943.113-7.883.323-11.823.53-.329.017-.788.252-.94.523-3.077 5.514-6.21 10.999-9.136 16.593-2.436 4.658-3.477 9.663-2.836 14.946a.952.952 0 0 1 .008.092c.025.728.254 1.627-.614 1.946-.893.328-1.517-.374-1.975-1.038-1.235-1.791-1.533-3.88-1.705-5.975-.408-4.998.996-9.638 2.907-14.165 1.671-3.958 3.782-7.679 6.124-11.273.144-.223.269-.458.495-.846z"/></g></g></svg>
+                                    </div>
+                                    <section class="sticky-content-card__section">
+                                        <p class="sticky-content-card__desc">Teads brings AMP'd mobile video inventory to nearly 100 publishers</p>
+                                    </section>
+                                </div>
+                            </article><!-- .sticky-content__card -->
+                        </div><!-- .sticky-content__inner -->
+                        <div class="modal-overlay" role="button" tabindex="0" on="tap:AMP.setState({stickyState: ''})"></div>
+                    </div><!-- #stickyAdvertisers -->
+
+                    <div id="stickyEcommerce" class="sticky-content"
+                        [class]="stickyState == 'e-commerce' ? 'sticky-content -block' : 'sticky-content'">
+                        <div class="sticky-content__inner">
+                            <article class="sticky-content__card">
+                                <div class="sticky-content-card__inner">
+                                    <div class="sticky-content-card__header">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 174.673 41.038"><g fill="#FFF"><path d="M31.921 5.93c1.188-1.194 2.342-2.354 3.497-3.512.674-.676 1.341-1.36 2.029-2.021.538-.517 1.01-.533 1.542-.019.986.952 1.954 1.923 2.908 2.908.463.478.461 1.001-.009 1.497-.118.124-.241.244-.362.365l-22.33 22.33c-.973.973-1.26.973-2.222.014-2.428-2.419-4.858-4.835-7.284-7.255-.768-.767-.764-1.112.015-1.895.846-.851 1.693-1.7 2.545-2.544.704-.697 1.1-.701 1.792-.009 1.314 1.314 2.62 2.637 3.872 3.899l9.355-9.357a10.156 10.156 0 0 0-3.854-1.844c-1.278-.296-2.6-.535-3.906-.559-3.915-.072-7.833-.028-11.75-.025-1.244 0-1.522.275-1.522 1.501-.002 7.956-.002 15.912 0 23.868 0 1.197.281 1.479 1.463 1.479 3.941.002 7.883.019 11.824-.003 7.693-.044 14-6.619 13.531-14.087-.028-.439-.015-.899-.146-1.31-.302-.95.004-1.608.726-2.25 1.005-.893 1.914-1.892 2.87-2.84.798-.791 1.243-.693 1.637.351 2.747 7.293.637 15.802-5.22 21.089-3.916 3.535-8.526 5.28-13.782 5.319-3.892.029-7.785.019-11.677.001-3.748-.017-6.632-2.317-7.338-5.837-.095-.476-.116-.972-.117-1.459C.001 25.45-.006 17.176.007 8.902.014 4.86 3.02 1.742 7.062 1.686c4.405-.061 8.813-.045 13.218.015 4.117.056 7.81 1.427 11.119 3.859.138.101.279.197.522.37zM125.86 14.515c.027 5.122-3.896 8.996-9.028 9.122-5.82.142-9.89-3.864-9.891-8.998-.002-5.343 3.898-9.208 9.364-9.226 5.58-.019 9.527 3.74 9.555 9.102zm-9.469 4.706c2.666.01 4.61-1.924 4.656-4.63.045-2.641-2.021-4.777-4.625-4.783-2.635-.006-4.634 2.046-4.628 4.751.006 2.718 1.914 4.652 4.597 4.662zM50.386 14.555c0-2.177-.005-4.353.002-6.53.005-1.471.907-2.398 2.369-2.382 2.345.026 4.702-.048 7.03.168 3.922.364 6.88 3.617 7.138 7.528.114 1.731.032 3.426-.659 5.032-1.194 2.775-3.395 4.392-6.313 4.75-2.436.299-4.923.25-7.386.227-1.424-.013-2.177-.964-2.18-2.41-.004-2.128-.001-4.256-.001-6.383zm4.642 4.744c.799 0 1.527.01 2.255-.002 2.447-.041 4.774-1.064 4.963-4.421.099-1.75-.237-3.403-1.89-4.402-1.654-.999-3.495-.816-5.328-.773v9.598zM171.921 16.655c.775 1.12 1.541 2.22 2.3 3.326.57.831.585 1.704.081 2.553-.498.838-1.292 1.162-2.249 1.076-.767-.068-1.302-.506-1.713-1.126-.932-1.407-1.885-2.801-2.788-4.226-.306-.482-.631-.695-1.226-.681-1.793.041-1.793.013-1.795 1.826 0 .661.022 1.323-.012 1.982-.064 1.241-.946 2.156-2.109 2.23-1.305.083-2.256-.672-2.479-1.974a3.908 3.908 0 0 1-.064-.656c-.004-4.234-.01-8.468.001-12.701.004-1.387.564-2.22 1.663-2.547.207-.062.431-.094.647-.094 2.178-.006 4.357-.034 6.534.004 3.067.053 5.192 1.679 5.783 4.512.509 2.44-.133 4.549-2.155 6.138-.131.102-.255.217-.419.358zm-7.377-3.038c1.416-.065 2.706-.075 3.984-.2.953-.093 1.454-.792 1.452-1.795-.002-1.042-.522-1.732-1.52-1.808-1.141-.087-2.292-.069-3.438-.051-.161.003-.452.257-.457.402-.039 1.095-.021 2.191-.021 3.452zM148.421 12.384h5.679c1.542 0 2.428.77 2.42 2.1-.008 1.304-.926 2.079-2.469 2.079h-5.564v2.588h.787c2.104 0 4.208-.004 6.312.001 1.27.003 2.19.839 2.249 2.026.058 1.169-.812 2.171-2.08 2.189-3.229.047-6.459.051-9.687-.001-1.39-.022-2.13-.822-2.273-2.194a6.6 6.6 0 0 1-.04-.658c-.002-4.012-.007-8.025.001-12.037.003-1.571.485-2.378 1.606-2.726.251-.078.526-.111.79-.112 3.156-.007 6.312-.008 9.468-.003 1.252.002 2.182.873 2.216 2.055a2.07 2.07 0 0 1-2.04 2.151c-2.126.066-4.256.032-6.384.039-.989.004-.99.003-.991 1.007v1.496zM82.644 23.791c-1.842-.21-3.6-.474-5.199-1.359-1.199-.664-1.622-1.774-1.186-2.9.422-1.088 1.57-1.664 2.688-1.3.483.158.944.399 1.396.637.914.482 1.877.687 2.904.576.701-.076 1.318-.311 1.46-1.094.136-.753-.404-1.119-.985-1.347-.953-.373-1.941-.657-2.9-1.016-.707-.264-1.426-.528-2.081-.897-2.163-1.217-3.106-3.706-2.33-6.058.574-1.739 1.888-2.713 3.561-3.199 2.262-.657 4.545-.584 6.789.121a5.058 5.058 0 0 1 1.477.784c.821.615 1.06 1.589.705 2.491-.353.896-1.212 1.488-2.207 1.354-.663-.089-1.31-.358-1.943-.601-.954-.365-1.92-.646-2.923-.307-.324.11-.751.421-.8.698-.048.273.249.761.525.906.662.348 1.398.56 2.11.809.921.322 1.881.552 2.765.953 2.205 1 3.358 2.722 3.195 5.183-.154 2.335-1.411 3.946-3.559 4.76-1.097.418-2.304.547-3.462.806zM134.187 16.89l2.426-6.636c.394-1.078.773-2.161 1.181-3.233.516-1.354 1.902-1.963 3.233-1.444 1.206.47 1.739 1.711 1.223 3.037a1941.941 1941.941 0 0 1-5.102 12.947c-.532 1.337-1.534 2.048-2.996 2.055-1.467.007-2.487-.709-3.004-2.043a1382.81 1382.81 0 0 1-4.98-13.072c-.47-1.25.128-2.493 1.321-2.934 1.279-.473 2.593.067 3.07 1.349 1.132 3.042 2.219 6.1 3.325 9.152.073.203.15.407.303.822zM100.325 23.615c-4.18.001-7.445-2.033-8.818-5.491-2.426-6.11 1.917-12.571 8.546-12.71 1.477-.031 2.93.115 4.32.656 1.209.47 1.857 1.394 1.727 2.434-.186 1.478-1.545 2.256-3.069 1.801-.859-.256-1.736-.581-2.616-.616-2.68-.108-4.737 2.01-4.765 4.773-.029 2.823 1.914 4.878 4.669 4.812.881-.021 1.749-.375 2.633-.51.658-.1 1.366-.237 1.992-.094.814.186 1.262.863 1.368 1.725.116.939-.302 1.626-1.047 2.107-1.251.809-2.693.973-4.133 1.109-.267.025-.538.003-.807.004zM69.221 14.446c0-2.179-.004-4.357.001-6.536.004-1.46.889-2.442 2.228-2.49 1.324-.047 2.31.813 2.384 2.232.081 1.562.049 3.131.052 4.697a956.35 956.35 0 0 1-.007 8.298c-.003.507-.036 1.04-.197 1.513-.36 1.056-1.499 1.645-2.597 1.433-1.086-.21-1.852-1.138-1.86-2.318-.014-2.276-.003-4.553-.004-6.829zM172.202 33.356c-.274.455-.535.918-.824 1.363-.64.984-1.674.983-2.303.002-.285-.445-.551-.903-.948-1.326 0 .843.006 1.685-.002 2.528-.008.811-.449 1.326-1.133 1.345-.687.019-1.186-.484-1.193-1.287-.017-2.03-.009-4.061-.001-6.091.003-.714.32-1.226 1.046-1.403.711-.173 1.251.104 1.613.712.584.982 1.146 1.976 1.758 3.035.599-1.028 1.16-1.971 1.702-2.926.365-.642.877-.986 1.626-.832.728.15 1.105.638 1.114 1.507.021 1.981.02 3.963 0 5.945-.008.858-.507 1.366-1.223 1.337-.698-.029-1.096-.516-1.102-1.363-.006-.831-.001-1.662-.001-2.493a3.505 3.505 0 0 0-.129-.053zM160.645 32.89c-.007 2.548-1.939 4.397-4.579 4.382-2.618-.015-4.584-1.918-4.575-4.427.009-2.548 2-4.435 4.656-4.416 2.631.018 4.505 1.877 4.498 4.461zm-6.62-.027c.001 1.196.877 2.11 2.048 2.135 1.145.025 2.055-.897 2.073-2.101.018-1.256-.858-2.162-2.076-2.145-1.192.017-2.046.898-2.045 2.111zM81.044 33.917c.318.463.646.914.946 1.384.421.66.309 1.356-.259 1.75-.571.395-1.253.247-1.713-.401-.367-.517-.741-1.036-1.044-1.592-.326-.598-.758-.783-1.49-.517 0 .416.006.872-.001 1.328-.013.835-.472 1.372-1.184 1.395-.69.023-1.214-.541-1.218-1.353-.009-2.004-.01-4.009 0-6.013.005-.914.438-1.332 1.359-1.341a188.73 188.73 0 0 1 2.713-.001c1.458.007 2.44.591 2.887 1.711.489 1.226.184 2.48-.841 3.461-.051.048-.09.108-.155.189zm-3.525-1.675c.549 0 1.031.005 1.512-.001.488-.007.772-.229.781-.75.01-.523-.297-.762-.755-.798-.499-.04-1.004-.009-1.538-.009v1.558zM114.358 33.881c.321.47.612.888.896 1.311.489.728.412 1.466-.192 1.868-.619.412-1.271.217-1.792-.545-.344-.504-.714-.996-1.007-1.528-.324-.588-.767-.674-1.432-.453 0 .466.014.948-.003 1.43-.028.772-.523 1.292-1.21 1.299-.698.007-1.183-.5-1.188-1.295-.011-2.052-.004-4.105-.003-6.157 0-.679.321-1.193.997-1.226 1.242-.06 2.496-.078 3.733.033 1.12.1 1.976.717 2.292 1.865.31 1.128.169 2.179-.708 3.043-.105.102-.215.199-.383.355zm-3.493-1.639c.545 0 1.007.002 1.468 0 .482-.002.794-.186.812-.725.019-.57-.31-.799-.808-.83-.48-.03-.963-.006-1.473-.006l.001 1.561zM123.371 33.909c-.192.931-.159.976.664.981.783.005 1.567-.017 2.35.009.811.026 1.341.533 1.302 1.191-.038.64-.543 1.036-1.349 1.039-1.371.005-2.742.007-4.113 0-.973-.005-1.376-.396-1.384-1.385a400.758 400.758 0 0 1 0-5.802c.007-.989.412-1.382 1.382-1.386 1.395-.006 2.791-.007 4.186.001.745.004 1.239.415 1.277 1.034.036.593-.453 1.139-1.16 1.179-.879.05-1.763-.005-2.642.043-.213.012-.545.219-.593.397-.119.447.243.497.59.497.661 0 1.323-.014 1.983.014.763.033 1.187.454 1.18 1.117-.008.665-.442 1.057-1.214 1.068-.827.012-1.653.003-2.459.003zM92.71 33.938h-2.808c0 .428.007.831-.002 1.234-.008.366-.001.737-.056 1.097-.1.66-.56.991-1.18.981-.626-.01-1.118-.374-1.129-1.031-.036-2.25-.037-4.502.001-6.752.011-.653.503-.988 1.137-1.026.607-.037 1.115.414 1.186 1.064.055.509.052 1.027.038 1.539-.012.452.132.689.626.668a19.329 19.329 0 0 1 1.615 0c.457.019.598-.185.574-.617-.027-.488-.028-.98.005-1.468.049-.72.583-1.215 1.239-1.192.658.023 1.148.536 1.152 1.264.011 2.105.012 4.211 0 6.316-.004.734-.503 1.241-1.166 1.25-.657.009-1.193-.491-1.225-1.208-.032-.681-.007-1.364-.007-2.119zM65.339 35.543c-.134.352-.245.7-.397 1.028a1.181 1.181 0 0 1-1.472.628c-.625-.208-.957-.726-.728-1.387a239.826 239.826 0 0 1 2.374-6.528c.228-.6.771-.874 1.413-.865.64.009 1.171.293 1.396.896a243.156 243.156 0 0 1 2.324 6.473c.2.585-.009 1.117-.652 1.369-.599.235-1.125.115-1.487-.416-.252-.369-.348-1.067-.637-1.143-.663-.174-1.401-.055-2.134-.055zm1.632-2.07l-.489-1.425-.463 1.377c.315.017.55.028.952.048zM139.708 32.836c-.111-3.026 3.309-5.435 6.674-3.989.572.246.86.727.666 1.376-.183.613-.698.892-1.391.751-.333-.068-.648-.233-.982-.28-.896-.127-1.643.15-2.155.93a2.232 2.232 0 0 0 .057 2.546c.556.75 1.329.958 2.213.796.31-.057.605-.189.909-.28.631-.189 1.125.013 1.405.595.292.607.076 1.155-.485 1.435-1.534.766-3.112.77-4.651.007-1.439-.714-2.15-1.933-2.258-3.519-.008-.123-.001-.245-.002-.368zM50.658 32.511c-.151-2.595 3.176-5.103 6.641-3.687.646.264.9.848.706 1.423-.201.594-.72.869-1.41.727-.214-.044-.418-.131-.627-.196-.918-.285-1.835-.021-2.37.682-.606.795-.642 1.863-.088 2.669.499.727 1.411 1.049 2.336.815.26-.066.511-.165.768-.241.654-.191 1.23.045 1.469.599.241.558.039 1.197-.58 1.475-1.584.712-3.194.707-4.723-.132-1.458-.798-2.1-2.117-2.122-4.134zM100.565 32.852c0-1.001-.015-2.002.004-3.002.017-.897.501-1.432 1.233-1.415.702.016 1.159.532 1.166 1.404.016 2.001.017 4.003 0 6.005-.007.892-.51 1.441-1.23 1.422-.691-.018-1.151-.55-1.168-1.411-.019-1.001-.004-2.002-.005-3.003zM133.692 34.716c.746-.014 1.329.538 1.326 1.259-.003.67-.582 1.266-1.254 1.29-.706.026-1.304-.566-1.305-1.291-.001-.727.506-1.244 1.233-1.258z"/></g></svg>
+                                    </div>
+                                    <section class="sticky-content-card__section">
+                                        <p class="sticky-content-card__desc">DiscoverCarHire.com drives conversions with faster mobile page load times via AMP</p>
+                                    </section>
+                                </div>
+                            </article><!-- .sticky-content__card -->
+                            <article class="sticky-content__card">
+                                <div class="sticky-content-card__inner">
+                                    <div class="sticky-content-card__header">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 175 29.446"><g fill="#FFF"><path d="M120.09 24.844c.227 1.631.207 1.658-1.241 1.658L1.385 26.501c-.291 0-.647.088-.856-.046-.238-.153-.474-.51-.474-.778 0-.271.241-.71.465-.775.437-.128.935-.053 1.408-.053l116.918-.004 1.244-.001zM171.25 11.027V2.53c0-.437-.006-.873.003-1.31.003-.18.016-.511.06-.517 1.034-.148 2.072-.318 3.111-.328.187-.002.542.68.546 1.05.043 3.493.026 6.986.026 10.48v6.05c-2.438.6-3.116.341-4.466-1.455-2.316-3.081-4.664-6.138-7.003-9.201-.102-.134-.251-.233-.619-.569v11.343h-3.659c-.019-.32-.057-.668-.057-1.015-.004-5.204.018-10.408-.023-15.611-.007-.913.3-1.071 1.164-1.191 1.87-.259 2.917.623 3.916 2.039 1.886 2.674 3.919 5.243 5.897 7.851.257.338.551.648.827.971.094-.029.186-.059.277-.09zM36.021 18.15c-.051-.249-.104-.386-.104-.523.017-5.381.053-10.763.045-16.144C35.961.636 36.253.4 37.088.31c1.539-.166 2.631.206 3.573 1.556 1.827 2.619 3.84 5.107 5.782 7.646.427.558.877 1.098 1.316 1.647l.284-.113V9.901c.002-2.873.022-5.746-.008-8.618-.007-.706.23-.933.931-.97 2.845-.152 2.844-.174 2.845 2.601 0 4.618-.03 9.237.022 13.854.012 1.067-.232 1.417-1.377 1.439-1.383.027-2.236-.405-3.053-1.544-2.222-3.096-4.599-6.079-6.919-9.104-.167-.218-.367-.411-.759-.846-.057.633-.118.999-.119 1.364-.011 2.982-.032 5.964-.002 8.945.008.809-.173 1.227-1.091 1.144-.68.046-1.652-.016-2.492-.016zM15.265 18.131c-1.498 0-2.757.039-4.009-.032-.265-.015-.56-.395-.752-.669-1.022-1.457-2.004-2.941-3.025-4.399-.453-.646-2.778-1.087-3.38-.614-.2.158-.276.566-.283.862a92.178 92.178 0 0 0-.001 4.039c.014.607-.198.808-.814.839-2.944.15-2.959.168-2.97-2.707C.014 10.793.035 6.135 0 1.477-.006.65.191.314 1.094.332 3.858.388 6.625.287 9.387.376c2.513.081 4.729 1.704 5.191 3.94.633 3.065.116 4.908-1.992 6.56-.448.351-.985.586-1.613.951l4.292 6.304zM3.811 3.731c0 1.642-.027 3.166.03 4.686.008.227.412.623.637.626 1.449.019 2.909.036 4.348-.114 1.486-.155 2.181-1.153 2.142-2.758-.034-1.421-.788-2.322-2.27-2.417-1.583-.101-3.178-.023-4.887-.023zM65.013 18.415c-5.517.011-9.497-3.885-9.49-9.262.006-5.221 4.102-9.236 9.738-9.152 5.217.078 9.183 4.148 9.246 8.988.069 5.359-4.187 9.47-9.494 9.426zm-.067-3.414c3.627.004 5.604-2.904 5.681-5.569.097-3.359-2.563-6.069-5.698-6.05-3.068.018-5.567 2.67-5.581 5.923-.012 3.032 2.592 5.682 5.598 5.696zM32.158 14.853v3.194c-.243.035-.482.098-.722.099-3.891.007-7.783-.008-11.674.02-.724.005-1.043-.165-1.04-.962.016-5.236.006-10.472-.033-15.707-.007-.882.269-1.22 1.181-1.208 3.745.047 7.491.045 11.236.039.624-.001.923.158.91.86-.053 2.88.374 2.328-2.325 2.353-2.036.019-4.074.033-6.109-.007-.856-.017-1.258.216-1.245 1.156.046 3.307-.314 2.794 2.739 2.842 1.563.024 3.128.015 4.691-.017.621-.013.969.175.985.84.013.553.106 1.107.072 1.72-.033.603-.633.682-.961.682h-4.996c-2.521-.001-2.521-.001-2.499 2.552.013 1.472.013 1.475 1.492 1.477 2.364.002 4.728-.003 7.092.003.388.001.776.041 1.206.064zM111.111 18.151c-1.238 0-2.318.034-3.393-.027-.236-.013-.539-.32-.663-.566-.391-.778-.778-1.569-1.039-2.396-.276-.873-.765-1.184-1.674-1.155-1.889.061-3.783-.025-5.67.066-.414.02-1.113.426-1.404 1.315-1.239 3.085-1.308 3.124-4.822 2.665.41-1.026.786-2.032 1.21-3.018 1.518-3.534 3.056-7.06 4.575-10.594.501-1.166.917-2.372 1.483-3.504.178-.355.708-.725 1.099-.75 2.656-.168 2.65-.135 3.672 2.291 2.171 5.151 4.352 10.296 6.626 15.673zm-6.878-7.426l-2.351-5.787-.376.014-2.339 5.773h5.066zM93.316.309c-.918 2.298-1.713 4.276-2.5 6.256-1.38 3.472-2.792 6.931-4.114 10.425-.407 1.076-.994 1.54-2.121 1.281a1.459 1.459 0 0 0-.542-.029c-.889.143-1.307-.216-1.648-1.082-2.111-5.364-4.302-10.697-6.463-16.042-.079-.195-.129-.401-.243-.762 1.277 0 2.457-.049 3.627.038.255.019.57.489.693.814 1.366 3.593 2.697 7.199 4.045 10.799.084.225.23.428.507.933.686-1.767 1.29-3.288 1.867-4.82.883-2.341 1.717-4.702 2.651-7.023.141-.351.691-.708 1.087-.753.95-.109 1.924-.035 3.154-.035zM117.978.335c2.072 0 4.144.019 6.215-.009.828-.011 1.177.279 1.139 1.147-.107 2.476.445 2.246-2.267 2.265-.727.005-1.458.049-2.18-.01-.87-.07-1.13.278-1.12 1.127.04 3.598.021 7.197.027 10.796.004 2.531.006 2.484-2.532 2.525-.941.015-1.155-.293-1.149-1.177.028-4.071-.027-8.142-.009-12.212.004-.801-.236-1.106-1.058-1.067-1.197.057-2.399-.006-3.598.024-.566.014-.794-.204-.778-.759.093-3.297-.369-2.602 2.512-2.682 1.599-.046 4.798.018 4.798.032zM136.662 10.19c-1.007-3.794 2.277-8.821 6.402-9.8 5.942-1.41 11.109 1.578 12.222 7.172-1.529-.661-2.985-1.331-4.472-1.921-1.009-.401-2.039-.834-3.099-1.002-2.598-.412-5.564 1.13-6.892 3.43-.46.796-1.076 1.284-2.057 1.404-.72.086-1.404.466-2.104.717zM132.572 9.145c0 2.617-.015 5.235.009 7.852.007.798-.208 1.189-1.112 1.161-3.145-.098-2.68.57-2.685-2.666-.007-4.545-.006-9.09-.012-13.635-.002-1.5-.007-1.5 1.482-1.507 2.751-.012 2.25-.132 2.264 2.251.013 2.182.003 4.363.003 6.545l.051-.001zM148.566 17.982c-3.958 1.373-8.896-.568-10.712-3.971 1.458.375 2.313-.35 3.039-1.462a3.744 3.744 0 0 1 1.338-1.225c.304-.16 1.008-.082 1.205.157 1.713 2.083 3.353 4.227 5.13 6.501z"/><path d="M155.367 8.445c.27 3.026-.799 5.566-3.334 7.922-1.005-2.049-1.924-3.924-2.846-5.798-.224-.455-.542-.885-.662-1.365-.131-.526-.287-1.223-.049-1.609.192-.311.976-.423 1.459-.356 1.107.155 2.19.476 3.283.726.654.151 1.31.294 2.149.48zM128.732 29.243c0-2.214.004-4.319-.003-6.424-.002-.608.29-.832.88-.813.872.028 1.777-.131 2.608.056.751.169 1.641.529 2.072 1.104.573.763.134 1.663-.582 2.372.21.168.436.325.574.48.319.357.62.739.482 1.969-.059.527-.902 1.138-1.449 1.201-1.46.164-2.952.055-4.582.055zm2.265-1.122c.454.091 1.174.164 1.774-.055.533-.194.75-.443.744-.83-.171-.644-.607-.862-.908-.971-.337-.123-.969-.141-1.365-.136-.737.027-1.174.491-1.04 1.489.159.362.761.577.795.503zm.366-3.079c.06.091 1.627-.115 1.659-.833.022-1.057-1.086-.972-1.806-1.029-.654-.052-1.096.074-1.093 1.011.003.984.611.882 1.24.851zM154.287 24.635c0 1.484-.009 2.641.004 3.797.006.526-.066 1.043-.733.856-.278-.078-.624-.543-.634-.842-.058-1.813-.044-3.629-.013-5.444-.019-.287.135-.773.317-.903.206-.146 1.002.055 1.248.332.912 1.03 1.711 2.16 2.562 3.245.206.262.704.833.928 1.081.103-.034.033-2.573.061-3.64.012-.459-.195-1.098.645-1.105.834-.007.658.614.662 1.086.015 1.706.03 3.413-.013 5.118-.009.367-.072 1.108-.395 1.091-.36.016-.979-.283-1.258-.606-.947-1.097-1.795-2.279-2.689-3.422-.121-.157-.29-.275-.692-.644zM161.424 29.333v-2.144-2.511c0-2.756 0-2.756 2.812-2.664 2.372.078 3.866 1.504 3.865 3.69-.001 2.217-1.467 3.59-3.886 3.627-.868.013-1.736.002-2.791.002zm1.401-3.591h.009c0 .542-.04 1.089.018 1.625.026.243.192.583.39.677 1.049.498 2.736-.235 3.208-1.344.526-1.236.034-2.594-1.132-3.126-1.63-.743-2.488-.221-2.492 1.517l-.001.651zM141.082 26.847l1.519 2.368c-.983.261-1.697.148-2.141-.77-.125-.259-.336-.476-.474-.73-.334-.62-.879-1.006-1.502-.693-.303.152-.32.746-.472 1.181-.082.682.027 1.146-.738 1.121-.736.107-.662-.489-.668-.742a91.018 91.018 0 0 1 .024-5.771c.01-.273.465-.727.747-.755a15.18 15.18 0 0 1 2.828-.007c1.108.099 2.031.536 2.347 1.76.293 1.136-.119 1.98-1.013 2.652-.142.105-.271.228-.457.386zm-1.653-3.485c-1.407-.006-1.414.032-1.467 1.103-.045.907.236 1.302 1.224 1.251 1.415-.073 1.917-.311 1.898-1.204-.029-1.255-.978-1.114-1.655-1.15zM151.359 29.201c-.971.287-1.552.158-1.861-.823-.103-.326-.636-.629-1.026-.723-.516-.124-1.087-.003-1.63-.043-.689-.051-1.121.216-1.28.891-.202.859-.781.927-1.68.715.176-.46.323-.882.497-1.293.748-1.775 1.487-3.555 2.264-5.317.343-.778 1.471-.938 1.787-.238 1.013 2.244 1.947 4.524 2.929 6.831zm-2.67-2.856l-.978-2.351-.319.01-.893 2.341h2.19zM169.193 28.299c.074-.37.374-.615.737-.707.958.246 1.711.538 2.48.593.354.025.925-.283 1.114-.645.084-.402-.474-.782-.821-.97-.533-.288-1.167-.384-1.751-.583-.877-.298-1.435-.905-1.435-1.843 0-.959.527-1.632 1.42-2.001 1.141-.472 2.653-.173 3.641.73-.217.7-.551 1.028-1.343.616a2.608 2.608 0 0 0-1.359-.259c-.283.023-.751.371-.757.583-.008.305.259.757.535.899.539.278 1.177.355 1.754.569 1.174.436 1.668 1.157 1.558 2.196-.112 1.063-.718 1.682-1.924 1.894-1.355.236-2.582-.066-3.849-1.072z"/></g></svg>
+                                    </div>
+                                    <section class="sticky-content-card__section">
+                                        <p class="sticky-content-card__desc">Leading French organic retailer doubles mobile conversions with AMP</p>
+                                    </section>
+                                </div>
+                            </article><!-- .sticky-content__card -->
+                            <article class="sticky-content__card">
+                                <div class="sticky-content-card__inner">
+                                    <div class="sticky-content-card__header">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 175.198 30.189"><g fill="#FFF"><path d="M175.198 23.402c-1.113 3.566-3.847 5.304-7.224 6.111-3.012.72-5.828.013-8.285-1.904-.415-.324-.653-.317-1.058-.02-1.835 1.344-3.876 2.199-6.174 2.215-2.13.015-3.932-.818-5.375-2.399-.111-.121-.215-.249-.322-.373l-.303-.348c-3.603 3.191-7.369 4.368-11.57.984.011-.004-.055 0-.088.035-1.572 1.684-3.584 2.025-5.757 1.926-1.564-.071-2.923-.6-4.006-1.736-1.176-1.235-1.323-2.652-.789-4.252.593-1.779 1.068-3.598 1.575-5.405.296-1.057.062-2.002-.766-2.74-.702-.626-1.54-.734-2.406-.407-.766.289-1.254.894-1.485 1.655-.493 1.62-.946 3.253-1.399 4.885-.638 2.3-1.259 4.605-1.891 6.906-.192.698-.442.888-1.165.893-.821.006-1.643.003-2.464.001-1.065-.003-1.369-.399-1.085-1.45.539-1.989 1.092-3.975 1.639-5.962.363-1.319.74-2.634 1.083-3.958.305-1.174-.189-2.365-1.154-2.877-.917-.487-2.189-.305-2.844.522a5.004 5.004 0 0 0-.87 1.678c-1.055 3.679-2.06 7.372-3.082 11.06-.234.847-.415.986-1.307.988-.803.002-1.606.005-2.409-.001-.922-.006-1.257-.427-1.021-1.325.278-1.058.586-2.108.882-3.162.591-2.107 1.184-4.214 1.772-6.322.051-.182.075-.371.111-.555-.764.297-1.451.626-2.173.83-1.05.296-1.013.266-1.225 1.372-.836 4.358-3.202 7.544-7.446 9.029-3.099 1.084-6.046.618-8.539-1.694-.318-.295-.486-.22-.76.035-1.419 1.32-3.074 2.023-5.047 1.995-2.811-.041-4.903-1.757-5.427-4.52a6.6 6.6 0 0 1 .157-3.137c.38-1.294.735-2.596 1.097-3.895.048-.171.072-.349.086-.418l-3.011-1.645c-.049.127-.152.346-.217.576-.626 2.23-1.15 4.494-1.89 6.685-1.155 3.419-3.496 5.703-7.117 6.284-2.747.441-5.217-.305-7.006-2.636-.066-.086-.136-.17-.234-.291-.161.121-.294.206-.41.309-1.944 1.727-4.242 2.647-6.792 3.004-2.184.305-4.375.445-6.478-.346-1.096-.412-2.139-1.002-3.131-1.631-.457-.29-.712-.3-1.134-.016-1.32.887-2.706 1.664-4.273 2.029a7.252 7.252 0 0 1-4.652-.428c-1.708-.75-2.487-2.378-2.004-4.19.628-2.357 1.299-4.703 1.961-7.052.206-.73.239-1.447-.14-2.123-.439-.783-1.092-1.267-2.028-1.257-1.029.01-1.837.487-2.223 1.41-.426 1.019-.704 2.103-1.003 3.171-.829 2.963-1.632 5.933-2.451 8.899-.237.858-.455 1.014-1.355 1.016-.858.002-1.716.012-2.573-.006-.775-.016-1.119-.484-.912-1.234.897-3.245 1.798-6.49 2.706-9.732.201-.717.321-1.424-.027-2.127-.389-.785-.978-1.329-1.882-1.391-1.003-.068-1.871.273-2.344 1.191-.32.622-.496 1.325-.689 2.005-.96 3.397-1.904 6.8-2.854 10.2-.273.976-.428 1.092-1.456 1.094-.748.001-1.497.002-2.245 0-1.11-.003-1.411-.396-1.115-1.46 1.609-5.785 3.221-11.569 4.828-17.355.485-1.748-.416-3.823-1.967-4.557-1.721-.815-3.715-.315-4.775 1.196-1.48 2.11-.499 4.656 2.01 5.221 1.573.354 1.666.508 1.233 2.054-.22.788-.442 1.576-.665 2.364-.154.545-.498.836-1.083.785-2.802-.246-4.953-1.533-6.283-4.04C-1.153 9.574.285 4.293 4.177 1.843 8.03-.583 14.808.274 17.012 6.634c.481 1.387.619 2.802.356 4.251-.009.047.023.101.053.218.243-.12.461-.237.687-.338 2.368-1.06 4.631-.995 6.726.663.272.215.437.177.707-.005 1.704-1.143 3.561-1.671 5.601-1.184 3.018.72 4.799 3.804 3.993 6.81a373.338 373.338 0 0 0-1.501 5.821c-.328 1.305.407 2.118 1.715 1.824.659-.148 1.274-.501 1.902-.777.341-.15.389-.405.289-.764-.864-3.091-.327-5.967 1.454-8.6 1.705-2.521 4.071-4.028 7.152-4.118 1.902-.056 3.698.467 5.099 1.868 1.554 1.553 1.745 3.409 1.048 5.409-.783 2.248-2.312 3.913-4.243 5.217-.886.599-1.872 1.051-2.814 1.566-.186.102-.38.19-.584.434.328.099.65.253.984.29 3.828.421 7.228-.373 9.71-3.577a6.077 6.077 0 0 0 .983-1.873c.799-2.556 1.527-5.134 2.279-7.704.034-.117.048-.24.083-.423-.248-.024-.457-.062-.667-.063-1.022-.006-2.044.003-3.066-.006-.783-.007-1.149-.433-.971-1.201.206-.887.473-1.759.725-2.634.134-.465.461-.666.945-.663 1.259.008 2.519-.012 3.778.009.434.007.658-.123.762-.57.223-.958.493-1.905.757-2.853.18-.646.422-.822 1.097-.826.785-.005 1.57-.008 2.354.001.725.008 1.075.404.932 1.136-.154.786-.387 1.557-.584 2.335-.052.208-.096.418-.161.699.242.028.431.066.62.068.876.007 1.752-.003 2.628.006.787.01 1.16.378 1.003 1.126-.201.961-.493 1.906-.782 2.846-.121.394-.466.528-.871.526-1.095-.005-2.191.017-3.285-.008-.458-.01-.68.137-.807.598-.776 2.832-1.586 5.655-2.376 8.483-.285 1.021-.108 1.999.401 2.904.634 1.127 1.909 1.627 3.149 1.221 1.765-.578 2.886-1.827 3.395-3.579 1.078-3.711 2.104-7.436 3.153-11.155.25-.885.592-1.077 1.489-.841.546.143 1.091.285 1.634.437.922.259 1.181.692 1.134 1.644-.012.244.179.624.386.732.803.42 1.645.766 2.482 1.118.569.239 1.175.398 1.727.669 1.501.737 2.022 1.919 1.575 3.528-.439 1.581-.901 3.156-1.361 4.731-.211.723-.232 1.44.048 2.145.4 1.006 1.217 1.397 2.245 1.073.786-.248 1.361-.768 1.759-1.474a.995.995 0 0 0 .116-.619c-.635-3.397.414-6.35 2.435-9.009 1.537-2.022 3.535-3.382 6.065-3.921 3.697-.788 7.443.933 9.207 4.312.253.484.512.578 1.025.481 2.524-.478 4.335-1.814 5.275-4.245.187-.482.554-.711 1.056-.721.584-.012 1.168-.003 1.752-.003 1.273 0 1.273 0 1.693 1.174.21-.106.417-.208.621-.315 2.479-1.304 4.862-1.201 7.115.516.289.22.451.145.709-.022 1.907-1.234 3.944-1.775 6.18-1.035 2.528.837 4.147 3.865 3.432 6.428-.578 2.07-1.183 4.133-1.778 6.198-.311 1.08-.184 1.666.466 2.098.675.448 1.784.399 2.43-.268.48-.495.922-1.116 1.135-1.762.641-1.936 1.167-3.911 1.727-5.874.595-2.085 1.172-4.174 1.767-6.259.175-.615.511-.873 1.158-.873.747 0 1.494.023 2.24.062.832.043 1.17.51.947 1.316-.469 1.703-.967 3.398-1.433 5.102-.48 1.756-.956 3.513-1.387 5.281-.11.45-.096.948-.047 1.414.132 1.241.984 2.027 2.246 2.139 1.534.136 2.818-.425 3.95-1.414.226-.198.321-.386.139-.702-.854-1.486-1.198-3.108-1.284-4.81-.14-2.759.457-5.388 1.322-7.974.889-2.661 2.032-5.199 3.76-7.435.797-1.031 1.698-1.96 2.867-2.58 1.856-.984 3.491-.454 4.402 1.439.72 1.497.857 3.11.907 4.74.195 6.391-2.141 11.809-6.342 16.511-.061.068-.124.134-.183.204-.023.027-.036.063-.075.135.526.971 1.322 1.628 2.446 1.769 1.712.215 3.169-.499 4.546-1.404.091-.06.114-.316.081-.461-.766-3.321-.389-6.456 1.6-9.284 1.769-2.514 4.15-3.957 7.313-3.83 1.367.055 2.66.419 3.823 1.168 2.003 1.291 2.66 3.123 2.012 5.546-.692 2.587-2.397 4.38-4.575 5.776-.826.529-1.726.942-2.593 1.407-.154.083-.311.161-.466.242l-.016.188c.49.112.976.285 1.472.325 2.705.216 5.159-.485 7.353-2.088.264-.193.541-.373.825-.536.944-.543 1.252-.469 1.822.414.002.219.002.438.002.657zm-77.716-4.786c-.007-.142-.008-.416-.034-.687-.141-1.483-1.068-2.56-2.449-2.853-1.062-.226-2.024.023-2.886.655-1.485 1.087-2.435 2.544-2.869 4.324-.265 1.088-.209 2.169.263 3.207.629 1.384 1.828 1.978 3.305 1.638 2.621-.604 4.633-3.256 4.67-6.284zm50.305 1.295c.194-.145.282-.183.329-.251.48-.686 1.015-1.343 1.417-2.073 1.546-2.807 2.469-5.831 2.895-8.995.142-1.053.081-2.139.033-3.206-.013-.289-.317-.565-.487-.847-.27.192-.625.327-.793.585-.526.806-1.037 1.632-1.456 2.498-1.587 3.282-2.435 6.738-2.256 10.404.029.6.197 1.192.318 1.885zm-106.404.476c.027.193.071.48.109.768.056.425.256.514.632.305 1.063-.591 2.16-1.126 3.191-1.767.977-.608 1.857-1.357 2.387-2.42.537-1.077.123-1.996-1.03-2.333-1.621-.474-3.394.281-4.335 1.856-.643 1.075-.88 2.261-.954 3.591zm119.375.92c.146-.034.239-.041.32-.076 1.541-.673 3.052-1.42 4.282-2.581a7.136 7.136 0 0 0 1.443-1.944c.397-.785.026-1.579-.813-1.839-.589-.182-1.262-.273-1.868-.19-1.66.23-2.599 1.372-3.149 2.85-.448 1.207-.681 2.45-.215 3.78z"/><path d="M139.972 7.498c-1.308.075-2.674-.955-2.714-2.69-.038-1.64 1.398-2.965 3.089-2.958 1.517.006 2.627 1.144 2.623 2.688-.005 1.661-1.323 2.963-2.998 2.96z"/></g></svg>
+                                    </div>
+                                    <section class="sticky-content-card__section">
+                                        <p class="sticky-content-card__desc">Metromile lowers costs, reaches more potential customers with AMP</p>
+                                    </section>
+                                </div>
+                            </article><!-- .sticky-content__card -->
+                        </div><!-- .sticky-content__inner -->
+                        <div class="modal-overlay" role="button" tabindex="0" on="tap:AMP.setState({stickyState: ''})"></div>
+                    </div><!-- #stickyEcommerce -->
+
+                    <div id="stickyPublishers" class="sticky-content"
+                        [class]="stickyState == 'publishers' ? 'sticky-content -block' : 'sticky-content'">
+                        <div class="sticky-content__inner">
+                                <article class="sticky-content__card">
+                                    <div class="sticky-content-card__inner">
+                                        <div class="sticky-content-card__header">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 209.574 25.575"><g fill="#FFF"><path d="M22.995 12.759c0 3.824-.017 7.649.015 11.473.006.731-.217.943-.939.931a189.09 189.09 0 0 0-7.263.004c-.804.018-.965-.28-.955-1.004.036-2.476-.008-4.952.026-7.428.01-.751-.232-1.039-.997-.997-.96.053-1.926.04-2.888.004-.649-.024-.871.234-.865.87.022 2.503-.018 5.008.023 7.511.013.765-.167 1.062-.998 1.044-2.447-.054-4.897-.035-7.345-.008-.613.007-.81-.192-.809-.806C.016 16.622.016 8.891 0 1.16-.001.546.197.349.809.355 3.312.382 5.817.389 8.32.352c.686-.01.835.255.828.874-.027 2.2.015 4.402-.025 6.602-.014.764.241 1.019.998.973a27.257 27.257 0 0 1 2.887-.003c.648.029.875-.204.867-.849-.025-2.228.01-4.457-.02-6.685-.009-.659.16-.924.874-.913 2.476.039 4.952.035 7.428.002.655-.009.854.198.85.85-.025 3.852-.012 7.704-.012 11.556zM133.669 12.441c.521.151.798.24 1.079.312 1.674.426 2.785 1.468 3.12 3.155.362 1.825.556 3.682.854 5.52.162 1 .362 1.996.595 2.982.135.57-.047.747-.602.744-2.64-.013-5.281-.024-7.921.008-.611.007-.758-.334-.837-.788-.344-1.97-.646-3.948-1.018-5.913-.356-1.884-1.097-2.42-3.019-2.404-.571.005-.761.175-.755.754.026 2.475-.015 4.951.026 7.426.012.739-.232.938-.946.927a274.368 274.368 0 0 0-7.426-.003c-.652.008-.92-.144-.918-.865.023-7.701.022-15.403.001-23.104-.002-.672.229-.838.863-.835 4.373.023 8.748-.041 13.119.042 1.549.03 3.124.263 4.631.632 2.531.62 3.886 2.242 4.036 4.501.215 3.233-.737 5.061-3.248 6.221-.462.211-.938.395-1.634.688zm-8.493-4.225c0 .603.021 1.207-.007 1.809-.022.487.177.771.655.7.778-.114 1.588-.194 2.308-.481 1.064-.424 1.468-1.413 1.311-2.74-.106-.901-.69-1.442-1.852-1.678a6.927 6.927 0 0 0-1.217-.146c-1.198-.026-1.198-.015-1.199 1.219l.001 1.317zM101.87 25.152h-2.56c-2.228 0-4.455-.012-6.683.009-.524.005-.804-.131-.899-.693a24.623 24.623 0 0 0-.612-2.726c-.066-.228-.418-.526-.644-.531a158.243 158.243 0 0 0-6.352.001c-.243.005-.616.32-.693.565-.277.888-.418 1.818-.69 2.707-.081.263-.421.634-.648.637-2.749.042-5.5.025-8.25.017-.098 0-.195-.07-.36-.134.07-.281.117-.543.2-.794 2.545-7.686 5.1-15.368 7.628-23.06.198-.604.486-.803 1.114-.799 3.63.027 7.261.021 10.891.005.531-.002.846.104 1.026.679 2.447 7.801 4.92 15.594 7.383 23.39.057.182.077.372.149.727zM87.479 5.251c-.168.23-.237.285-.253.352-.715 3.009-1.426 6.018-2.134 9.029-.118.503.115.713.607.711 1.098-.005 2.196-.002 3.294 0 .564.001.674-.237.548-.785-.573-2.507-1.1-5.026-1.647-7.539-.118-.543-.253-1.082-.415-1.768zM40.634 12.697c0-3.768.018-7.535-.015-11.303-.007-.759.156-1.052.991-1.047 5.527.036 11.055.034 16.583.002.773-.004.999.228.97.984a63.89 63.89 0 0 0-.003 4.289c.02.676-.187.912-.883.902-2.447-.035-4.895.009-7.342-.027-.754-.011-1.077.163-1.057 1 .046 1.951.005 1.952 1.944 1.952 1.953 0 3.905.018 5.857-.011.6-.009.834.171.819.797a80.738 80.738 0 0 0 .004 4.537c.024.727-.282.883-.926.876-2.172-.025-4.345-.012-6.518-.008-1.159.002-1.159.007-1.161 1.117-.004 2.098-.004 2.098 2.126 2.098 2.2 0 4.4.019 6.6-.012.632-.009.885.156.866.833a105.292 105.292 0 0 0-.005 4.702c.009.56-.16.779-.75.778-5.775-.016-11.55-.018-17.325.002-.639.002-.787-.243-.784-.829.018-3.877.009-7.754.009-11.632zM157.871 17.365c1.21 0 2.421.017 3.63-.008.547-.011.78.177.837.744.107 1.071.68 1.666 1.67 1.871 1.197.248 2.415-.123 2.912-.887.652-1.003.3-2.36-.869-2.818-1.245-.488-2.566-.781-3.845-1.188-1.489-.474-3.009-.881-4.441-1.492-2.311-.986-3.773-2.666-3.903-5.323-.147-3.018 1.017-5.277 3.689-6.73 1.7-.924 3.558-1.326 5.451-1.453 2.61-.174 5.22-.128 7.728.803 2.563.951 4.046 2.734 4.295 5.497.051.567-.122.791-.72.784a297.758 297.758 0 0 0-6.683.001c-.477.005-.715-.162-.803-.61-.322-1.644-2.078-1.895-3.29-1.41-.706.283-1.065.812-1.075 1.596-.011.886.473 1.414 1.24 1.642 1.497.446 3.026.786 4.525 1.227a35.64 35.64 0 0 1 3.345 1.147c3.847 1.562 5.044 4.415 3.979 8.572-.702 2.739-2.692 4.382-5.265 5.252-4.057 1.371-8.163 1.31-12.199-.103-2.941-1.03-4.524-3.172-4.679-6.325-.028-.562.177-.805.756-.795 1.239.021 2.477.006 3.715.006zM198.888.367c3.272 0 6.544.014 9.815-.012.631-.005.886.158.868.832a86.672 86.672 0 0 0 .001 4.783c.021.719-.267.884-.92.864-1.319-.039-2.639-.013-3.959-.011-1.095.001-1.097.002-1.097 1.136-.001 5.389-.014 10.778.015 16.167.004.768-.171 1.058-.998 1.041-2.501-.053-5.004-.05-7.505-.001-.792.016-.963-.259-.959-.995.027-5.416.015-10.833.014-16.249 0-1.095-.003-1.097-1.068-1.098-1.43-.002-2.86-.021-4.289.009-.585.013-.764-.208-.755-.773.027-1.622.038-3.245-.004-4.866-.017-.668.221-.844.86-.839 3.327.025 6.654.012 9.981.012z"/></g></svg>
+                                        </div>
+                                        <section class="sticky-content-card__section">
+                                            <p class="sticky-content-card__desc">Hearst integrates key partner and product solutions on AMP</p>
+                                        </section>
+                                    </div>
+                                </article><!-- .sticky-content__card -->
+                                <article class="sticky-content__card">
+                                    <div class="sticky-content-card__inner">
+                                        <div class="sticky-content-card__header">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.07 25.998"><g fill="#FFF"><path d="M50.846 25.888c-.025-.48-.063-.872-.064-1.264-.003-7.757.016-15.513-.024-23.27C50.753.318 51.011-.007 52.09 0c7.676.047 15.353.041 23.03.006.971-.004 1.306.234 1.301 1.258-.04 7.836-.024 15.673-.019 23.51 0 .67.061 1.229-.948 1.225-7.996-.035-15.993-.021-23.99-.025-.157-.001-.313-.043-.618-.086zm17.984-12.25c1.716-1.213 2.307-2.522 2.285-4.931-.026-2.778-1.487-4.366-4.253-4.428-3.118-.069-6.238-.017-9.357-.007-.222.001-.444.089-.661.136v17.073h3.234v-6.523c.248-.072.397-.147.548-.153 1.238-.048 2.477-.102 3.716-.118 2.634-.035 3.383.714 3.418 3.395.014 1.067.002 2.135.002 3.225h3.436c-.472-2.725 1.044-5.854-2.368-7.669zM0 .025h1.29c7.598 0 15.195.017 22.793-.02 1.035-.005 1.457.186 1.448 1.36-.055 7.717-.03 15.435-.03 23.152v1.377H0V.025zm8.234 17.057l-.291.044L5.6 4.438H2.295c.046.318.067.553.115.784.908 4.421 1.834 8.838 2.726 13.262.68 3.371.663 3.396 4.036 3.136.341-.026.826-.426.94-.756.336-.977.519-2.007.762-3.017l2.027-8.444c.292.235.39.472.445.717.784 3.507 1.547 7.02 2.366 10.519.086.366.477.911.764.936 1.221.105 2.456.044 3.687.044l3.542-17.244c-.758 0-1.318.058-1.862-.012-1.043-.134-1.447.247-1.6 1.322-.415 2.925-.972 5.831-1.48 8.743-.171.982-.367 1.96-.551 2.941-.298-.205-.36-.384-.402-.568-.875-3.773-1.73-7.551-2.646-11.315-.097-.4-.512-.978-.84-1.021-1.012-.134-2.053-.049-3.107-.049L8.234 17.082zM126.977 25.929h-25.384V.087c.372-.023.686-.058 1.001-.058 7.755-.003 15.509.007 23.264-.018.825-.003 1.217.126 1.213 1.093-.036 7.994-.021 15.989-.024 23.983-.002.233-.039.467-.07.842zm-19.598-4.232c.164.051.31.136.455.135 3.079-.015 6.162.05 9.237-.088 2.911-.131 4.825-1.825 5.154-4.732.273-2.409.262-4.87.149-7.297-.128-2.768-1.776-4.657-4.569-5.068-2.196-.323-4.457-.215-6.689-.271-1.225-.031-2.452-.006-3.737-.006v17.327zM92.693 18.661c.048-.288.109-.515.121-.745.108-2.069.106-2.07 2.204-2.005.234.007.467.045.786.077v5.65H81.001v-2.84l2.251-.132V7.184l-2.222-.128V4.194h14.797v5.633h-3.186l-.119-2.64h-5.779v3.893h4.489v3.065c-1.181 0-2.366.035-3.547-.012-.777-.031-1.071.245-1.037 1.031.049 1.143.013 2.29.013 3.497h6.032zM40.082 18.69h4.509v2.993H32.306v-2.915h4.13V7.197c-.94 0-1.921-.068-2.889.018-1.074.096-1.457-.304-1.321-1.351.066-.508.011-1.032.011-1.659h12.437c0 .763.075 1.557-.041 2.321-.04.26-.549.618-.862.638-1.191.075-2.391.03-3.688.03l-.001 11.496z"/><path d="M60.145 11.932V7.219c2.019 0 3.97-.074 5.91.028 1.128.06 1.695.947 1.708 2.23.015 1.519-.468 2.348-1.727 2.424-1.907.117-3.827.031-5.891.031zM110.803 18.86V7.178c2.018 0 3.968-.1 5.901.035 1.305.091 2.128 1.101 2.201 2.338.133 2.257.197 4.543-.014 6.788-.171 1.82-1.219 2.504-3.039 2.518-1.663.013-3.326.003-5.049.003z"/></g></svg>
+                                        </div>
+                                        <section class="sticky-content-card__section">
+                                            <p class="sticky-content-card__desc">Wired AMP’s its 20+ year archive to meet audiences online</p>
+                                        </section>
+                                    </div>
+                                </article><!-- .sticky-content__card -->
+                                <article class="sticky-content__card">
+                                    <div class="sticky-content-card__inner">
+                                        <div class="sticky-content-card__header">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 175.805 25.275"><g fill="#FFF"><path d="M124.512 12.64c0-3.109-.003-6.219.004-9.328.001-.413.022-.833.096-1.238.229-1.252 1.086-2.008 2.417-2.025 2.622-.034 5.248-.099 7.865.018 2.636.118 4.987 1.124 7.033 2.809a12.47 12.47 0 0 1 3.895 5.535c.897 2.52 1.001 5.081.256 7.647-1.085 3.737-3.429 6.429-6.941 8.088a11.39 11.39 0 0 1-4.775 1.106c-2.361.026-4.724.038-7.084-.016-1.875-.043-2.74-.962-2.756-2.841-.024-2.694-.009-5.388-.01-8.082V12.64zm5.083-7.412V20.11c1.463 0 2.898.013 4.332-.003 1.788-.02 3.382-.586 4.773-1.727 2.284-1.874 3.288-5.053 2.389-7.852-.97-3.022-3.067-4.861-6.201-5.26-1.727-.22-3.504-.04-5.293-.04zM69.628 9.862v.41c0 4.096-.001 8.191.001 12.287 0 .644-.123 1.241-.544 1.759-.532.656-1.438.94-2.312.697-.744-.206-1.435-.992-1.529-1.756a6.73 6.73 0 0 1-.052-.815c-.004-6.625-.002-13.25-.005-19.874 0-.645.126-1.238.546-1.757.845-1.044 2.566-1.073 3.344.02.968 1.36 1.866 2.769 2.785 4.163 1.491 2.265 2.974 4.535 4.46 6.803l.494.752c.284-.428.547-.819.805-1.212 2.209-3.366 4.418-6.732 6.624-10.099C84.898.244 85.76-.151 86.77.099c.937.232 1.608 1.056 1.674 2.059.005.083.006.166.006.249 0 6.767.001 13.534-.001 20.301 0 1.167-.635 2.046-1.664 2.327-1.296.354-2.657-.615-2.737-1.956-.019-.32-.014-.641-.014-.961l-.001-11.896V9.85l-.076-.024c-.124.18-.252.356-.371.539L78.8 17.676c-.786 1.199-2.001 1.577-3.102.861-.444-.288-.785-.779-1.088-1.234-1.647-2.474-3.266-4.966-4.896-7.451l-.086.01zM93.977 12.632c.028-6.996 5.716-12.634 12.713-12.6 6.957.033 12.562 5.724 12.541 12.701-.021 6.853-5.767 12.662-12.854 12.538-6.697-.118-12.397-5.648-12.4-12.639zm12.638 7.491c4.086-.047 7.451-3.222 7.46-7.472.008-4.157-3.272-7.461-7.455-7.468-4.286-.007-7.471 3.424-7.478 7.479-.008 4.1 3.383 7.471 7.473 7.461zM150.558 12.634C150.528 5.812 156.09.223 162.785.029c7.19-.208 12.824 5.587 13.015 12.222.206 7.144-5.566 12.871-12.324 13.021-7.104.158-12.977-5.673-12.918-12.638zm12.619 7.489c4.171-.044 7.488-3.333 7.465-7.5-.023-4.226-3.351-7.431-7.449-7.44-4.238-.009-7.489 3.373-7.487 7.51.003 4.076 3.399 7.44 7.471 7.43zM18.158 15.424h-.423c-1.033 0-2.066.004-3.099-.001-1.389-.007-2.44-.996-2.468-2.313-.03-1.411.945-2.489 2.375-2.517 2.006-.039 4.013-.042 6.018.001 1.503.032 2.43 1.164 2.396 2.73-.03 1.404-.003 2.81-.007 4.215-.003.921-.012 1.842-.026 2.763-.01.668-.309 1.216-.782 1.658-1.324 1.239-2.915 2.012-4.623 2.556-1.883.6-3.818.838-5.79.723-2.669-.154-5.067-1.042-7.131-2.756C2.156 20.456.631 17.857.17 14.731c-.548-3.708.196-7.165 2.624-10.11C4.759 2.237 7.356.852 10.367.258c3.095-.611 6.058-.073 8.907 1.182.752.331 1.498.724 2.152 1.215.861.646 1.07 1.655.72 2.684a2.291 2.291 0 0 1-2.164 1.558 2.402 2.402 0 0 1-1.181-.295c-2.02-1.154-4.162-1.857-6.503-1.725C9.212 5.051 6.634 7 5.807 10.085c-.467 1.741-.524 3.476.035 5.217.954 2.97 3.503 4.942 6.619 5.022 1.884.048 3.703-.279 5.391-1.182.232-.124.316-.262.312-.522-.015-.926-.006-1.852-.006-2.778v-.418zM46.401 20.049h3.589c2.564 0 5.128-.002 7.692.001 1.163.002 2.032.788 2.188 1.962.165 1.246-.478 2.351-1.564 2.661-.19.054-.397.069-.596.07-5.413.004-10.826.004-16.238.002-1.36-.001-2.358-.99-2.464-2.344-.082-1.036.417-1.777 1.051-2.502 1.623-1.855 3.224-3.73 4.834-5.596l3.718-4.305 4.306-4.994h-.468c-3.43 0-6.861-.003-10.291.002-.81.001-1.493-.262-1.968-.934-.499-.705-.625-1.488-.288-2.291.335-.799 1.005-1.16 1.845-1.236.13-.012.261-.01.391-.01L56.631.534c.742 0 1.47.057 2.12.471 1.133.721 1.502 2.205.785 3.519-.324.593-.806 1.106-1.25 1.627-1.82 2.139-3.653 4.268-5.481 6.4a8735.325 8735.325 0 0 1-3.959 4.613c-.78.908-1.562 1.814-2.343 2.721-.028.03-.046.072-.102.164zM28.839 12.611c0-3.358-.011-6.716.006-10.074.006-1.218.728-2.174 1.754-2.434 1.605-.406 2.977.541 3.147 2.182.04.388.06.781.06 1.171.004 6.17.003 12.341.001 18.511 0 .677-.052 1.343-.337 1.978-.585 1.309-2.524 1.761-3.641.852-.666-.543-.977-1.255-.984-2.078-.024-3.168-.017-6.336-.022-9.504v-.605a.104.104 0 0 0 .016.001z"/></g></svg>
+                                        </div>
+                                        <section class="sticky-content-card__section">
+                                            <p class="sticky-content-card__desc">AMP makes Gizmodo 3x faster on mobile</p>
+                                        </section>
+                                    </div>
+                                </article><!-- .sticky-content__card -->
+                            </div><!-- .sticky-content__inner -->
+                        <div class="modal-overlay" role="button" tabindex="0" on="tap:AMP.setState({stickyState: ''})"></div>
+                    </div><!-- #stickyPublishers -->
+
+                    <amp-carousel width="auto" height="250" layout="fixed-height" type="carousel" autoplay>
+                        <article class="featured-carousel__item">
+                            <div class="featured-carousel__item-inner">
+                                <header class="featured-carousel__header" on="tap:lightboxBind" role="button" tabindex="0">
+                                    <h2 class="featured-carousel__title">Bind</h2>
+                                </header>
+                                <div class="featured-carousel__main">
+                                    <div class="featured-carousel__main-left"></div>
+                                    <p class="featured-carousel__desc">Amp-bind allows you to add custom interactivity to your pages beyond using AMP's pre-built components.</p>
+                                </div>
+                            </div><!-- .featured-carousel__item-inner -->
+                        </article><!-- .featured-carousel__item -->
+                        <article class="featured-carousel__item">
+                            <div class="featured-carousel__item-inner">
+                                <header class="featured-carousel__header" on="tap:lightboxAccordion" role="button" tabindex="0">
+                                    <h2 class="featured-carousel__title">Accordion</h2>
+                                </header>
+                                <section class="featured-carousel__main">
+                                    <div class="featured-carousel__main-left"></div>
+                                    <p class="featured-carousel__desc">An accordion provides a way for viewers to have a glance at the outline of the content and jump to a section or their choice at their will.</p>
+                                </section>
+                            </div><!-- .featured-carousel__item-inner -->
+                        </article><!-- .featured-carousel__item -->
+                        <article class="featured-carousel__item">
+                            <div class="featured-carousel__item-inner">
+                                <header class="featured-carousel__header" on="tap:lightboxCarousel" role="button" tabindex="0">
+                                    <h2 class="featured-carousel__title">Carousel</h2>
+                                </header>
+                                <section class="featured-carousel__main">
+                                    <div class="featured-carousel__main-left"></div>
+                                    <p class="featured-carousel__desc">A generic carousel for displaying multiple similar pieces of content along a horizontal axis; meant to be highly flexible and performant.</p>
+                                </section>
+                            </div><!-- .featured-carousel__item-inner -->
+                        </article><!-- .featured-carousel__item -->
+                        <article class="featured-carousel__item">
+                            <div class="featured-carousel__item-inner">
+                                <header class="featured-carousel__header" on="tap:lightboxAnimation" role="button" tabindex="0">
+                                    <h2 class="featured-carousel__title">Animation</h2>
+                                </header>
+                                <section class="featured-carousel__main">
+                                    <div class="featured-carousel__main-left"></div>
+                                    <p class="featured-carousel__desc">An amp-animation element defines such an animation as a JSON structure.</p>
+                                </section>
+                            </div><!-- .featured-carousel__item-inner -->
+                        </article><!-- .featured-carousel__item -->
+                        <article class="featured-carousel__item">
+                            <div class="featured-carousel__item-inner">
+                                <header class="featured-carousel__header" on="tap:lightboxPObserver" role="button" tabindex="0">
+                                    <h2 class="featured-carousel__title">P - Observer</h2>
+                                </header>
+                                <section class="featured-carousel__main">
+                                    <div class="featured-carousel__main-left"></div>
+                                    <p class="featured-carousel__desc">Monitors the position of an element within the viewport as a user scrolls, and dispatches events that can be used with other AMP components.</p>
+                                </section>
+                            </div><!-- .featured-carousel__item-inner -->
+                        </article><!-- .featured-carousel__item -->
+                        <article class="featured-carousel__item">
+                            <div class="featured-carousel__item-inner">
+                                <header class="featured-carousel__header" on="tap:lightboxLightbox" role="button" tabindex="0">
+                                    <h2 class="featured-carousel__title">Lightbox</h2>
+                                </header>
+                                <section class="featured-carousel__main">
+                                    <div class="featured-carousel__main-left"></div>
+                                    <p class="featured-carousel__desc">The amp-lightbox component defines child elements that display in a full-viewport overlay/modal.</p>
+                                </section>
+                            </div><!-- .featured-carousel__item-inner -->
+                        </article><!-- .featured-carousel__item -->
+                    </amp-carousel>
+                    <amp-lightbox id="lightboxBind" class="lightbox" layout="nodisplay">
+                        <div class="lightbox__wrapper">
+                            <article class="lightbox__inner">
+                                <header class="lightbox__header">
+                                    <button class="close-btn" on="tap:lightboxBind.close" role="button" tabindex="0">
+                                        <i class="fas fa-times"></i>
+                                        <span class="sr-only">Close</span>
+                                    </button><!-- .close-btn -->
+                                    <div class="lightbox__hero">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 100"><path fill="#01E3F7" d="M41.792-.5L.693 59.16h28.725L19.305 99.5l41.066-62.908-27.374-.442z"/><linearGradient id="a" gradientUnits="userSpaceOnUse" x1="-.112" y1="49.934" x2="57.338" y2="49.934"><stop offset="0" stop-color="#12043d"/><stop offset="1" stop-color="#240878"/></linearGradient><path fill="url(#a)" d="M40.987.439L-.112 60.098h28.725l-9.28 39.332 38.005-60.986-26.515-.442z"/></svg>
+                                    </div><!-- .lightbox__hero -->
+                                    <div class="lightbox__main">
+                                        <div class="lightbox-main__title">
+                                            <h1 class="lightbox-main-title__text">AMP - Bind</h1>
+                                        </div>
+                                        <div class="lightbox-main__intro">
+                                            <p class="lightbox-main-intro__text">The amp-bind component allows you to add custom stateful interactivity to your AMP pages via data binding and JS-like expressions.</p>
+                                        </div>
+                                    </div><!-- .lightbox__main -->
+                                </header><!-- .lightbox__header -->
+                                <section class="lightbox__section">
+                                    <div class="lightbox-section__title">
+                                        <h3 class="lightbox-section-title__text">Note</h3>
+                                    </div>
+                                    <div class="lightbox-section__desc">
+                                        <p class="lightbox-section-desc__text">For performance and to avoid the risk of unexpected content jumping, amp-bind does not evaluate expressions on page load. This means that the visual elements should be given a default state and not rely amp-bind for initial render</p>
+                                    </div>
+                                </section><!-- .lightbox__section -->
+                            </article><!-- .lightbox -->
+                        </div><!-- .lightbox__wrapper -->
+                        <div class="modal-overlay" on="tap:lightboxBind.close" role="button" tabindex="0"></div>
+                    </amp-lightbox><!-- .lightbox -->
+                    <amp-lightbox id="lightboxAccordion" class="lightbox" layout="nodisplay">
+                        <div class="lightbox__wrapper">
+                            <article class="lightbox__inner">
+                                <header class="lightbox__header">
+                                    <button class="close-btn" on="tap:lightboxAccordion.close" role="button" tabindex="0">
+                                        <i class="fas fa-times"></i>
+                                        <span class="sr-only">Close</span>
+                                    </button><!-- .close-btn -->
+                                    <div class="lightbox__hero">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 100"><path fill="#01E3F7" d="M41.792-.5L.693 59.16h28.725L19.305 99.5l41.066-62.908-27.374-.442z"/><linearGradient id="a" gradientUnits="userSpaceOnUse" x1="-.112" y1="49.934" x2="57.338" y2="49.934"><stop offset="0" stop-color="#12043d"/><stop offset="1" stop-color="#240878"/></linearGradient><path fill="url(#a)" d="M40.987.439L-.112 60.098h28.725l-9.28 39.332 38.005-60.986-26.515-.442z"/></svg>
+                                    </div><!-- .lightbox__hero -->
+                                    <div class="lightbox__main">
+                                        <div class="lightbox-main__title">
+                                            <h1 class="lightbox-main-title__text">AMP - Accordion</h1>
+                                        </div>
+                                        <div class="lightbox-main__intro">
+                                            <p class="lightbox-main-intro__text">Provides a way for viewers to glance at the content outline and jump to any section. This is helpful for mobile devices where even a couple of sentences into a section requires scrolling.</p>
+                                        </div>
+                                    </div><!-- .lightbox__main -->
+                                </header><!-- .lightbox__header -->
+                                <section class="lightbox__section">
+                                    <div class="lightbox-section__title">
+                                        <h3 class="lightbox-section-title__text">Behavior</h3>
+                                    </div>
+                                    <div class="lightbox-section__desc">
+                                        <p class="lightbox-section-desc__text">The amp-accordion component allows you to display collapsible and expandable content sections. Each of the amp-accordion component’s immediate children is considered a section in the accordion. Each of these nodes must be a &lt;section&gt; tag.</p>
+                                    </div>
+                                </section><!-- .lightbox__section -->
+                            </article><!-- .lightbox -->
+                        </div><!-- .lightbox__wrapper -->
+                        <div class="modal-overlay" on="tap:lightboxAccordion.close" role="button" tabindex="0"></div>
+                    </amp-lightbox><!-- .lightbox -->
+                    <amp-lightbox id="lightboxCarousel" class="lightbox" layout="nodisplay">
+                        <div class="lightbox__wrapper">
+                            <article class="lightbox__inner">
+                                <header class="lightbox__header">
+                                    <button class="close-btn" on="tap:lightboxCarousel.close" role="button" tabindex="0">
+                                        <i class="fas fa-times"></i>
+                                        <span class="sr-only">Close</span>
+                                    </button><!-- .close-btn -->
+                                    <div class="lightbox__hero">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 100"><path fill="#01E3F7" d="M41.792-.5L.693 59.16h28.725L19.305 99.5l41.066-62.908-27.374-.442z"/><linearGradient id="a" gradientUnits="userSpaceOnUse" x1="-.112" y1="49.934" x2="57.338" y2="49.934"><stop offset="0" stop-color="#12043d"/><stop offset="1" stop-color="#240878"/></linearGradient><path fill="url(#a)" d="M40.987.439L-.112 60.098h28.725l-9.28 39.332 38.005-60.986-26.515-.442z"/></svg>
+                                    </div><!-- .lightbox__hero -->
+                                    <div class="lightbox__main">
+                                        <div class="lightbox-main__title">
+                                            <h1 class="lightbox-main-title__text">AMP - Carousel</h1>
+                                        </div>
+                                        <div class="lightbox-main__intro">
+                                            <p class="lightbox-main-intro__text">A generic carousel for displaying multiple similar pieces of content along a horizontal axis; meant to be highly flexible and performant.</p>
+                                        </div>
+                                    </div><!-- .lightbox__main -->
+                                </header><!-- .lightbox__header -->
+                                <section class="lightbox__section">
+                                    <div class="lightbox-section__title">
+                                        <h3 class="lightbox-section-title__text">Behavior</h3>
+                                    </div>
+                                    <div class="lightbox-section__desc">
+                                        <p class="lightbox-section-desc__text">Each of the amp-carousel component’s immediate children is considered an item in the carousel. Each of these nodes may also have arbitrary HTML children. The carousel advances between items if the user swipes, uses arrow keys, or clicks an optional navigation arrow.</p>
+                                    </div>
+                                </section><!-- .lightbox__section -->
+                            </article><!-- .lightbox -->
+                        </div><!-- .lightbox__wrapper -->
+                        <div class="modal-overlay" on="tap:lightboxCarousel.close" role="button" tabindex="0"></div>
+                    </amp-lightbox><!-- .lightbox -->
+                    <amp-lightbox id="lightboxAnimation" class="lightbox" layout="nodisplay">
+                        <div class="lightbox__wrapper">
+                            <article class="lightbox__inner">
+                                <header class="lightbox__header">
+                                    <button class="close-btn" on="tap:lightboxAnimation.close" role="button" tabindex="0">
+                                        <i class="fas fa-times"></i>
+                                        <span class="sr-only">Close</span>
+                                    </button><!-- .close-btn -->
+                                    <div class="lightbox__hero">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 100"><path fill="#01E3F7" d="M41.792-.5L.693 59.16h28.725L19.305 99.5l41.066-62.908-27.374-.442z"/><linearGradient id="a" gradientUnits="userSpaceOnUse" x1="-.112" y1="49.934" x2="57.338" y2="49.934"><stop offset="0" stop-color="#12043d"/><stop offset="1" stop-color="#240878"/></linearGradient><path fill="url(#a)" d="M40.987.439L-.112 60.098h28.725l-9.28 39.332 38.005-60.986-26.515-.442z"/></svg>
+                                    </div><!-- .lightbox__hero -->
+                                    <div class="lightbox__main">
+                                        <div class="lightbox-main__title">
+                                            <h1 class="lightbox-main-title__text">AMP - Animation</h1>
+                                        </div>
+                                        <div class="lightbox-main__intro">
+                                            <p class="lightbox-main-intro__text">An amp-animation element defines such an animation as a JSON structure.</p>
+                                        </div>
+                                    </div><!-- .lightbox__main -->
+                                </header><!-- .lightbox__header -->
+                                <section class="lightbox__section">
+                                    <div class="lightbox-section__title">
+                                        <h3 class="lightbox-section-title__text">Placement in DOM</h3>
+                                    </div>
+                                    <div class="lightbox-section__desc">
+                                        <p class="lightbox-section-desc__text">&lt;amp-animation&gt; is only allowed to be placed as a direct child of &lt;body&gt; element if trigger="visibility". If trigger is not specified and animation's playback is controlled programmatically via its actions, it can be placed anywhere in the DOM.</p>
+                                    </div>
+                                </section><!-- .lightbox__section -->
+                            </article><!-- .lightbox -->
+                        </div><!-- .lightbox__wrapper -->
+                        <div class="modal-overlay" on="tap:lightboxAnimation.close" role="button" tabindex="0"></div>
+                    </amp-lightbox><!-- .lightbox -->
+                    <amp-lightbox id="lightboxPObserver" class="lightbox" layout="nodisplay">
+                        <div class="lightbox__wrapper">
+                            <article class="lightbox__inner">
+                                <header class="lightbox__header">
+                                    <button class="close-btn" on="tap:lightboxPObserver.close" role="button" tabindex="0">
+                                        <i class="fas fa-times"></i>
+                                        <span class="sr-only">Close</span>
+                                    </button><!-- .close-btn -->
+                                    <div class="lightbox__hero">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 100"><path fill="#01E3F7" d="M41.792-.5L.693 59.16h28.725L19.305 99.5l41.066-62.908-27.374-.442z"/><linearGradient id="a" gradientUnits="userSpaceOnUse" x1="-.112" y1="49.934" x2="57.338" y2="49.934"><stop offset="0" stop-color="#12043d"/><stop offset="1" stop-color="#240878"/></linearGradient><path fill="url(#a)" d="M40.987.439L-.112 60.098h28.725l-9.28 39.332 38.005-60.986-26.515-.442z"/></svg>
+                                    </div><!-- .lightbox__hero -->
+                                    <div class="lightbox__main">
+                                        <div class="lightbox-main__title">
+                                            <h1 class="lightbox-main-title__text">AMP - Position Observer</h1>
+                                        </div>
+                                        <div class="lightbox-main__intro">
+                                            <p class="lightbox-main-intro__text">Monitors the position of an element within the viewport as a user scrolls, and dispatches events that can be used with other AMP components.</p>
+                                        </div>
+                                    </div><!-- .lightbox__main -->
+                                </header><!-- .lightbox__header -->
+                                <section class="lightbox__section">
+                                    <div class="lightbox-section__title">
+                                        <h3 class="lightbox-section-title__text">Overview</h3>
+                                    </div>
+                                    <div class="lightbox-section__desc">
+                                        <p class="lightbox-section-desc__text">The amp-position-observer component monitors the position of an element within the viewport as a user scrolls, and dispatches enter, exit and scroll:&lt;Position In Viewport As a Percentage&gt; events (Low Trust Level), which can be used to trigger actions (Only Low Trust Actions) on other components (e.g., amp-animation.</p>
+                                    </div>
+                                </section><!-- .lightbox__section -->
+                            </article><!-- .lightbox -->
+                        </div><!-- .lightbox__wrapper -->
+                        <div class="modal-overlay" on="tap:lightboxPObserver.close" role="button" tabindex="0"></div>
+                    </amp-lightbox><!-- .lightbox -->
+                    <amp-lightbox id="lightboxLightbox" class="lightbox" layout="nodisplay">
+                        <div class="lightbox__wrapper">
+                            <article class="lightbox__inner">
+                                <header class="lightbox__header">
+                                    <button class="close-btn" on="tap:lightboxLightbox.close" role="button" tabindex="0">
+                                        <i class="fas fa-times"></i>
+                                        <span class="sr-only">Close</span>
+                                    </button><!-- .close-btn -->
+                                    <div class="lightbox__hero">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 100"><path fill="#01E3F7" d="M41.792-.5L.693 59.16h28.725L19.305 99.5l41.066-62.908-27.374-.442z"/><linearGradient id="a" gradientUnits="userSpaceOnUse" x1="-.112" y1="49.934" x2="57.338" y2="49.934"><stop offset="0" stop-color="#12043d"/><stop offset="1" stop-color="#240878"/></linearGradient><path fill="url(#a)" d="M40.987.439L-.112 60.098h28.725l-9.28 39.332 38.005-60.986-26.515-.442z"/></svg>
+                                    </div><!-- .lightbox__hero -->
+                                    <div class="lightbox__main">
+                                        <div class="lightbox-main__title">
+                                            <h1 class="lightbox-main-title__text">AMP - Lightbox</h1>
+                                        </div>
+                                        <div class="lightbox-main__intro">
+                                            <p class="lightbox-main-intro__text">The amp-lightbox component defines child elements that display in a full-viewport overlay/modal.</p>
+                                        </div>
+                                    </div><!-- .lightbox__main -->
+                                </header><!-- .lightbox__header -->
+                                <section class="lightbox__section">
+                                    <div class="lightbox-section__title">
+                                        <h3 class="lightbox-section-title__text">Behavior</h3>
+                                    </div>
+                                    <div class="lightbox-section__desc">
+                                        <p class="lightbox-section-desc__text">When the user taps or clicks an element (e.g., a button), the amp-lightbox ID referenced in the clicked element's on attribute triggers the lightbox to take up the full viewport and displays the child elements of the amp-lightbox.</p>
+                                    </div>
+                                </section><!-- .lightbox__section -->
+                            </article><!-- .lightbox -->
+                        </div><!-- .lightbox__wrapper -->
+                        <div class="modal-overlay" on="tap:lightboxLightbox.close" role="button" tabindex="0"></div>
+                    </amp-lightbox><!-- .lightbox -->
+                </section><!-- .featured-carousel -->
+            </section><!-- .home-main -->
+            <section class="app-benefits">
+                <h2 class="app-benefits__title">Business Benefits</h2>
+                <div class="app-benefit">
+                    <i class="far fa-heart"></i>
+                    <div class="app-benefit__inner">
+                        <h3 class="app-benefit__title">Web page speed improves the user experience and core business metrics</h3>
+                        <p class="app-benefit__text">AMP pages load near instantly, enabling you to offer a consistently fast experience across all devices and platforms.</p>
+                    </div>
+                </div><!-- .app-benefit -->
+                <div class="app-benefit">
+                    <i class="far fa-star"></i>
+                    <div class="app-benefit__inner">
+                        <h3 class="app-benefit__title">Building AMP pages is easy and reduces developer overhead</h3>
+                        <p class="app-benefit__text">You can often convert your entire archive in days especially if you use a popular CMS such as Wordpress or Drupal.</p>
+                    </div>
+                </div><!-- .app-benefit -->
+                <div class="app-benefit">
+                    <i class="fas fa-bullseye"></i>
+                    <div class="app-benefit__inner">
+                        <h3 class="app-benefit__title">AMP can be applied across various web touch points</h3>
+                        <p class="app-benefit__text">Used by popular and global platforms like Google, Bing and Twitter, AMP allows you to ensure users from all these surfaces get an unparalleled, often instantaneous and native-feeling experience by defaulting to AMP pages when available.</p>
+                    </div>
+                </div><!-- .app-benefit -->
+                <h2 class="app-benefits__title">Developer Benefits</h2>
+                <div class="app-benefit">
+                    <i class="far fa-square"></i>
+                    <div class="app-benefit__inner">
+                        <h3 class="app-benefit__title">Maintain flexibility and control and reduce complexity in your code</h3>
+                        <p class="app-benefit__text">You can use CSS to customize your styling, dynamic data to fetch the freshest data where needed, to build the best possible userexperience for your customers.</p>
+                    </div>
+                </div><!-- .app-benefit -->
+                <div class="app-benefit">
+                    <i class="fas fa-cubes"></i>
+                    <div class="app-benefit__inner">
+                        <h3 class="app-benefit__title">Building blocks that ensure performance</h3>
+                        <p class="app-benefit__text">It takes a lot of time and effort to build a great website. AMP components are already optimized for the best performance.</p>
+                    </div>
+                </div><!-- .app-benefit -->
+                <div class="app-benefit">
+                    <i class="fas fa-globe-americas"></i>
+                    <div class="app-benefit__inner">
+                        <h3 class="app-benefit__title">Build for a sustainable future in the open web for everyone</h3>
+                        <p class="app-benefit__text">The AMP Project is an open source initiative to protect the future of the web helping everyone deliver a better, faster more user-friendly experience.</p>
+                    </div>
+                </div><!-- .app-benefit -->
+            </section><!-- app-benefits -->
+        </main><!-- .body-wrapper -->
+        @@include('./partials/footer.html')
+    </div><!-- .off-canvas-container -->
+</body>
+
+</html>

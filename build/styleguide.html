@@ -1,0 +1,411 @@
+<!doctype html>
+<html ⚡ lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>AMP Template</title>
+    <link rel="canonical" href="https://codepen.io/danielbriceno/pen/jRXBjp">
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
+
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+    <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js" async></script>
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js" async></script>
+    <script async custom-element="amp-lightbox" src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"></script>
+
+    <meta name="description"
+        content="Showcasing a complete Custom AMP Template">
+
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "NewsArticle",
+            "headline": "Open-source framework for publishing content",
+            "datePublished": "2015-10-07T12:02:41Z",
+            "image": [
+            "logo.svg"
+            ]
+        }
+    </script>
+
+    <style amp-custom>html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;-webkit-box-sizing:border-box;box-sizing:border-box}*,*:before,*:after{-webkit-box-sizing:inherit;box-sizing:inherit}@font-face{font-display:fallback}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:0.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-webkit-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace, monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{background:none;border:none;outline:none;overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{-webkit-box-sizing:border-box;box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}@media print{form{display:none}}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}.skip-nav{display:none}html[lang=ko] a{-webkit-text-underline-position:under;-ms-text-underline-position:below;text-underline-position:under}html{position:relative}body{color:#fff;font-family:"Lato",Arial,sans-serif;font-size:1rem;line-height:1.5em}body ::selection{background:#bf00aa;color:#fff}html,body{overflow-x:hidden}.container{max-width:960px;height:100%}a{color:#fff;text-decoration:none}a:hover{text-decoration:underline}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}a{-webkit-transition:all .15s ease;-o-transition:all .15s ease;transition:all .15s ease}p{margin:.625rem 0 .625rem;font-weight:400}h1,h2,h3,h4,h5,h6{font-weight:500;line-height:1em;margin:0 0 0.5rem}h1{font-size:3rem}h2{font-size:2rem}h3{font-size:1.5rem}h4{font-size:1rem}h5{font-size:.75rem}h6{font-size:.75rem}mark{background-color:#bf00aa;color:#fff}.btn{-webkit-box-shadow:3px 3px 0 0 rgba(0,0,0,0.25);box-shadow:3px 3px 0 0 rgba(0,0,0,0.25);border:none;color:#fff;cursor:pointer;display:inline-block;font-family:"Lato",Arial,sans-serif;font-weight:400;padding:.625rem 1.25rem;text-align:center;text-decoration:none;text-transform:uppercase;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle;white-space:nowrap;-webkit-transform:skew(-20deg, 0);-ms-transform:skew(-20deg, 0);transform:skew(-20deg, 0);-webkit-transition:all .4s ease;-o-transition:all .4s ease;transition:all .4s ease}.btn span{display:inline-block;-webkit-transform:skew(20deg, 0);-ms-transform:skew(20deg, 0);transform:skew(20deg, 0)}.btn .fas,.btn .far{-webkit-transform:skew(20deg, 0);-ms-transform:skew(20deg, 0);transform:skew(20deg, 0)}.btn:hover{opacity:.5;text-decoration:none}.btn:active,.btn:focus{outline:none}.nav-header .btn{-ms-flex-item-align:center;align-self:center}.nav-footer .btn{background:-webkit-gradient(linear, left top, left bottom, from(#bf00aa), to(#240878));background:-webkit-linear-gradient(top, #bf00aa 0%, #240878 100%);background:-o-linear-gradient(top, #bf00aa 0%, #240878 100%);background:linear-gradient(180deg, #bf00aa 0%, #240878 100%);width:75%}.-primary.btn{background:-webkit-gradient(linear, left top, left bottom, from(#f9579b), to(#fc4a4c));background:-webkit-linear-gradient(top, #f9579b 0%, #fc4a4c 100%);background:-o-linear-gradient(top, #f9579b 0%, #fc4a4c 100%);background:linear-gradient(180deg, #f9579b 0%, #fc4a4c 100%)}.-primary.btn.-outline{background:none;border:1px solid #fff;color:#fff;padding:calc(.625rem - 1px) calc(1.25rem - 1px)}.-secondary.btn{background:-webkit-gradient(linear, left top, left bottom, from(#bf00aa), to(#240878));background:-webkit-linear-gradient(top, #bf00aa 0%, #240878 100%);background:-o-linear-gradient(top, #bf00aa 0%, #240878 100%);background:linear-gradient(180deg, #bf00aa 0%, #240878 100%)}.-tertiary.btn{background:-webkit-gradient(linear, left top, left bottom, from(#03b2ee), to(#070dfa));background:-webkit-linear-gradient(top, #03b2ee 0%, #070dfa 100%);background:-o-linear-gradient(top, #03b2ee 0%, #070dfa 100%);background:linear-gradient(180deg, #03b2ee 0%, #070dfa 100%)}.-sm.btn{font-size:.75rem;line-height:1rem;padding:.41667rem 1.25rem}.close-btn{background:none;border:0;color:#fff;white-space:nowrap;-webkit-transition:all .4s ease;-o-transition:all .4s ease;transition:all .4s ease}.close-btn:hover{color:#240878}.nav-header .close-btn{-ms-flex-item-align:center;align-self:center}.lightbox .close-btn{color:#240878}.search-btn{padding:0;-webkit-transition:all .4s ease;-o-transition:all .4s ease;transition:all .4s ease}.search-btn:hover{color:#240878}.site-search-open .search-btn.-header-main{display:none}.cancel-btn{padding:0;-webkit-transition:all .4s ease-in;-o-transition:all .4s ease-in;transition:all .4s ease-in}.cancel-btn:hover{color:#240878}.site-search-open .cancel-btn{display:block}.site-search-closed .cancel-btn{display:none}.amp-carousel-button{background-image:none;border-radius:0;color:#03b2ee;cursor:pointer;-webkit-transition:all .5s ease;-o-transition:all .5s ease;transition:all .5s ease}.amp-carousel-button:before{font-family:FontAwesome;position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%, -50%);-ms-transform:translate(-50%, -50%);transform:translate(-50%, -50%)}.amp-carousel-button:hover{-webkit-transform:translateY(-1.25rem) scale(1.2);-ms-transform:translateY(-1.25rem) scale(1.2);transform:translateY(-1.25rem) scale(1.2)}.amp-carousel-button.amp-carousel-button-next:before{content:"\f054"}.amp-carousel-button.amp-carousel-button-prev:before{content:"\f053"}.hero-carousel{margin:0 auto;max-width:400px}.hero-carousel .amp-carousel-button{background-color:transparent}.hero-carousel__item{padding:0 3.75rem}.featured-carousel{margin-bottom:5rem}.featured-carousel>amp-carousel>div:first-child{display:-webkit-box;display:-ms-flexbox;display:flex}.featured-carousel__item{background:-webkit-gradient(linear, right top, left top, from(#12043d), to(#240878));background:-webkit-linear-gradient(right, #12043d 0%, #240878 100%);background:-o-linear-gradient(right, #12043d 0%, #240878 100%);background:linear-gradient(-90deg, #12043d 0%, #240878 100%);-webkit-box-shadow:0 0 4px 2px rgba(0,0,0,0.25);box-shadow:0 0 4px 2px rgba(0,0,0,0.25);margin:0 20px;-webkit-transform:skew(-20deg, 0);-ms-transform:skew(-20deg, 0);transform:skew(-20deg, 0)}.featured-carousel__item:first-child{margin-left:20px}.featured-carousel__item-inner{position:relative;-webkit-transform:skew(20deg, 0);-ms-transform:skew(20deg, 0);transform:skew(20deg, 0);white-space:normal;width:150px}.featured-carousel__header{background-color:#03b2ee;cursor:pointer;margin-left:20px;padding:1.25rem;position:relative;text-align:center;-webkit-transform:skew(-20deg, 0);-ms-transform:skew(-20deg, 0);transform:skew(-20deg, 0);width:100%;z-index:2;-webkit-transition:all .5s ease;-o-transition:all .5s ease;transition:all .5s ease}.featured-carousel__header:hover{-webkit-transform:skew(-20deg, 0) translateY(-10px);-ms-transform:skew(-20deg, 0) translateY(-10px);transform:skew(-20deg, 0) translateY(-10px);background-color:#bf00aa}.featured-carousel__header:hover .featured-carousel__title{color:#fff}.featured-carousel__title{color:#240878;font-size:1rem;font-style:italic;font-weight:900;margin-bottom:0;text-transform:uppercase;-webkit-transform:skew(20deg, 0);-ms-transform:skew(20deg, 0);transform:skew(20deg, 0)}.featured-carousel__main{position:relative;-webkit-transform:translateX(-40%);-ms-transform:translateX(-40%);transform:translateX(-40%);width:120%;z-index:2}.featured-carousel__main-left{float:left;height:250px;width:6.25rem;shape-outside:polygon(100% 0, 96% 1%, 0 100%, 3% 100%);-webkit-clip-path:polygon(100% 0, 96% 1%, 0 100%, 3% 100%);clip-path:polygon(100% 0, 96% 1%, 0 100%, 3% 100%)}.featured-carousel__desc{font-size:.75rem;font-style:italic;font-weight:400;line-height:1rem}.form-inner{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}@media (max-width: 480px){.form-inner{display:block}}.form-group{margin-bottom:1.25rem;position:relative}.form-inner .form-group{-ms-flex-preferred-size:48%;flex-basis:48%}.form-group__border{background:#fff;bottom:0;height:2px;left:0;position:absolute;-webkit-transition:.3s;-o-transition:.3s;transition:.3s;width:0;z-index:1}.form-control{background-color:transparent;border:0;border-bottom:1px solid #fff;color:#fff;padding:.625rem 0}.form-control:active,.form-control:focus,.form-control:hover{color:#fff;-webkit-appearance:none}.form-control:placehoder{color:#fff}.form-control::-webkit-input-placeholder{color:#fff}.form-control::-moz-placeholder{color:#fff}.form-control:-ms-input-placeholder{color:#fff}.form-control:-moz-placeholder{color:#fff}.form-control.-alt{background-color:#fff;color:#240878}.form-control.-alt:active,.form-control.-alt:focus,.form-control.-alt:hover{color:#240878;-webkit-appearance:none}.form-control:focus{outline:none}.form-control:focus:placehoder{color:.5}.form-control:focus::-webkit-input-placeholder{color:.5}.form-control:focus::-moz-placeholder{color:.5}.form-control:focus:-ms-input-placeholder{color:.5}.form-control:focus:-moz-placeholder{color:.5}.form-control:focus ~ .form-group__border{width:100%}.form-group .form-control{width:100%}.site-search-form .form-control{border-bottom:none;width:90%}.-textarea.form-control{resize:none}.form-group__check,.form-group__radio{display:block;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.form-group__check:checked,.form-group__check:not(:checked),.form-group__radio:checked,.form-group__radio:not(:checked){position:absolute;left:-9999px}.form-group__check+.form-group__label:after,.form-group__radio+.form-group__label:after{content:'';height:3px;left:4px;position:absolute;-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg);width:3px}.form-group__check:checked+.form-group__label:before,.form-group__radio:checked+.form-group__label:before{background:-webkit-gradient(linear, left top, left bottom, from(#fc4a4c), to(#bf00aa));background:-webkit-linear-gradient(top, #fc4a4c 0%, #bf00aa 100%);background:-o-linear-gradient(top, #fc4a4c 0%, #bf00aa 100%);background:linear-gradient(180deg, #fc4a4c 0%, #bf00aa 100%);border:none;-webkit-box-shadow:0 0 10px 0 rgba(0,0,0,0.2);box-shadow:0 0 10px 0 rgba(0,0,0,0.2)}.form-group__check:disabled+.form-group__label,.form-group__check:disabled:not(:checked)+.form-group__label,.form-group__check:disabled:checked+.form-group__label,.form-group__radio:disabled+.form-group__label,.form-group__radio:disabled:not(:checked)+.form-group__label,.form-group__radio:disabled:checked+.form-group__label{color:#bbb;cursor:not-allowed}.form-group__check:disabled+.form-group__label:hover,.form-group__check:disabled:not(:checked)+.form-group__label:hover,.form-group__check:disabled:checked+.form-group__label:hover,.form-group__radio:disabled+.form-group__label:hover,.form-group__radio:disabled:not(:checked)+.form-group__label:hover,.form-group__radio:disabled:checked+.form-group__label:hover{opacity:1}.form-group__check:disabled+.form-group__label:active:before,.form-group__check:disabled:not(:checked)+.form-group__label:active:before,.form-group__check:disabled:checked+.form-group__label:active:before,.form-group__radio:disabled+.form-group__label:active:before,.form-group__radio:disabled:not(:checked)+.form-group__label:active:before,.form-group__radio:disabled:checked+.form-group__label:active:before{-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1)}.form-group__check:disabled+.form-group__label:before,.form-group__check:disabled:not(:checked)+.form-group__label:before,.form-group__check:disabled:checked+.form-group__label:before,.form-group__radio:disabled+.form-group__label:before,.form-group__radio:disabled:not(:checked)+.form-group__label:before,.form-group__radio:disabled:checked+.form-group__label:before{border-color:#bbb}.form-group__check:disabled+.form-group__label:after,.form-group__check:disabled:not(:checked)+.form-group__label:after,.form-group__check:disabled:checked+.form-group__label:after,.form-group__radio:disabled+.form-group__label:after,.form-group__radio:disabled:not(:checked)+.form-group__label:after,.form-group__radio:disabled:checked+.form-group__label:after{display:none}.form-group__check:checked+.form-group__label:after{background:#fff;-webkit-box-shadow:2px 0 0 #fff,4px 0 0 #fff,4px -2px 0 #fff,4px -4px 0 #fff,4px -6px 0 #fff,4px -8px 0 #fff;box-shadow:2px 0 0 #fff,4px 0 0 #fff,4px -2px 0 #fff,4px -4px 0 #fff,4px -6px 0 #fff,4px -8px 0 #fff;top:8px}.form-group__radio:checked+.form-group__label:after{background:#fff;border-radius:50%;content:' ';margin-left:2px;height:12px;left:2px;top:4px;width:12px}.form-group__label{font-weight:300}.-cr .form-group__label{margin-bottom:0;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;position:relative;padding-left:30px;cursor:pointer}.-cr .form-group__label:hover{opacity:.8}.-cr .form-group__label:active:before{-webkit-transform:scale(0);-ms-transform:scale(0);transform:scale(0)}.-cr .form-group__label:before{border:1px solid #fff;border-radius:50%;content:'';position:absolute;left:0;top:0;width:20px;height:20px;-webkit-transition:.3s;-o-transition:.3s;transition:.3s}.home-main{background:-webkit-gradient(linear, left top, left bottom, from(#fc4a4c), color-stop(50%, #7528ac), to(#070dfa));background:-webkit-linear-gradient(top, #fc4a4c 0%, #7528ac 50%, #070dfa 100%);background:-o-linear-gradient(top, #fc4a4c 0%, #7528ac 50%, #070dfa 100%);background:linear-gradient(180deg, #fc4a4c 0%, #7528ac 50%, #070dfa 100%);padding:6.25rem 1.25rem 1.25rem}.app-intro{padding-bottom:3.75rem}.app-intro__desc{font-style:italic;font-size:1rem;font-weight:700;text-align:center}.app-benefits{background:-webkit-gradient(linear, right top, left top, from(#7528ac), to(#12043d));background:-webkit-linear-gradient(right, #7528ac 0%, #12043d 100%);background:-o-linear-gradient(right, #7528ac 0%, #12043d 100%);background:linear-gradient(-90deg, #7528ac 0%, #12043d 100%);border-top:1px solid #240878;padding:3.75rem 1.25rem;position:relative}.app-benefits:before{background:#240878;content:'';height:10px;left:25%;position:absolute;top:-5px;-webkit-transform:skew(-20deg, 0);-ms-transform:skew(-20deg, 0);transform:skew(-20deg, 0);width:50%}.app-benefits .far,.app-benefits .fas{color:#bf00aa;font-size:2rem;margin-right:1.25rem;height:50%}.app-benefits__title{font-size:1.15rem;font-style:italic;font-weight:700;margin:1.25rem 0;text-transform:uppercase;text-align:center}.app-benefit{display:-webkit-box;display:-ms-flexbox;display:flex;padding:1.25rem}.app-benefit__title{color:#bf00aa;font-size:1rem;font-style:italic;font-weight:700;line-height:1em;text-shadow:0 1px 1px rgba(0,0,0,0.5)}.app-benefit__text{font-size:.85rem}.header{background-color:#fc4a4c;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;padding:.625rem;height:6vh;-webkit-box-shadow:0 2px 10px rgba(0,0,0,0.25);box-shadow:0 2px 10px rgba(0,0,0,0.25);position:absolute;width:100%;z-index:990}.header__logo{display:block;height:23px;width:115px}.site-search-open .header__logo{display:none}.header__logo svg{-webkit-transition:all .4s ease;-o-transition:all .4s ease;transition:all .4s ease}.header__logo:hover svg g{fill:#240878}.header__logo:hover svg path{fill:#240878}.mobile-nav-trigger{padding:0;-webkit-transition:all .4s ease;-o-transition:all .4s ease;transition:all .4s ease}.mobile-nav-trigger:hover{color:#240878}.mobile-nav-trigger.close-btn:hover{color:#bf00aa}.site-search-open .mobile-nav-trigger{display:none}.site-search-form{border-bottom:1px solid #fff;width:80%}.site-search-closed .site-search-form{display:none}.header .site-search-form>span{display:table-cell;vertical-align:top}.header .site-search-form>span:first-of-type{width:100%}.header .site-search-field{display:inline-block;float:none;max-width:none}.off-canvas-container{position:relative;-webkit-transition:margin .5 ease;-o-transition:margin .5 ease;transition:margin .5 ease}body.nav-open .off-canvas-container{margin-left:280px;margin-right:-280px}.lightbox__wrapper{padding:0 2.5rem 0 1.25rem;position:relative;left:0;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);width:100%;z-index:991}.lightbox__inner{background:-webkit-gradient(linear, left top, left bottom, from(#fc4a4c), color-stop(50%, #7528ac), to(#070dfa));background:-webkit-linear-gradient(top, #fc4a4c 0%, #7528ac 50%, #070dfa 100%);background:-o-linear-gradient(top, #fc4a4c 0%, #7528ac 50%, #070dfa 100%);background:linear-gradient(180deg, #fc4a4c 0%, #7528ac 50%, #070dfa 100%);padding:1.25rem}.lightbox__header{position:relative}.lightbox__header .close-btn{position:absolute;right:0;top:0}.lightbox__header svg{display:block;margin:0 auto;max-width:25%}.lightbox__main{background:-webkit-gradient(linear, left top, left bottom, from(#240878), to(#12043d));background:-webkit-linear-gradient(top, #240878 0%, #12043d 100%);background:-o-linear-gradient(top, #240878 0%, #12043d 100%);background:linear-gradient(180deg, #240878 0%, #12043d 100%);-webkit-box-shadow:3px 3px 1px 1px rgba(0,0,0,0.25);box-shadow:3px 3px 1px 1px rgba(0,0,0,0.25);margin:2.5rem;-webkit-transform:skew(-10deg, 0);-ms-transform:skew(-10deg, 0);transform:skew(-10deg, 0)}.lightbox-main__title{background-color:#03b2ee;padding:1.25rem;text-align:center;-webkit-transform:skew(0, 0);-ms-transform:skew(0, 0);transform:skew(0, 0)}.lightbox-main-title__text{color:#240878;font-size:1rem;font-style:italic;font-weight:900;margin-bottom:0;text-transform:uppercase;-webkit-transform:skew(10deg, 0);-ms-transform:skew(10deg, 0);transform:skew(10deg, 0)}.lightbox-main__intro{padding:.625rem 2.5rem;-webkit-transform:skew(0, 0);-ms-transform:skew(0, 0);transform:skew(0, 0)}.lightbox-main-intro__text{font-size:.75rem;line-height:1rem;-webkit-transform:skew(10deg, 0);-ms-transform:skew(10deg, 0);transform:skew(10deg, 0)}.lightbox__section{background:-webkit-gradient(linear, left top, left bottom, from(#240878), to(#12043d));background:-webkit-linear-gradient(top, #240878 0%, #12043d 100%);background:-o-linear-gradient(top, #240878 0%, #12043d 100%);background:linear-gradient(180deg, #240878 0%, #12043d 100%);-webkit-box-shadow:3px 3px 1px 1px rgba(0,0,0,0.25);box-shadow:3px 3px 1px 1px rgba(0,0,0,0.25);margin:2.5rem;-webkit-transform:skew(-10deg, 0);-ms-transform:skew(-10deg, 0);transform:skew(-10deg, 0)}.lightbox-section__title{padding:2.5rem 1.25rem 0;-webkit-transform:skew(0, 0);-ms-transform:skew(0, 0);transform:skew(0, 0)}.lightbox-section-title__text{color:#03b2ee;font-size:1rem;font-style:italic;font-weight:900;text-transform:uppercase}.lightbox-section__desc{font-size:.75rem;line-height:1rem;padding:0 2.5rem 2.5rem;-webkit-transform:skew(10deg, 0);-ms-transform:skew(10deg, 0);transform:skew(10deg, 0)}.modal-overlay{display:none;position:absolute;z-index:990;top:0;right:0;bottom:0;left:0;background:rgba(0,0,0,0.75);width:100%;height:100%}.sticky-content .modal-overlay{position:fixed}.-block .modal-overlay{display:block}.lightbox .modal-overlay{display:block}.nav-container{background:#12043d;border-right:1px solid #fff;height:100%;left:-280px;right:auto;position:absolute;top:0;z-index:9999;width:280px;-webkit-transition:left 0.5s ease, right 0.5s ease;-o-transition:left 0.5s ease, right 0.5s ease;transition:left 0.5s ease, right 0.5s ease}.nav-header{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;height:6vh;padding:0 1.25rem}.nav-main{margin-bottom:2.5rem}.nav-main>*:first-child{background-color:#fc4a4c;background:-webkit-linear-gradient(300deg, #fc4a4c 60%, #bf00aa 35%);background:-o-linear-gradient(300deg, #fc4a4c 60%, #bf00aa 35%);background:linear-gradient(150deg, #fc4a4c 60%, #bf00aa 35%)}.nav-main>*:first-child .nav-section[expanded]{background:#fc4a4c}.nav-main>*:first-child .nav-list{background:-webkit-gradient(linear, left top, left bottom, from(#fc4a4c), to(#bf00aa));background:-webkit-linear-gradient(top, #fc4a4c 0%, #bf00aa 100%);background:-o-linear-gradient(top, #fc4a4c 0%, #bf00aa 100%);background:linear-gradient(180deg, #fc4a4c 0%, #bf00aa 100%)}.nav-main>*:nth-child(2n){background-color:#bf00aa;background:-webkit-linear-gradient(300deg, #bf00aa 60%, #7528ac 35%);background:-o-linear-gradient(300deg, #bf00aa 60%, #7528ac 35%);background:linear-gradient(150deg, #bf00aa 60%, #7528ac 35%)}.nav-main>*:nth-child(2n) .nav-section[expanded]{background:#bf00aa}.nav-main>*:nth-child(2n) .nav-list{background:-webkit-gradient(linear, left top, left bottom, from(#bf00aa), to(#7528ac));background:-webkit-linear-gradient(top, #bf00aa 0%, #7528ac 100%);background:-o-linear-gradient(top, #bf00aa 0%, #7528ac 100%);background:linear-gradient(180deg, #bf00aa 0%, #7528ac 100%)}.nav-main>*:nth-child(3n){background-color:#7528ac;background:-webkit-linear-gradient(300deg, #7528ac 60%, #240878 35%);background:-o-linear-gradient(300deg, #7528ac 60%, #240878 35%);background:linear-gradient(150deg, #7528ac 60%, #240878 35%)}.nav-main>*:nth-child(3n) .nav-section[expanded]{background:#7528ac}.nav-main>*:nth-child(3n) .nav-list{background:-webkit-gradient(linear, left top, left bottom, from(#7528ac), to(#240878));background:-webkit-linear-gradient(top, #7528ac 0%, #240878 100%);background:-o-linear-gradient(top, #7528ac 0%, #240878 100%);background:linear-gradient(180deg, #7528ac 0%, #240878 100%)}.nav-main>*:nth-child(4n){background-color:#240878;background:-webkit-linear-gradient(300deg, #240878 60%, #12043d 35%);background:-o-linear-gradient(300deg, #240878 60%, #12043d 35%);background:linear-gradient(150deg, #240878 60%, #12043d 35%)}.nav-main>*:nth-child(4n) .nav-section[expanded]{background:#240878}.nav-main>*:nth-child(4n) .nav-list{background:-webkit-gradient(linear, left top, left bottom, from(#240878), to(#12043d));background:-webkit-linear-gradient(top, #240878 0%, #12043d 100%);background:-o-linear-gradient(top, #240878 0%, #12043d 100%);background:linear-gradient(180deg, #240878 0%, #12043d 100%)}.nav-link{color:#fff;display:block;font-weight:400;letter-spacing:1px;padding:.41667rem;text-decoration:none;-webkit-transition:all .1s ease;-o-transition:all .1s ease;transition:all .1s ease}.nav-link:hover{opacity:0.3;text-decoration:none}.nav-section__header .nav-link{font-weight:700}.nav-section__header .nav-link{display:inline-block;margin:0 10px;padding:10px 0}.nav-section .fa-chevron-up{display:none}.nav-section .fa-chevron-down{display:block}.nav-section[expanded]{margin-top:1px}.nav-section[expanded] .fa-chevron-up{display:block}.nav-section[expanded] .fa-chevron-down{display:none}.nav-section__header{background-color:transparent;border:none;outline:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}[expanded] .nav-section__header{border-bottom:1px solid rgba(255,255,255,0.2);position:relative}[expanded] .nav-section__header:after{background-color:rgba(0,0,0,0.2);content:'';height:1px;width:100%;position:absolute;left:0;bottom:0}.nav-section__header .fas{position:absolute;top:50%;right:1.25rem;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);-webkit-transition:all .1s ease;-o-transition:all .1s ease;transition:all .1s ease}.nav-section__header .fas:hover{color:#240878}.nav-list{list-style:none;margin:0;padding:.625rem 1.25rem}.mobile-nav-link{display:block;width:100%;padding:11px 10px;cursor:pointer;border:0}.mobile-nav-link:hover{text-decoration:underline}.nav-footer{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;text-align:center}.sg{background:-webkit-gradient(linear, left top, left bottom, from(#fc4a4c), color-stop(50%, #7528ac), to(#070dfa));background:-webkit-linear-gradient(top, #fc4a4c 0%, #7528ac 50%, #070dfa 100%);background:-o-linear-gradient(top, #fc4a4c 0%, #7528ac 50%, #070dfa 100%);background:linear-gradient(180deg, #fc4a4c 0%, #7528ac 50%, #070dfa 100%);padding:6.25rem 1.25rem 1.25rem}.sg-section{padding:1.25rem 0}.sg-section__title{font-size:1.5rem;font-weight:300;margin-bottom:1.25rem;text-transform:uppercase}.sg-section__subtitle{font-size:1rem;text-transform:uppercase;margin:2.5rem 0 1.25rem}.sg-section__main{padding:0 1.25rem}.sticky{position:relative;opacity:0;visibility:hidden;z-index:9999}.sticky__inner{background:-webkit-linear-gradient(300deg, #240878 60%, #12043d 35%);background:-o-linear-gradient(300deg, #240878 60%, #12043d 35%);background:linear-gradient(150deg, #240878 60%, #12043d 35%);padding:1.25rem;-webkit-box-shadow:0 2px 10px rgba(0,0,0,0.75);box-shadow:0 2px 10px rgba(0,0,0,0.75);height:12vh;position:fixed;left:0;top:0;width:100%}.sticky__header{margin-bottom:1.25rem;text-align:center}.sticky__header svg{display:inline-block;margin-right:.625rem;width:1.25rem}.sticky-header__title{display:inline-block;font-size:1rem;font-style:italic;font-weight:700;margin-bottom:0;text-transform:uppercase;-webkit-transform:translateY(-25%);-ms-transform:translateY(-25%);transform:translateY(-25%)}.sticky__nav{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-pack:distribute;justify-content:space-around}.sticky__nav .btn{font-size:.75rem;line-height:1rem;padding:.41667rem .625rem}.sticky__nav .btn:first-child{background:#7528ac}.sticky__nav .btn:nth-child(2n){background:#bf00aa}.sticky__nav .btn:last-child{background:#fc4a4c}.sticky__nav .btn.-active{-webkit-box-shadow:15px 15px 0 0 rgba(0,0,0,0.25);box-shadow:15px 15px 0 0 rgba(0,0,0,0.25);-webkit-transform:translateY(-10px) skew(-20deg, 0);-ms-transform:translateY(-10px) skew(-20deg, 0);transform:translateY(-10px) skew(-20deg, 0)}.sticky__nav .btn:hover{opacity:1}.sticky__nav .btn:hover:first-child{background:rgba(117,40,172,0.8)}.sticky__nav .btn:hover:nth-child(2n){background:rgba(191,0,170,0.8)}.sticky__nav .btn:hover:last-child{background:rgba(252,74,76,0.8)}.sticky-content{position:absolute;z-index:100}.sticky-content:nth-child(2n) .sticky-content__inner{background-color:#7528ac}.sticky-content:nth-child(3n) .sticky-content__inner{background-color:#bf00aa}.sticky-content:nth-child(4n) .sticky-content__inner{background-color:#fc4a4c}.sticky-content__inner{background:#12043d;border-bottom:1px solid rgba(255,255,255,0.5);display:none;padding:1.25rem 3.75rem}.-block .sticky-content__inner{-webkit-animation:animate-sticky .5s ease-in;animation:animate-sticky .5s ease-in;display:block;left:0;top:12vh;position:fixed;width:100%;z-index:991}@-webkit-keyframes animate-sticky{0%{-webkit-transform:translateY(-100%);transform:translateY(-100%)}100%{-webkit-transform:translateY(0);transform:translateY(0)}}@keyframes animate-sticky{0%{-webkit-transform:translateY(-100%);transform:translateY(-100%)}100%{-webkit-transform:translateY(0);transform:translateY(0)}}.sticky-content__card{background:-webkit-gradient(linear, left top, left bottom, from(#240878), to(#12043d));background:-webkit-linear-gradient(top, #240878 0%, #12043d 100%);background:-o-linear-gradient(top, #240878 0%, #12043d 100%);background:linear-gradient(180deg, #240878 0%, #12043d 100%);-webkit-box-shadow:3px 3px 1px 1px rgba(0,0,0,0.25);box-shadow:3px 3px 1px 1px rgba(0,0,0,0.25);margin-bottom:2.5rem;-webkit-transform:skew(-20deg, 0);-ms-transform:skew(-20deg, 0);transform:skew(-20deg, 0)}.-block .sticky-content__card:first-child{-webkit-animation:animate-cards .5s ease-in;animation:animate-cards .5s ease-in}.-block .sticky-content__card:nth-child(2n){-webkit-animation:animate-cards 1s ease-in;animation:animate-cards 1s ease-in}.-block .sticky-content__card:last-child{-webkit-animation:animate-cards 1.5s ease-in;animation:animate-cards 1.5s ease-in}@-webkit-keyframes animate-cards{0%{opacity:0;visibility:hidden}100%{opacity:1;visibility:visible}}@keyframes animate-cards{0%{opacity:0;visibility:hidden}100%{opacity:1;visibility:visible}}.sticky-content-card__inner{padding:1.25rem 2.5rem;-webkit-transform:skew(20deg, 0);-ms-transform:skew(20deg, 0);transform:skew(20deg, 0)}.sticky-content-card__header{margin-bottom:1.25rem}.sticky-content-card__header svg{display:block;margin:0 auto;max-width:60%}.sticky-content-card__desc{color:#bf00aa;font-size:.75rem;line-height:1rem}.body-footer{background:-webkit-gradient(linear, left top, left bottom, from(#240878), to(#12043d));background:-webkit-linear-gradient(top, #240878 0%, #12043d 100%);background:-o-linear-gradient(top, #240878 0%, #12043d 100%);background:linear-gradient(180deg, #240878 0%, #12043d 100%);border-top:4px solid #7528ac;padding-top:1.25rem}.body-footer:before{background:#fff;content:'';position:absolute;height:1px;width:100%;top:-5px}.body-footer__group{margin-bottom:1.25rem;padding:1.25rem;position:relative;text-align:center}.body-footer__group:after{background:-webkit-gradient(linear, right top, left top, from(#12043d), to(#240878));background:-webkit-linear-gradient(right, #12043d 0%, #240878 100%);background:-o-linear-gradient(right, #12043d 0%, #240878 100%);background:linear-gradient(-90deg, #12043d 0%, #240878 100%);content:'';height:100%;width:75%;position:absolute;top:0;left:12%;z-index:1;-webkit-transform:skew(-25deg, 0);-ms-transform:skew(-25deg, 0);transform:skew(-25deg, 0)}.body-footer-group__title{font-size:1rem;font-style:italic;font-weight:700;margin-bottom:2.5rem;position:relative;text-align:center;text-transform:uppercase;z-index:2}.body-footer-group__title:after{background-color:#bf00aa;bottom:-100%;-webkit-box-shadow:-12px 10px 1px 1px #7528ac;box-shadow:-12px 10px 1px 1px #7528ac;content:'';height:2px;left:50%;position:absolute;-webkit-transform:skew(-25deg, 0) translateX(-50%);-ms-transform:skew(-25deg, 0) translateX(-50%);transform:skew(-25deg, 0) translateX(-50%);width:50%}.body-footer-group__nav{position:relative;z-index:2}.body-footer-group__nav-link{display:block;margin:.625rem 0}.body-footer-group__nav-link:hover{color:#bf00aa;text-decoration:none}.body-footer__copy{background:-webkit-gradient(linear, left top, left bottom, from(#fc4a4c), to(#bf00aa));background:-webkit-linear-gradient(top, #fc4a4c 0%, #bf00aa 100%);background:-o-linear-gradient(top, #fc4a4c 0%, #bf00aa 100%);background:linear-gradient(180deg, #fc4a4c 0%, #bf00aa 100%);padding:.625rem 1.25rem;text-align:center}.body-footer-copy__text{display:block;font-size:.75rem}.body-footer__nav{padding:3.75rem 1.25rem}.body-footer-nav__title{font-size:1rem;font-style:italic;font-weight:700;margin-bottom:1.25rem;text-align:center;text-transform:uppercase}.body-footer__social{background-color:#12043d;border-top:1px solid rgba(191,0,170,0.15);-webkit-box-shadow:inset 0 1px 12px 2px rgba(0,0,0,0.25);box-shadow:inset 0 1px 12px 2px rgba(0,0,0,0.25);padding:1.25rem 0}.body-footer-social__nav{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;margin:0 auto;width:75%}.body-footer-social__link{background:-webkit-gradient(linear, left top, left bottom, from(#fc4a4c), to(#bf00aa));background:-webkit-linear-gradient(top, #fc4a4c 0%, #bf00aa 100%);background:-o-linear-gradient(top, #fc4a4c 0%, #bf00aa 100%);background:linear-gradient(180deg, #fc4a4c 0%, #bf00aa 100%);border-radius:50%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;height:1.875rem;width:1.875rem;position:relative;-webkit-transition:all .5s ease;-o-transition:all .5s ease;transition:all .5s ease}.body-footer-social__link .fab{color:#fff;-webkit-transition:all .3s ease-out;-o-transition:all .3s ease-out;transition:all .3s ease-out}.body-footer-social__link:before{background:#bf00aa;border-radius:50%;content:'';display:none;position:absolute;height:100%;width:100%}.body-footer-social__link:hover{text-decoration:none}.body-footer-social__link:hover:before{display:block}.body-footer-social__link:hover .fab{opacity:.8}
+
+/*# sourceMappingURL=styles.css.map */
+</style>
+    <style amp-boilerplate>
+        body {
+            -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            animation: -amp-start 8s steps(1, end) 0s 1 normal both
+        }
+
+        @-webkit-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-moz-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-ms-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-o-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+    </style><noscript>
+        <style amp-boilerplate>
+            body {
+                -webkit-animation: none;
+                -moz-animation: none;
+                -ms-animation: none;
+                animation: none
+            }
+        </style>
+    </noscript>
+</head>
+
+<body [class]="navVisible ? 'nav-open' : 'nav-closed'"
+    class="nav-closed">
+    <div class="off-canvas-container">
+        
+<header [class]="searchVisible ? 'header site-search-open' : 'header site-search-closed'"
+class="header site-search-closed">
+    <button class="mobile-nav-trigger" on="tap:AMP.setState({navVisible: ! navVisible, searchVisible: false})">
+        <span class="nav-pull fa fa-bars"></span>
+    </button>
+    <a class="header__logo" href="/">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 245.37 49.03">
+            <g fill="#fff" id="logo"><path class="cls-1" d="M24.62 37.63h-4.53a1.65 1.65 0 0 1-1.76-1.28l-.81-4.72H8.6l-1.94 4.72a2.56 2.56 0 0 1-.8.88 2.08 2.08 0 0 1-1.25.4H0L12.53 11.4h6zm-7.79-10l-1.28-7.49q-.14-.7-.31-1.67t-.33-2.08q-.43 1.13-.85 2.1l-.73 1.68-3.08 7.45zM60 11.4l-3.19 26.23h-5.15l1.84-15.27q.07-.49.18-1.07t.25-1.21L46 33.61a2.56 2.56 0 0 1-.95.9 2.59 2.59 0 0 1-1.25.31h-.79a2.24 2.24 0 0 1-1.19-.31 1.69 1.69 0 0 1-.72-.9L36.54 20q0 .61-.05 1.19t-.09 1.06l-1.8 15.38h-5.19l3.24-26.23h4.46a4.8 4.8 0 0 1 .64 0 1.65 1.65 0 0 1 .46.13 1.19 1.19 0 0 1 .37.27 3.93 3.93 0 0 1 .37.47l4.61 13.81q.2.56.36 1.14t.31 1.18q.27-.59.58-1.18t.67-1.14l8-13.81a5.73 5.73 0 0 1 .49-.47 1.72 1.72 0 0 1 .43-.27 1.92 1.92 0 0 1 .49-.13 5 5 0 0 1 .65 0zM76.18 11.4a12.49 12.49 0 0 1 4 .57 7.49 7.49 0 0 1 2.74 1.57 6.08 6.08 0 0 1 1.58 2.36 8.36 8.36 0 0 1 .5 2.92 11.65 11.65 0 0 1-.66 4 8.34 8.34 0 0 1-2 3.16A9.35 9.35 0 0 1 78.91 28a14.27 14.27 0 0 1-4.9.76h-2.78l-1.1 8.84H64.3l3.2-26.2zm-1.58 13a5.34 5.34 0 0 0 2.11-.4 3.48 3.48 0 0 0 1.39-1 4.23 4.23 0 0 0 .76-1.61 8.46 8.46 0 0 0 .23-2.05 4.66 4.66 0 0 0-.21-1.42A2.84 2.84 0 0 0 77.16 16a4.22 4.22 0 0 0-1.56-.26h-2.77l-1.06 8.6zM164.75 16h-6.66l-2.66 21.58h-5.83L152.22 16h-6.7l.58-4.64h19.26zM176.39 15.92l-.77 6.34H183l-.58 4.36h-7.38l-.81 6.5H184l-.58 4.52h-15.61L171 11.4h15.62l-.58 4.52zM220.42 11.4l-3.24 26.23H212l1.84-15.26q.07-.49.18-1.07t.25-1.21l-7.88 13.54a2.56 2.56 0 0 1-.95.9 2.59 2.59 0 0 1-1.25.31h-.79a2.24 2.24 0 0 1-1.19-.31 1.69 1.69 0 0 1-.72-.9L196.91 20q0 .61-.05 1.19t-.09 1.06L195 37.63h-5.18L193 11.4h4.46a4.79 4.79 0 0 1 .64 0 1.65 1.65 0 0 1 .46.13 1.2 1.2 0 0 1 .37.27 4.08 4.08 0 0 1 .37.47l4.61 13.81q.2.56.36 1.14t.31 1.18q.27-.59.58-1.18t.67-1.14l8-13.81a5.73 5.73 0 0 1 .49-.47 1.72 1.72 0 0 1 .43-.27 1.91 1.91 0 0 1 .49-.13 5 5 0 0 1 .65 0zM236.55 11.4a12.49 12.49 0 0 1 4 .57 7.5 7.5 0 0 1 2.74 1.57 6.08 6.08 0 0 1 1.57 2.36 8.35 8.35 0 0 1 .5 2.92 11.66 11.66 0 0 1-.66 4 8.34 8.34 0 0 1-2 3.16 9.35 9.35 0 0 1-3.41 2.02 14.27 14.27 0 0 1-4.9.76h-2.79l-1.1 8.84h-5.83l3.2-26.23zm-1.58 13a5.34 5.34 0 0 0 2.11-.37 3.48 3.48 0 0 0 1.39-1 4.23 4.23 0 0 0 .76-1.61 8.44 8.44 0 0 0 .23-2.05 4.66 4.66 0 0 0-.21-1.42 3 3 0 0 0-.64-1.12 2.91 2.91 0 0 0-1.09-.73 4.21 4.21 0 0 0-1.56-.26h-2.76l-1.06 8.6z"/><path d="M114 0a24.52 24.52 0 1 0 24.52 24.52A24.52 24.52 0 0 0 114 0zm-3.9 45.16l3.9-16.4h-12l17.13-24.89-4.24 15.67 11.06.18z" fill="#fff"/></g>
+        </svg>
+    </a>
+    <form class="site-search-form" method="POST" action-xhr="/example.com/subscribe">
+        <input type="text" class="form-control" placeholder="Search"/>
+        <button class="search-btn">
+            <span class="sr-only">Search</span>
+            <i class="fas fa-search"></i>
+        </button>
+    </form>
+    <button class="search-btn -header-main" on="tap:AMP.setState({searchVisible: !searchVisible})">
+        <span class="sr-only">Search</span>
+        <i class="fas fa-search"></i>
+    </button>
+    <button class="cancel-btn" on="tap:AMP.setState({searchVisible: !searchVisible})">
+        Cancel
+    </button>
+</header><!-- .header -->
+<nav class="nav-container">
+    <header class="nav-header">
+        <a class="btn -primary -sm" target="_blank" href="https://amp.dev/documentation/templates/about/support">
+            <i class="far fa-question-circle"></i>
+            <span>Support</span>
+        </a>
+        <button class="close-btn mobile-nav-trigger" on="tap:AMP.setState({navVisible: !navVisible})">
+            <span class="sr-only">Close</span>
+            <i class="fas fa-times"></i>
+        </button>
+    </header>
+    <section class="nav-main">
+        <amp-accordion>
+            <section class="nav-section">
+                <header class="nav-section__header">
+                    <a class="nav-link" target="_blank" href="https://amp.dev/about/websites">About</a>
+                    <i class="fas fa-chevron-down"></i>
+                    <i class="fas fa-chevron-up"></i>
+                </header>
+                <ul class="nav-list">
+                    <li><a class="nav-link" target="_blank" href="https://amp.dev/documentation/templates/about/websites">AMP Websites</a></li>
+                    <li><a class="nav-link" target="_blank" href="https://amp.dev/documentation/templates/about/stories">AMP Stories</a></li>
+                    <li><a class="nav-link" target="_blank" href="https://amp.dev/documentation/templates/about/ads">AMP Ads</a></li>
+                    <li><a class="nav-link" target="_blank" href="https://amp.dev/documentation/templates/about/email">AMP Email</a></li>
+                    <li><a class="nav-link" target="_blank" href="https://amp.dev/documentation/templates/about/how-amp-works">How AMP works</a></li>
+                    <li><a class="nav-link" target="_blank" href="https://amp.dev/documentation/templates/about/mission-and-vision">Vision and Mission</a></li>
+                    <li><a class="nav-link" target="_blank" href="https://amp.dev/documentation/templates/about/use-cases">Use cases</a></li>
+                    <li><a class="nav-link" target="_blank" href="https://amp.dev/documentation/templates/about/success-stories">Success Stories</a></li>
+                </ul>
+            </section>
+        </amp-accordion>
+        <amp-accordion>
+            <section class="nav-section">
+                <header class="nav-section__header">
+                    <a class="nav-link" target="_blank" href="https://amp.dev/documentation/templates/documentation">Documentation</a>
+                    <i class="fas fa-chevron-down"></i>
+                    <i class="fas fa-chevron-up"></i>
+                </header>
+                <ul class="nav-list">
+                    <li><a class="nav-link" target="_blank" href="https://amp.dev/documentation/guides-and-tutorials/">Guides & Tutorials</a></li>
+                    <li><a class="nav-link" target="_blank" href="https://amp.dev/documentation/components/">Components</a></li>
+                    <li><a class="nav-link" target="_blank" href="https://amp.dev/documentation/examples/">Examples</a></li>
+                    <li><a class="nav-link" target="_blank" href="https://amp.dev/documentation/courses/">Courses</a></li>
+                    <li><a class="nav-link" target="_blank" href="https://amp.dev/documentation/templates/">Templates</a></li>
+                    <li><a class="nav-link" target="_blank" href="https://amp.dev/documentation/tools">Tools</a></li>
+                </ul>
+            </section>
+        </amp-accordion>
+        <amp-accordion>
+            <section class="nav-section">
+                <header class="nav-section__header">
+                    <a class="nav-link">Community</a>
+                    <i class="fas fa-chevron-down"></i>
+                    <i class="fas fa-chevron-up"></i>
+                </header>
+                <ul class="nav-list">
+                    <li><a class="nav-link" target="_blank" href="https://amp.dev/documentation/guides-and-tutorials/contribute/">Contribute</a></li>
+                    <li><a class="nav-link" target="_blank" href="https://amp.dev/community/platform-and-vendor-partners">Platforms and Vendor Partners</a></li>
+                    <li><a class="nav-link" target="_blank" href="https://amp.dev/community/roadmap">Roadmap</a></li>
+                    <li><a class="nav-link" target="_blank" href="https://amp.dev/community/governance">Governance</a></li>
+                </ul>
+            </section>
+        </amp-accordion>
+        <amp-accordion>
+            <section class="nav-section">
+                <header class="nav-section__header">
+                    <a class="nav-link">Events</a>
+                    <i class="fas fa-chevron-down"></i>
+                    <i class="fas fa-chevron-up"></i>
+                </header>
+                <ul class="nav-list">
+                    <li><a class="nav-link" target="_blank" href="https://amp.dev/events/amp-conf-2019">AMP Conf 2019</a></li>
+                    <li><a class="nav-link" target="_blank" href="https://amp.dev/events/amp-roadshow">AMP Roadshow</a></li>
+                </ul>
+            </section>
+        </amp-accordion>
+    </section>
+    <footer class="nav-footer">
+        <p>Checkout our AMP Blog</p>
+        <a class="btn" target="_blank" href="https://blog.amp.dev/">
+            <i class="fas fa-edit"></i>
+            <span>Blog</span></a>
+    </footer>
+</nav><!-- .nav-container -->
+        <main class="body-wrapper">
+            <div class="sg">
+                <h1>Styleguide</h1>
+                <section class="sg-section">
+                    <header class="sg-section__header">
+                        <h1 class="sg-section__title">Typography</h1>
+                    </header>
+                    <main class="sg-section__main">
+                        <h2 class="sg-section__subtitle">Headings</h2>
+                        <h1>Heading 1</h1>
+                        <h2>Heading 2</h2>
+                        <h3>Heading 3</h3>
+                        <h4>Heading 4</h4>
+                        <h5>Heading 5</h5>
+                        <h6>Heading 6</h6>
+                        <h2 class="sg-section__subtitle">Paragraphs</h2>
+                        <p>Lorem ipsum <mark>dolor sit amet</mark>, <i>consectetur adipisicing elit</i>. Rerum ea <b>natus nihil eos sit</b>, <em>consequuntur possimus, illo</em>. Voluptates molestiae rerum debitis, <strong>inventore aliquam,</strong> quod doloremque.</p>
+                    </main>
+                </section>
+                <section class="sg-section">
+                    <header class="sg-section__header">
+                        <h1 class="sg-section__title">Buttons</h1>
+                    </header>
+                    <main class="sg-section__main">
+                        <a href="#" class="btn -primary">
+                            <span>Primary</span>
+                        </a>
+                        <a href="#" class="btn -primary -outline">
+                            <span>Primary Outline</span>
+                        </a>
+                        <a href="#" class="btn -secondary">
+                            <span>Secondary</span>
+                        </a>
+                        <a href="#" class="btn -tertiary">
+                            <span>Tertiary</span>
+                        </a>
+                    </main>
+                </section>
+                <section class="sg-section">
+                    <header class="sg-section__header">
+                        <h1 class="sg-section__title">Form Elements</h1>
+                    </header>
+                    <main class="sg-section__main">
+                        <form class="form" method="POST" action-xhr="/example.com/subscribe">
+                            <div class="form-inner">
+                                <div class="form-group -input">
+                                    <input class="form-control" type="text" placeholder="First Name">
+                                    <span class="form-group__border"></span>
+                                </div>
+                                <div class="form-group -input">
+                                    <input class="form-control" type="text" placeholder="Last Name">
+                                    <span class="form-group__border"></span>
+                                </div>
+                            </div>
+                            <div class="form-group -input">
+                                <input class="form-control" type="email" placeholder="Email">
+                                <span class="form-group__border"></span>
+                            </div>
+                            <div class="form-group -textarea">
+                                <textarea class="form-control -textarea" placeholder="Leave your comment"></textarea>
+                                <span class="form-group__border"></span>
+                            </div>
+                            <div class="form-group -cr">
+                                <input class="form-group__check" type="checkbox" id="checkBoxChecked" checked="checked">
+                                <label class="form-group__label" for="checkBoxChecked">Checkbox Checked</label>
+                            </div>
+                            <div class="form-group -cr">
+                                <input class="form-group__check" type="checkbox" id="checkBox">
+                                <label class="form-group__label" for="checkBox">Checkbox</label>
+                            </div>
+                            <div class="form-group -cr">
+                                <input class="form-group__check" type="checkbox" id="checkBoxDisabled" disabled="disabled">
+                                <label class="form-group__label" for="checkBoxDisabled">Checkbox Disabled</label>
+                            </div>
+                            <div class="form-group -cr">
+                                    <input class="form-group__radio" type="radio" id="radioChecked" checked="checked">
+                                    <label class="form-group__label" for="radioChecked">Radio Button Checked</label>
+                                </div>
+                                <div class="form-group -cr">
+                                    <input class="form-group__radio" type="radio" id="radio">
+                                    <label class="form-group__label" for="radio">Radio Button</label>
+                                </div>
+                                <div class="form-group -cr">
+                                    <input class="form-group__radio" type="radio" id="radioDisabled" disabled="disabled">
+                                    <label class="form-group__label" for="radioDisabled">Radio Button Disabled</label>
+                                </div>
+                        </form>
+                    </main>
+                </section>
+            </div><!-- .styleguide -->
+        </main><!-- .body-wrapper -->
+        <footer class="body-footer">
+    <div class="body-footer__group">
+        <h2 class="body-footer-group__title">Overview</h2>
+        <nav class="body-footer-group__nav">
+            <a href="https://amp.dev/about/websites" class="body-footer-group__nav-link" target="_blank">
+                AMP Framework
+            </a>
+            <a href="https://amp.dev/about/use-cases" class="body-footer-group__nav-link" target="_blank">
+                Use Cases
+            </a>
+            <a href="https://amp.dev/success-stories/" class="body-footer-group__nav-link" target="_blank">
+                Success Stories
+            </a>
+            <a href="https://amp.dev/about/how-amp-works" class="body-footer-group__nav-link" target="_blank">
+                Functionality
+            </a>
+        </nav>
+    </div><!-- .body-footer__group -->
+    <div class="body-footer__group">
+        <h2 class="body-footer-group__title">Docs</h2>
+        <nav class="body-footer-group__nav">
+            <a href="https://amp.dev/documentation/guides-and-tutorials/" class="body-footer-group__nav-link" target="_blank">
+                Get Started
+            </a>
+            <a href="https://amp.dev/documentation/guides-and-tutorials/" class="body-footer-group__nav-link" target="_blank">
+                Guides and Tutorials
+            </a>
+            <a href="https://amp.dev/documentation/components/" class="body-footer-group__nav-link" target="_blank">
+                Components
+            </a>
+            <a href="https://amp.dev/documentation/examples/" class="body-footer-group__nav-link" target="_blank">
+                Examples
+            </a>
+            <a href="https://amp.dev/documentation/templates/" class="body-footer-group__nav-link" target="_blank">
+                Design Templates
+            </a>
+            <a href="https://amp.dev/documentation/tools" class="body-footer-group__nav-link" target="_blank">
+                Tools
+            </a>
+        </nav>
+    </div><!-- .body-footer__group -->
+    <div class="body-footer__group">
+        <h2 class="body-footer-group__title">Community</h2>
+        <nav class="body-footer-group__nav">
+            <a href="https://amp.dev/documentation/guides-and-tutorials/" class="body-footer-group__nav-link" target="_blank">
+                Platform and Vendor Partners
+            </a>
+            <a href="https://amp.dev/documentation/guides-and-tutorials/contribute/" class="body-footer-group__nav-link" target="_blank">
+                Contribute
+            </a>
+            <a href="https://amp.dev/community/roadmap" class="body-footer-group__nav-link" target="_blank">
+                Roadmap
+            </a>
+        </nav>
+    </div><!-- .body-footer__group -->
+    <div class="body-footer__group">
+        <h2 class="body-footer-group__title">Events</h2>
+        <nav class="body-footer-group__nav">
+            <a href="https://amp.dev/events/amp-conf-2019" class="body-footer-group__nav-link" target="_blank">
+                AMP Conf 2019
+            </a>
+            <a href="https://amp.dev/events/amp-roadshow" class="body-footer-group__nav-link" target="_blank">
+                AMP Roadshow
+            </a>
+        </nav>
+    </div><!-- .body-footer__group -->
+    <div class="body-footer__social">
+        <h2 class="body-footer-nav__title">Follow Us!</h2>
+        <nav class="body-footer-social__nav">
+            <a href="https://twitter.com/AMPhtml" class="body-footer-social__link">
+                <span class="sr-only">Twitter</span>
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.youtube.com/channel/UCXPBsjgKKG2HqsKBhWA4uQw" class="body-footer-social__link">
+                <span class="sr-only">YouTube</span>
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://amphtml.wordpress.com/" class="body-footer-social__link">
+                <span class="sr-only">Wordpress</span>
+                <i class="fab fa-wordpress-simple"></i>
+            </a>
+            <a href="https://github.com/ampproject" class="body-footer-social__link">
+                <span class="sr-only">Github</span>
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://stackoverflow.com/questions/tagged/amp-html" class="body-footer-social__link">
+                <span class="sr-only">Stack Overflow</span>
+                <i class="fab fa-stack-overflow"></i>
+            </a>
+        </nav><!-- .body-footer-social__nav -->
+    </div><!-- .body-footer__social -->
+    <div class="body-footer__copy">
+        <span class="body-footer-copy__text">© 2019 AMP Open Source Project</span>
+    </div><!-- .body-footer-copy -->
+</footer><!-- .body-footer -->
+    </div><!-- .off-canvas-container -->
+</body>
+
+</html>

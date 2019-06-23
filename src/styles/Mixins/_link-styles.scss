@@ -1,0 +1,8 @@
+@mixin hoverMixin($color) {
+	&:active,
+	&:focus,
+	&:hover {
+		color: $color;
+		-webkit-appearance: none;
+	}
+}

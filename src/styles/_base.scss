@@ -1,0 +1,93 @@
+html {
+	position: relative;
+}
+
+body {
+	color: $text-color-light;
+	font-family: $font-primary;
+    font-size: $font-size-base;
+    line-height: $line-height;
+
+    ::selection {
+        background: $hollywood-cerise;
+        color: $text-color-light;
+    }
+}
+
+html, body {
+	overflow-x: hidden;
+}
+
+.container {
+	max-width: 960px;
+	height: 100%;
+}
+
+a {
+    color: $text-color-light;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
+a {
+    @include transition($transition-time: 0.15s);
+}
+
+p {
+    margin: $padding/2 0 $padding/2;
+    font-weight: $font-weight-light;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: $font-weight-medium;
+    line-height: 1em;
+    margin: 0 0 0.5rem;
+}
+
+h1 {
+    font-size: $font-size-xxl;
+}
+
+h2 {
+    font-size: $font-size-xl;
+}
+
+h3 {
+    font-size: $font-size-lg;
+}
+
+h4 {
+    font-size: $font-size-md;
+}
+
+h5 {
+    font-size: $font-size-sm;
+}
+
+h6 {
+    font-size: $font-size-sm;
+}
+
+mark {
+	background-color: $brand-primary;
+	color: $text-color-light;
+}

@@ -1,0 +1,128 @@
+@import 'Mixins/mixins';
+
+// ------------------------------------------------------ //
+// General Settings
+// ---------------
+//
+// ------------------------------------------------------ //
+// Padding
+//
+$padding: 1.25rem;
+// sass-lint:disable-all
+// ----------------------------------------------------------------------------------- //
+// reference material
+// scotch.io/tutorials/default-sizes-for-twitter-bootstraps-media-queries
+// css-tricks.com/snippets/css/media-queries-for-standard-devices
+// ----------------------------------------------------------------------------------- //
+// below is a really comprehensive guide to break points
+// responsivedesign.is/develop/browser-feature-support/media-queries-for-common-device-breakpoints
+// ----------------------------------------------------------------------------------- //
+// iphone  || small devices || desktops || wide screens || large screens || super wide //
+// xs: 320 || sm: 480       || md: 768  || lg: 1024     || xl: 1274      || xxl: 1548  //
+// ----------------------------------------------------------------------------------- //
+$container-max-widths: (xs: 90%, sm: 400px, md: 688px, lg: 944px, xl: 1194px, xxl: 1468px);
+$grid-breakpoints: (xs: 0, sm: 480px, md: 768px, lg: 1024px, xl: 1274px, xxl: 1548px);
+// ------------------------------------------------------ //
+// Columns
+//
+$grid-columns: 12;
+$grid-gutter-width-base: 1vw;
+// sass-lint:enable-all
+// ------------------------------------------------------ //
+// Colors
+// ------
+//
+// Grays
+$white: #fff;
+$black: #000;
+$gray: #bbb;
+// ------------------------------------------------------ //
+// Design Colors
+//
+$brilliant-rose: #f9579b;
+$sunset-orange: #fc4a4c;
+$hollywood-cerise: #bf00aa;
+$purple-heart: #7528ac;
+$cerulean: #03b2ee;
+$blue: #070dfa;
+$deep-blue: #240878;
+$black-rock: #12043d;
+// ------------------------------------------------------ //
+// Gradients
+//
+$gradient-rose-orange: linear-gradient(180deg, $brilliant-rose 0%, $sunset-orange 100%);
+$gradient-rose-orange-150deg: linear-gradient(150deg, $brilliant-rose 60%, $sunset-orange 35%);
+$gradient-rose-orange-90deg: linear-gradient(-90deg, $brilliant-rose 0%, $sunset-orange 100%);
+
+$gradient-orange-cerise: linear-gradient(180deg, $sunset-orange 0%, $hollywood-cerise 100%);
+$gradient-orange-cerise-150deg: linear-gradient(150deg, $sunset-orange 60%, $hollywood-cerise 35%);
+$gradient-orange-cerise-90deg: linear-gradient(-90deg, $sunset-orange 0%, $hollywood-cerise 100%);
+
+$gradient-cerise-deepblue: linear-gradient(180deg, $hollywood-cerise 0%, $deep-blue 100%);
+$gradient-cerise-deepblue-150deg: linear-gradient(150deg, $hollywood-cerise 60%, $deep-blue 35%);
+$gradient-cerise-deepblue-90deg: linear-gradient(-90deg, $hollywood-cerise 0%, $deep-blue 100%);
+
+$gradient-cerise-purple: linear-gradient(180deg, $hollywood-cerise 0%, $purple-heart 100%);
+$gradient-cerise-purple-150deg: linear-gradient(150deg, $hollywood-cerise 60%, $purple-heart 35%);
+$gradient-cerise-purple-90deg: linear-gradient(-90deg, $hollywood-cerise 0%, $purple-heart 100%);
+
+$gradient-cerulean-blue: linear-gradient(180deg, $cerulean 0%, $blue 100%);
+$gradient-cerulean-blue-150deg: linear-gradient(150deg, $cerulean 60%, $blue 35%);
+
+$gradient-purple-deepblue: linear-gradient(180deg, $purple-heart 0%, $deep-blue 100%);
+$gradient-purple-deepblue-150deg: linear-gradient(150deg, $purple-heart 60%, $deep-blue 35%);
+$gradient-purple-deepblue-90deg: linear-gradient(-90deg, $purple-heart 0%, $deep-blue 100%);
+
+$gradient-purple-blackrock: linear-gradient(180deg, $purple-heart 0%, $black-rock 100%);
+$gradient-purple-blackrock-150deg: linear-gradient(150deg, $purple-heart 60%, $black-rock 35%);
+$gradient-purple-blackrock-90deg: linear-gradient(-90deg, $purple-heart 0%, $black-rock 100%);
+
+$gradient-deepblue-blackrock: linear-gradient(180deg, $deep-blue 0%, $black-rock 100%);
+$gradient-deepblue-blackrock-150deg: linear-gradient(150deg, $deep-blue 60%, $black-rock 35%);
+
+$gradient-blackrock-deepblue-90deg: linear-gradient(-90deg, $black-rock 0%, $deep-blue 100%);
+
+$gradient-orange-purple-blue: linear-gradient(180deg, $sunset-orange 0%, $purple-heart 50%, $blue 100%);
+
+// ------------------------------------------------------ //
+// Brand Definitions
+//
+$brand-primary: $hollywood-cerise;
+$brand-secondary: $deep-blue;
+// ------------------------------------------------------ //
+// Text Colors
+//
+$text-color-light: $white;
+$text-color-medium: $brand-primary;
+$text-color-dark: $brand-secondary;
+// ------------------------------------------------------ //
+// Link Colors
+//
+$link-color-primary: $brand-secondary;
+$link-color-secondary: $brand-primary;
+// ------------------------------------------------------ //
+// ------------------------------------------------------ //
+// Typography
+// ------
+
+$font-primary: 'Lato', Arial, sans-serif;
+$font-secondary: 'Roboto', Arial, sans-serif;
+$font-tertiary: 'Arial', sans-serif;
+
+$font-title: $font-primary;
+
+$line-height: 1.5em;
+
+$font-weight-thin: 300;
+$font-weight-light: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+$font-weight-black: 900;
+
+$font-size-base: 1rem;
+$font-size-xs: $font-size-base - 0.4;
+$font-size-sm: $font-size-base - 0.25;
+$font-size-md: $font-size-base;
+$font-size-lg: $font-size-base+0.5;
+$font-size-xl: $font-size-base+1;
+$font-size-xxl: $font-size-base+2;

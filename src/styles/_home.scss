@@ -1,0 +1,68 @@
+.home-main {
+    background: $gradient-orange-purple-blue;
+    padding: $padding*5 $padding $padding;
+}
+
+.app-intro {
+    padding-bottom: $padding*3;
+}
+
+.app-intro__desc {
+    font-style: italic;
+    font-size: $font-size-md;
+    font-weight: $font-weight-bold;
+    text-align: center;
+}
+
+.app-benefits {
+    background: $gradient-purple-blackrock-90deg;
+    border-top: 1px solid $deep-blue;
+    padding: $padding*3 $padding;
+    position: relative;
+
+    &:before {
+        background: $deep-blue;
+        content: '';
+        height: 10px;
+        left: 25%;
+        position: absolute;
+        top: -5px;
+        transform: skew(-20deg, 0);
+        width: 50%;
+    }
+
+    .far,
+    .fas {
+        color: $brand-primary;
+        font-size: $font-size-xl;
+        margin-right: $padding;
+        height: 50%;
+    }
+}
+
+.app-benefits__title {
+    font-size: $font-size-md + 0.15;
+    font-style: italic;
+    font-weight: $font-weight-bold;
+    margin: $padding 0;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.app-benefit {
+    display: flex;
+    padding: $padding;
+}
+
+.app-benefit__title {
+    color: $brand-primary;
+    font-size: $font-size-md;
+    font-style: italic;
+    font-weight: $font-weight-bold;
+    line-height: 1em;
+    text-shadow: 0 1px 1px rgba($black, 0.5);
+}
+
+.app-benefit__text {
+    font-size: $font-size-base - 0.15;
+}

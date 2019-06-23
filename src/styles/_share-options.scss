@@ -1,0 +1,160 @@
+.share-options {
+    @include cf();
+    margin: 55px 0 20px;
+
+    &__title {
+        color: $color-A2;
+        @include bidi-value(float, left, right);
+        @include font-T7();
+        margin: 0;
+        @include bidi-style(margin-right, 29px, margin-left, 0);
+    }
+
+    &__list {
+        clear: both;
+        list-style: none;
+        margin: -10px 0 0;
+        padding: 0;
+    }
+
+    &__item {
+        display: inline;
+
+        a {
+            color: $color-A2;
+            @include font-T3();
+        }
+
+        span {
+            border: 0;
+            font-size: 0;
+            text-shadow: none;
+            color: transparent;
+        }
+    }
+    @media print {
+         display:none;
+    }
+}
+
+.share-options--alt {
+    margin: 10px;
+    white-space: nowrap;
+
+    .share-options__title {
+        @include font-T9;
+        text-transform: uppercase;
+        position: relative;
+        z-index: 1;
+        @include bidi-value(float, none, none);
+        display: inline-block;
+        line-height: 33px;
+        @include bidi-style(margin-right, 0.5em, margin-left, 0);
+    }
+
+    .share-options__list {
+        float: none;
+        display: inline;
+        position: relative;
+        z-index: 1;
+    }
+
+    .share-options__item {
+        display: inline-block;
+        width: 32px;
+    }
+
+    @media screen and (min-width: $tablet) {
+        margin: 11px 5px -11px 10px;
+        height: 0;
+        @include bidi-value(text-align, right, left);
+
+        .share-options__title {
+            @include bidi-style(margin-right, 1em, margin-left, 0);
+        }
+    }
+}
+
+.share-options--incontent {
+    margin: 10px 0;
+    white-space: nowrap;
+
+    .share-options__title {
+        @include font-T5;
+        position: relative;
+        z-index: 1;
+        @include bidi-value(float, none, none);
+        display: inline-block;
+        line-height: 33px;
+        @include bidi-style(margin-right, 0.5em, margin-left, 0);
+    }
+
+    .share-options__list {
+        float: none;
+        display: inline;
+        position: relative;
+        z-index: 1;
+    }
+
+    .share-options__item {
+        display: inline-block;
+        width: 32px;
+    }
+
+}
+
+
+
+.ico {
+    background-image: url(../images/sprites/icons/icons.png);
+	font-size: 0;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.ico--facebook {
+    background-position: -985px -441px;
+    height: 23px;
+    width: 36px;
+}
+
+.ico--rss {
+    background-position: -1192px -250px;
+    height: 20px;
+    width: 36px;
+}
+
+.ico--twitter {
+    background-position: -1079px -353px;
+    height: 20px;
+    width: 36px;
+}
+
+.ico--googleplus {
+    background-position: -1056px -373px;
+    height: 22px;
+    width: 36px;
+}
+
+.ico--pinterest {
+    background-position: -1033px -395px;
+    height: 23px;
+    width: 36px;
+}
+.ico--youtube {
+    background-position: -961px -464px;
+    height: 23px;
+    width: 36px;
+}
+
+.ico--email {
+    background-position: -1125px -314px;
+    height: 17px;
+    width: 36px;
+}
+
+.ico--whatsapp {
+    background-position: -1009px -418px;
+    height: 23px;
+    width: 36px;
+}

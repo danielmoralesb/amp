@@ -1,0 +1,125 @@
+.amp-carousel-button {
+    background-image: none;
+    border-radius: 0;
+    color: $cerulean;
+    cursor: pointer;
+    @include transition(all, .5s, ease);
+
+    &:before {
+        font-family: FontAwesome;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &:hover {
+        transform: translateY(-$padding) scale(1.2);
+    }
+
+    &.amp-carousel-button-next {
+        &:before {
+            content: "\f054";
+        }
+    }
+
+    &.amp-carousel-button-prev {
+        &:before {
+            content: "\f053";
+        }
+    }
+}
+
+.hero-carousel {
+    margin: 0 auto;
+    max-width:400px;
+
+    .amp-carousel-button {
+        background-color: transparent;
+    }
+}
+
+.hero-carousel__item {
+    padding: 0 $padding*3;
+}
+
+.featured-carousel {
+    margin-bottom: $padding*4;
+}
+
+.featured-carousel > amp-carousel > div:first-child {
+    display: flex;
+}
+
+.featured-carousel__item {
+    background: $gradient-blackrock-deepblue-90deg;
+    box-shadow: 0 0 4px 2px rgba($black, .25);
+    margin: 0 20px;
+    transform: skew(-20deg, 0);
+
+    &:first-child {
+        margin-left: 20px;
+    }
+}
+
+.featured-carousel__item-inner {
+    position: relative;
+    transform: skew(20deg, 0);
+    white-space: normal;
+    width: 150px;
+}
+
+.featured-carousel__header {
+    background-color: $cerulean;
+    cursor: pointer;
+    margin-left: 20px;
+    padding: $padding;
+    position: relative;
+    text-align: center;
+    transform: skew(-20deg, 0);
+    width: 100%;
+    z-index: 2;
+
+    @include transition(all, .5s, ease);
+
+    &:hover {
+        transform: skew(-20deg, 0) translateY(-10px);
+        background-color: $brand-primary;
+
+        .featured-carousel__title {
+            color: $text-color-light;
+        }
+    }
+}
+
+.featured-carousel__title {
+    color: $text-color-dark;
+    font-size: $font-size-md;
+    font-style: italic;
+    font-weight: $font-weight-black;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    transform: skew(20deg, 0);
+}
+
+.featured-carousel__main {
+    position: relative;
+    transform: translateX(-40%);
+    width: 120%;
+    z-index: 2;
+}
+
+.featured-carousel__main-left {
+    float: left;
+    height: 250px;
+    width: $padding*5;
+    shape-outside: polygon(100% 0, 96% 1%, 0 100%, 3% 100%);
+    clip-path: polygon(100% 0, 96% 1%, 0 100%, 3% 100%);
+}
+
+.featured-carousel__desc {
+    font-size: $font-size-sm;
+    font-style: italic;
+    font-weight: $font-weight-light;
+    line-height: $font-size-md;
+}
