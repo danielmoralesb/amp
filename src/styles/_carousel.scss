@@ -44,7 +44,8 @@
 }
 
 .featured-carousel {
-    margin-bottom: $padding*4;
+    margin: 0 auto $padding*4;
+    max-width: 960px;
 }
 
 .featured-carousel > amp-carousel > div:first-child {

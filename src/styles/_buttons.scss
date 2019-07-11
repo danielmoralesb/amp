@@ -28,7 +28,6 @@
     @include transition(all, .4s, ease);
 
     &:hover {
-        opacity: .5;
         text-decoration: none;
     }
 
@@ -44,6 +43,14 @@
     .nav-footer & {
         background:$gradient-cerise-deepblue;
         width: 75%;
+
+        &:hover {
+            background:$gradient-cerise-deepblue-light;
+        }
+    }
+
+    .sg & {
+        margin-bottom: $padding;
     }
 }
 
@@ -51,11 +58,20 @@
     &.btn {
         background: $gradient-rose-orange;
 
+        &:hover {
+            background: $gradient-rose-orange-light;
+        }
+
         &.-outline {
             background: none;
             border: 1px solid $white;
             color: $text-color-light;
             padding: calc(#{$padding/2} - 1px) calc(#{$padding} - 1px);
+
+            &:hover {
+                background: $white;
+                color: $text-color-dark;
+            }
         }
     }
 }
@@ -63,12 +79,20 @@
 .-secondary {
     &.btn {
         background: $gradient-cerise-deepblue;
+
+        &:hover {
+            background: $gradient-cerise-deepblue-light;
+        }
     }
 }
 
 .-tertiary {
     &.btn {
         background: $gradient-cerulean-blue;
+
+        &:hover {
+            background: $gradient-cerulean-blue-light;
+        }
     }
 }
 
@@ -93,10 +117,6 @@
 
     .nav-header & {
         align-self: center;
-    }
-
-    .lightbox & {
-        color: $deep-blue;
     }
 }
 

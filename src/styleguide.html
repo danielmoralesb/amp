@@ -109,93 +109,95 @@
         @@include('./partials/header.html')
         <main class="body-wrapper">
             <div class="sg">
-                <h1>Styleguide</h1>
-                <section class="sg-section">
-                    <header class="sg-section__header">
-                        <h1 class="sg-section__title">Typography</h1>
-                    </header>
-                    <main class="sg-section__main">
-                        <h2 class="sg-section__subtitle">Headings</h2>
-                        <h1>Heading 1</h1>
-                        <h2>Heading 2</h2>
-                        <h3>Heading 3</h3>
-                        <h4>Heading 4</h4>
-                        <h5>Heading 5</h5>
-                        <h6>Heading 6</h6>
-                        <h2 class="sg-section__subtitle">Paragraphs</h2>
-                        <p>Lorem ipsum <mark>dolor sit amet</mark>, <i>consectetur adipisicing elit</i>. Rerum ea <b>natus nihil eos sit</b>, <em>consequuntur possimus, illo</em>. Voluptates molestiae rerum debitis, <strong>inventore aliquam,</strong> quod doloremque.</p>
-                    </main>
-                </section>
-                <section class="sg-section">
-                    <header class="sg-section__header">
-                        <h1 class="sg-section__title">Buttons</h1>
-                    </header>
-                    <main class="sg-section__main">
-                        <a href="#" class="btn -primary">
-                            <span>Primary</span>
-                        </a>
-                        <a href="#" class="btn -primary -outline">
-                            <span>Primary Outline</span>
-                        </a>
-                        <a href="#" class="btn -secondary">
-                            <span>Secondary</span>
-                        </a>
-                        <a href="#" class="btn -tertiary">
-                            <span>Tertiary</span>
-                        </a>
-                    </main>
-                </section>
-                <section class="sg-section">
-                    <header class="sg-section__header">
-                        <h1 class="sg-section__title">Form Elements</h1>
-                    </header>
-                    <main class="sg-section__main">
-                        <form class="form" method="POST" action-xhr="/example.com/subscribe">
-                            <div class="form-inner">
-                                <div class="form-group -input">
-                                    <input class="form-control" type="text" placeholder="First Name">
-                                    <span class="form-group__border"></span>
+                <div class="container">
+                    <h1>Styleguide</h1>
+                    <section class="sg-section">
+                        <header class="sg-section__header">
+                            <h1 class="sg-section__title">Typography</h1>
+                        </header>
+                        <main class="sg-section__main">
+                            <h2 class="sg-section__subtitle">Headings</h2>
+                            <h1>Heading 1</h1>
+                            <h2>Heading 2</h2>
+                            <h3>Heading 3</h3>
+                            <h4>Heading 4</h4>
+                            <h5>Heading 5</h5>
+                            <h6>Heading 6</h6>
+                            <h2 class="sg-section__subtitle">Paragraphs</h2>
+                            <p>Lorem ipsum <mark>dolor sit amet</mark>, <i>consectetur adipisicing elit</i>. Rerum ea <b>natus nihil eos sit</b>, <em>consequuntur possimus, illo</em>. Voluptates molestiae rerum debitis, <strong>inventore aliquam,</strong> quod doloremque.</p>
+                        </main>
+                    </section>
+                    <section class="sg-section">
+                        <header class="sg-section__header">
+                            <h1 class="sg-section__title">Buttons</h1>
+                        </header>
+                        <main class="sg-section__main">
+                            <a href="#" class="btn -primary">
+                                <span>Primary</span>
+                            </a>
+                            <a href="#" class="btn -primary -outline">
+                                <span>Primary Outline</span>
+                            </a>
+                            <a href="#" class="btn -secondary">
+                                <span>Secondary</span>
+                            </a>
+                            <a href="#" class="btn -tertiary">
+                                <span>Tertiary</span>
+                            </a>
+                        </main>
+                    </section>
+                    <section class="sg-section">
+                        <header class="sg-section__header">
+                            <h1 class="sg-section__title">Form Elements</h1>
+                        </header>
+                        <main class="sg-section__main">
+                            <form class="form" method="POST" action-xhr="/example.com/subscribe">
+                                <div class="form-inner">
+                                    <div class="form-group -input">
+                                        <input class="form-control" type="text" placeholder="First Name">
+                                        <span class="form-group__border"></span>
+                                    </div>
+                                    <div class="form-group -input">
+                                        <input class="form-control" type="text" placeholder="Last Name">
+                                        <span class="form-group__border"></span>
+                                    </div>
                                 </div>
                                 <div class="form-group -input">
-                                    <input class="form-control" type="text" placeholder="Last Name">
+                                    <input class="form-control" type="email" placeholder="Email">
                                     <span class="form-group__border"></span>
                                 </div>
-                            </div>
-                            <div class="form-group -input">
-                                <input class="form-control" type="email" placeholder="Email">
-                                <span class="form-group__border"></span>
-                            </div>
-                            <div class="form-group -textarea">
-                                <textarea class="form-control -textarea" placeholder="Leave your comment"></textarea>
-                                <span class="form-group__border"></span>
-                            </div>
-                            <div class="form-group -cr">
-                                <input class="form-group__check" type="checkbox" id="checkBoxChecked" checked="checked">
-                                <label class="form-group__label" for="checkBoxChecked">Checkbox Checked</label>
-                            </div>
-                            <div class="form-group -cr">
-                                <input class="form-group__check" type="checkbox" id="checkBox">
-                                <label class="form-group__label" for="checkBox">Checkbox</label>
-                            </div>
-                            <div class="form-group -cr">
-                                <input class="form-group__check" type="checkbox" id="checkBoxDisabled" disabled="disabled">
-                                <label class="form-group__label" for="checkBoxDisabled">Checkbox Disabled</label>
-                            </div>
-                            <div class="form-group -cr">
-                                    <input class="form-group__radio" type="radio" id="radioChecked" checked="checked">
-                                    <label class="form-group__label" for="radioChecked">Radio Button Checked</label>
+                                <div class="form-group -textarea">
+                                    <textarea class="form-control -textarea" placeholder="Leave your comment"></textarea>
+                                    <span class="form-group__border"></span>
                                 </div>
                                 <div class="form-group -cr">
-                                    <input class="form-group__radio" type="radio" id="radio">
-                                    <label class="form-group__label" for="radio">Radio Button</label>
+                                    <input class="form-group__check" type="checkbox" id="checkBoxChecked" checked="checked">
+                                    <label class="form-group__label" for="checkBoxChecked">Checkbox Checked</label>
                                 </div>
                                 <div class="form-group -cr">
-                                    <input class="form-group__radio" type="radio" id="radioDisabled" disabled="disabled">
-                                    <label class="form-group__label" for="radioDisabled">Radio Button Disabled</label>
+                                    <input class="form-group__check" type="checkbox" id="checkBox">
+                                    <label class="form-group__label" for="checkBox">Checkbox</label>
                                 </div>
-                        </form>
-                    </main>
-                </section>
+                                <div class="form-group -cr">
+                                    <input class="form-group__check" type="checkbox" id="checkBoxDisabled" disabled="disabled">
+                                    <label class="form-group__label" for="checkBoxDisabled">Checkbox Disabled</label>
+                                </div>
+                                <div class="form-group -cr">
+                                        <input class="form-group__radio" type="radio" id="radioChecked" checked="checked">
+                                        <label class="form-group__label" for="radioChecked">Radio Button Checked</label>
+                                    </div>
+                                    <div class="form-group -cr">
+                                        <input class="form-group__radio" type="radio" id="radio">
+                                        <label class="form-group__label" for="radio">Radio Button</label>
+                                    </div>
+                                    <div class="form-group -cr">
+                                        <input class="form-group__radio" type="radio" id="radioDisabled" disabled="disabled">
+                                        <label class="form-group__label" for="radioDisabled">Radio Button Disabled</label>
+                                    </div>
+                            </form>
+                        </main>
+                    </section>
+                </div><!-- .container -->
             </div><!-- .styleguide -->
         </main><!-- .body-wrapper -->
         @@include('./partials/footer.html')

@@ -78,13 +78,3 @@
     float: none;
     max-width: none;
 }
-
-.off-canvas-container {
-	position: relative;
-	@include transition(margin, 0.5, ease);
-}
-
-body.nav-open .off-canvas-container {
-	margin-left: 280px;
-	margin-right: -280px;
-}
