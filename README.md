@@ -256,11 +256,12 @@ Since JavaScript is not allowed on AMP Pages, I took advantage of the multiple c
 
 Here is a List of the Components that I used on my **AMP Page**:
 
- + [AMP Bind (Toggle)][AMPBindToggle]
- + [AMP Accordion (Accordion Navigation)][AMPAccordion]
- + [AMP Animation and AMP Position Observer (Sticky Nav)][AMPAnimationPositionObserver]
- + [AMP Bind (Modal)][AMPBindModal]
- + [AMP Lightbox][AMPLightbox]
+ + [AMP Bind (Toggle)][AMPBindToggle] -> _[ChecK out this CodePen Example](https://codepen.io/danielmorales/pen/gJQOMm)_
+ + [AMP Accordion (Accordion Navigation)][AMPAccordion] -> _[ChecK out this CodePen Example](https://codepen.io/danielmorales/pen/LKLOra)_
+ + [AMP Animation and AMP Position Observer (Sticky Nav)][AMPAnimationPositionObserver] -> _[ChecK out this CodePen Example](https://codepen.io/danielmorales/pen/KjqZPQ)_
+ + [AMP Bind (Modal)][AMPBindModal] -> _[ChecK out this CodePen Example](https://codepen.io/danielmorales/pen/ZdJJxm)_
+ + [AMP Carousel][AMPCarousel] -> _[Check out this CodePen Example](https://codepen.io/danielmorales/pen/WqEXMw)_
+ + [AMP Lightbox][AMPLightbox] -> _[Check out this CodePen Example](https://codepen.io/danielmorales/pen/zVdRQN)_
 <br/><br/>
 
 _Note that for every component that is used on any AMP Page I had to add its required script._ This way I only used what I need instead of using the whole lirbary of components that AMP has, saving on loading time when users request the finished page.
@@ -279,9 +280,12 @@ While researching a way to toggle a class when using AMP Components I bumped int
 + Code:
 
     ```html
-    <button class="mobile-nav-trigger" on="tap:AMP.setState({navVisible: !navVisible})"> <span class="sr-only">Close</span> <i class="fas fa-times"></i></button>
+    <button class="mobile-nav-trigger" on="tap:AMP.setState({navVisible: ! navVisible, searchVisible: false})">
+        <span class="nav-pull fa fa-bars"></span>
+    </button>
 
-    <body [class]="navVisible ? 'nav-open' : 'nav-closed'" class="nav-closed">
+    <body [class]="navVisible ? 'nav-open' : 'nav-closed'"
+    class="nav-closed">
     ```
 
 + Description:
@@ -307,7 +311,7 @@ The Regular version of the page had an accordion navigation on the its mobile me
     <section class="nav main-nav">
         <amp-accordion>
             <section class="nav-section">
-                <header class="nav-header">
+                <header class="nav-section__header"">
                     <a class="nav-link" href="https://amp.dev/documentation/templates/?referrer=ampstart.com/about">About</a>
                 </header>
                 <ul class="nav-list">
@@ -396,13 +400,18 @@ Position Observer
     ```html
     <amp-position-observer target="stickyWrapper" on="enter:hideAnim.start; exit:showAnim.start" intersection-ratios="0.9" layout="nodisplay"></amp-position-observer>
 
-    <div id="stickyWrapper" class="sticky-wrapper">
-        <a class="sticky-wrapper__link">
-            In This Issue
-        </a>
-        <a class="sticky-wrapper__link">
-            Share
-        </a>
+    <div id="stickyWrapper" class="sticky">
+        <section class="sticky__inner">
+            <header class="sticky__header">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.92 20.92"><path fill="#FFF" d="M10.46 0C4.683 0 0 4.683 0 10.46c0 5.777 4.683 10.46 10.46 10.46s10.46-4.683 10.46-10.46C20.92 4.683 16.237 0 10.46 0zM8.809 19.269l1.652-7H5.348l7.314-10.618-1.809 6.685 4.719.079-6.763 10.854z"/></svg>
+                <h2 class="sticky-header__title">Success Stories</h2>
+            </header>
+            <nav class="sticky__nav">
+                <a class="btn" href="https://amp.dev/success-stories/" target="_blank"><span>Advertisers</span></a>
+                <a class="btn" href="https://amp.dev/success-stories/" target="_blank"><span>E-Commerce</span></a>
+                <a class="btn" href="https://amp.dev/success-stories/" target="_blank"><span>Publishers</span></a>
+            </nav>
+        </section>
     </div>
     ```
 
@@ -417,40 +426,90 @@ Position Observer
 #### AMPBindModal
 
 + Code:
+
     + Trigger:
+
         ```html
-        <div id="stickyWrapper" class="sticky-wrapper">
-            <a [class]="headerState == 'inThisIssue' ? 'sticky-wrapper__link -active' : 'sticky-wrapper__link'" class="sticky-wrapper__link" on="tap:AMP.setState({headerState : headerState != 'inThisIssue' ? 'inThisIssue' : ''})">
-                In This Issue
-            </a>
-            <a [class]="headerState == 'share' ? 'sticky-wrapper__link -active' : 'sticky-wrapper__link" class="sticky-wrapper__link" on="tap:AMP.setState({headerState : headerState != 'share' ? 'share' : ''})">
-                Share
-            </a>
+        <div id="stickyWrapper" class="sticky">
+            <section class="sticky__inner">
+                <header class="sticky__header">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.92 20.92"><path fill="#FFF" d="M10.46 0C4.683 0 0 4.683 0 10.46c0 5.777 4.683 10.46 10.46 10.46s10.46-4.683 10.46-10.46C20.92 4.683 16.237 0 10.46 0zM8.809 19.269l1.652-7H5.348l7.314-10.618-1.809 6.685 4.719.079-6.763 10.854z"/></svg>
+                    <h2 class="sticky-header__title">Success Stories</h2>
+                </header>
+                <nav class="sticky__nav">
+                    <a class="btn" href="https://amp.dev/success-stories/" target="_blank"><span>Advertisers</span></a>
+                    <a class="btn" href="https://amp.dev/success-stories/" target="_blank"><span>E-Commerce</span></a>
+                    <a class="btn" href="https://amp.dev/success-stories/" target="_blank"><span>Publishers</span></a>
+                </nav>
+            </section>
         </div>
         ```
 
     + Modal:
+
         ```html
-        <div [class]="headerState == 'inThisIssue' ? '-block' : ''">
-            <div class="inner">
-                <h2>Comments</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eros quam, egestas vitae justo vehicula, maximus pulvinar nisl.</p>
+        <div id="stickyAdvertisers" class="sticky-content"
+            [class]="stickyState == 'advertisers' ? 'sticky-content -block' : 'sticky-content'">
+            <div class="sticky-content__inner">
+                <article class="sticky-content__card">
+                    <div class="sticky-content-card__inner">
+                        <div class="sticky-content-card__header">
+                            <svg></svg>
+                        </div>
+                        <section class="sticky-content-card__section">
+                            <p class="sticky-content-card__desc">Faster page loads with AMP deliver truckloads of new drivers to U.S. Xpress</p>
+                        </section>
+                    </div>
+                </article>
             </div>
-            <div class="modal-overlay" role="button" tabindex="0" on="tap:AMP.setState({headerState: ''})"></div>
+            <div class="modal-overlay" role="button" tabindex="0" on="tap:AMP.setState({stickyState: ''})"></div>
         </div>
-        <div [class]="headerState == 'share' ? '-block' : ''">
-            <div class="inner">
-                <h2>Comments</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eros quam, egestas vitae justo vehicula, maximus pulvinar nisl.</p>
+
+        <div id="stickyEcommerce" class="sticky-content"
+            [class]="stickyState == 'e-commerce' ? 'sticky-content -block' : 'sticky-content'">
+            <div class="sticky-content__inner">
+                <article class="sticky-content__card">
+                    <div class="sticky-content-card__inner">
+                        <div class="sticky-content-card__header">
+                            <svg></svg>
+                        </div>
+                        <section class="sticky-content-card__section">
+                            <p class="sticky-content-card__desc">DiscoverCarHire.com drives conversions with faster mobile page load times via AMP</p>
+                        </section>
+                    </div>
+                </article>
             </div>
-            <div class="modal-overlay" role="button" tabindex="0" on="tap:AMP.setState({headerState: ''})"></div>
+            <div class="modal-overlay" role="button" tabindex="0" on="tap:AMP.setState({stickyState: ''})"></div>
         </div>
         ```
+
 + Description:
-  + By tapping the _sticky-wrapper__link_ we are toggling its **-active** class
-  + We are also using the _state machine_ technique in order to pass the **headerState** variable to its correspondent Modal
-    +  If **headerState** exists, add the **-block** class to it
+  + By tapping the _btn_ we are toggling its **-active** class
+  + We are also using the _state machine_ technique in order to pass the **stickyState** variable to its correspondent Modal
+    +  If **stickyState** exists, add the **-block** class to it
     +  If not, do nothing
+
+#### AMPCarousel
+[(More Info)][AMPSiteCarousel]
+
++ Required Script:
+    ``` js
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+    ```
++ Code:
+    ```html
+    <amp-carousel width="400" height="400" layout="responsive" type="slides" autoplay>
+        <div class="hero-carousel__item" >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 225.333 287.375"><circle></circle></svg>
+        </div>
+        <div class="hero-carousel__item" >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 225.333 287.375"><circle></circle></svg>
+        </div>
+    </amp-carousel>
+    ```
++ Description:
+    + In this example I used the "type" **slides** since I was using **SVG's** as images
+    + I also used the "autoplay" for obvious reasons and styled the **carousel buttons** by overriding its default styles usign the _.amp-carousel-button-prev_ and _.amp-carousel-button-next_ classes
 
 #### AMPLightbox
 [(More Info)][AMPSiteLightbox]
@@ -465,33 +524,65 @@ Position Observer
     + Trigger
 
         ```html
-        <a class="lightbox-trigger" on="tap:lightbox1" role="button">
+        <article class="featured-carousel__item" on="tap:lightboxBind" role="button" tabindex="0">
+            <div class="featured-carousel__item-inner">
+                 <header class="featured-carousel__header">
+                    <h2 class="featured-carousel__title">Bind</h2>
+                </header>
+                <div class="featured-carousel__main">
+                    <div class="featured-carousel__main-left"></div>
+                        <p class="featured-carousel__desc">Amp-bind allows you to add custom interactivity to your pages beyond using AMP's pre-built components.</p>
+                </div>
+            </div>
+        </article>
         ```
 
     + Lightbox:
 
         ```html
-        <amp-lightbox id="lightbox1" layout="nodisplay">
-            <div class="lightbox-overlay" role="button" tabindex="0" on="tap:lightbox1.close">
-                <div class="lightbox-img">
-                    <a title="Close" class="lightbox-close" role="button" on="tap:lightbox1.close"></a>
-                    <figure class="article-feature">
-                        <amp-img layout="responsive" width="600" height="550" src="http://lorempixel.com/400/200/sports/" alt="Sports"></amp-img>
-                        <figcaption class="article-feature__caption">
-                            <span class="smalltext">Sport Picture</em></span>
-                        </figcaption>
-                    </figure>
+        <amp-lightbox id="lightboxBind" class="lightbox" layout="nodisplay">
+            <div class="lightbox__wrapper">
+                <article class="lightbox__inner">
+                    <header class="lightbox__header">
+                        <button class="close-btn" on="tap:lightboxBind.close" role="button" tabindex="0">
+                            <i class="fas fa-times"></i>
+                            <span class="sr-only">Close</span>
+                        </button>
+                        <div class="lightbox__hero">
+                            <svg></svg>
+                        </div>
+                        <div class="lightbox__main">
+                            <div class="lightbox-main__title">
+                                <h1 class="lightbox-main-title__text">AMP - Bind</h1>
+                            </div>
+                            <div class="lightbox-main__intro">
+                                <p class="lightbox-main-intro__text">The amp-bind component allows you to add custom stateful interactivity to your AMP pages via data binding and JS-like expressions.</p>
+                            </div>
+                        </div>
+                    </header>
+                        <section class="lightbox__section">
+                            <div class="lightbox-section__title">
+                                <h3 class="lightbox-section-title__text">Note</h3>
+                            </div>
+                            <div class="lightbox-section__desc">
+                                <p class="lightbox-section-desc__text">For performance and to avoid the risk of unexpected content jumping, amp-bind does not evaluate expressions on page load. This means that the visual elements should be given a default state and not rely amp-bind for initial render</p>
+                            </div>
+                        </section>
+                    </article>
                 </div>
-            </div>
+            <div class="modal-overlay" on="tap:lightboxBind.close" role="button" tabindex="0"></div>
         </amp-lightbox>
         ```
 
 + Description:
-    + On the trigger _tap_, target the lightbox with the ID of **lightbox1**
-    + **Lightbox1** will open on tap
+    + On the trigger _tap_, target the lightbox with the ID of **lightboxBind**
+    + **lightboxBind** will open on tap
+    + Clicking the **modal-overlay** will trigger the _close_ method ont the **lightboxBind** element
 
 # Conclusion
 **AMP** is a very useful and easy to use framework, although it does take a little time to get used to. One most acknowledge that NOT all the functionality can be recreated using AMP but you can get close enough, a good price to get your ranking higher.
+
+You can check out the complete **AMP** example at _[Codepen](https://codepen.io/danielmorales/pen/jRXBjp)_.
 
 
 [GULP]: #GULP
@@ -503,6 +594,7 @@ Position Observer
 [AMPAccordion]: #AMPAccordion
 [AMPAnimationPositionObserver]: #AMPAnimationPositionObserver
 [AMPBindModal]: #AMPBindModal
+[AMPCarousel]: #AMPCarousel
 [AMPLightbox]: #AMPLightbox
 
 [AMPSite]: https://amp.dev/
@@ -521,6 +613,7 @@ Position Observer
 [AMPSiteAMPAccordion]: https://amp.dev/documentation/components/amp-accordion
 [AMPSiteAMPAnimation]: https://amp.dev/documentation/components/amp-animation
 [AMPSiteAMPPositionObserver]: https://amp.dev/documentation/components/amp-position-observer
+[AMPSiteCarousel]: https://amp.dev/documentation/examples/components/amp-carousel
 [AMPSiteLightbox]: https://amp.dev/documentation/components/amp-lightbox
 [AMPStructuredData]: https://wordlift.io/blog/en/amp-structured-data/
 [SOAMPBind]: https://stackoverflow.com/questions/45239075/amp-easy-way-to-toggle-a-css-class
